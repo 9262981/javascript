@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>string</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="description" content="请输入您的描述信息">
+	<meta name="keywords" content="关键字,关键字,关键字">
+	<meta name="author" content="Simon Sun">
+	<style></style>
+	<script>
+		var s = 'Hello, world!';
+
+		console.log(s[0]); // 'H'
+		console.log(s[6]); // ' '
+		console.log(s[7]); // 'w'
+		console.log(s[12]); // '!'
+		console.log(s[13]); // undefined 超出范围的索引不会报错，但一律返回undefined
+		console.log(s.toUpperCase());
+		console.log(s.toLowerCase());
+		console.log(s.indexOf("wor"));
+
+		console.log(s.substring(0,4)); // 从索引0开始到5（不包括5），返回'hello'
+		console.log(s.substring(8)); // 从索引7开始到结束，返回'world'
+
+	</script>
+</head>
+<body>
+	<pre>ASCII字符可以以\x##形式的十六进制表示，例如：
+
+	'\x41'; // 完全等同于 'A'
+
+
+
+
+	还可以用\u####表示一个Unicode字符：
+
+	'\u4e2d\u6587'; // 完全等同于 '中文'
+	</pre>
+</body>
+</html>
