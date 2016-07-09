@@ -76,20 +76,20 @@ function createObject2(name, age) {
 };
 
 var box1 = createObject('Lee', 100);					//创建第一个对象
-var box2 = createObject('Jack', 200);					//创建第二个对象
+var box2 = createObject2('Jack', 200);					//创建第二个对象
 // 工厂模式解决了重复实例化的问题，但还有一个问题，那就是识别问题，因为根本无法
 // 搞清楚他们到底是哪个对象的实例。
 var box3 = createObject2('kkk', 500);					//创建第三个对象
 
-alert(box1.run());													//打印第一个对象实例的run()方法
-alert(box2.run());													//打印第二个对象实例的run()方法
-alert(box3.run());													//打印第二个对象实例的run()方法
+console.log(box1.run());													//打印第一个对象实例的run()方法
+console.log(box2.run());													//打印第二个对象实例的run()方法
+console.log(box3.run());													//打印第二个对象实例的run()方法
 
-// //alert(typeof box1);
-// //alert(typeof box2);
-alert(box1 instanceof Object);
-alert(box2 instanceof Object);
-alert(box3 instanceof Object);						//不管怎样，他们都是Object类型，就无法区分，谁到底是谁的对象了
+// //console.log(typeof box1);
+// //console.log(typeof box2);
+console.log(box1 instanceof createObject);
+console.log(box2 instanceof createObject2);
+console.log(box3 instanceof Object);						//不管怎样，他们都是Object类型，就无法区分，谁到底是谁的对象了
 
 
 
