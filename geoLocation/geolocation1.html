@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geolocation Example</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+    <p>This page is a demonstration of the Geolocation API. This works in the latest versions of all major browsers, but you may need to place this file on a web server to get it to work.</p>
+    <script>
+        window.onload = function(){
+            document.getElementById("geo-btn").onclick = function(){
+                navigator.geolocation.watchPosition(function(position){
+                    document.getElementById("output").innerHTML = 
+                        "Latitude is (十进制 纬度)" + position.coords.latitude +
+                        "<br>Longitude is (十进制 经度)" + position.coords.longitude +
+                        "<br>accuracy is (经纬度坐标的精度，以米为单位)" + position.coords.accuracy +
+                        "<br>altitude is (以米为单位的海拔高度，空为null)" + position.coords.altitude +
+                        "<br>altitudeAccuracy is （精度，数值大 不准确）" + position.coords.altitudeAccuracy +
+                        "<br>heading is （指南针方向，0为正北，nan为检测到）" + position.coords.heading +
+                        "<br>speed is （速度）" + position.coords.speed 
+                        ;
+
+                }, function(error){
+                    document.getElementById("output").innerHTML = error.message || "An error occurred while trying to get location.";
+                });
+            };
+        };
+        
+    </script>
+    
+    <p><script>document.write(navigator.geolocation ? "Your browser supports the Geolocation API." : "Your browser does not support the Geolocation API.");</script></p>
+    <input type="button" value="Get Location" id="geo-btn">
+    <div id="output"></div>
+</body>
+</html>
