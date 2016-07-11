@@ -1,0 +1,61 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>simonDemo</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="description" content="请输入您的描述信息">
+	<meta name="keywords" content="关键字,关键字,关键字">
+	<meta name="author" content="Simon Sun">
+	<style>video{width:500px;height:300px}</style>
+	<script>
+
+	</script>
+</head>
+<body>
+	
+	<video id="myVideo" audioTracks>
+	  <source id="mp4_src" src="aaa.mp4" type="video/mp4">
+	  您的浏览器不支持 video 标签。
+	</video>
+
+	<p>点击按钮播放或暂停视频。</p>
+
+	<button onclick="playVid()" onmouseover="playVid()" type="button" >播放视频</button>
+	<button onclick="pauseVid()" type="button">暂停视频</button> 
+	<button onclick="playPause()" type="button">播放暂停</button> 
+	<button onclick="audioTracks()" type="button">audioTracks</button> 
+
+
+	<div id="demo">123</div>
+	<p>Video courtesy of <a href="http://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+	<script>
+	var x = document.getElementById("myVideo"); 
+
+	function playVid()
+	  { 
+	  x.play(); 
+	  } 
+
+	function pauseVid()
+	  { 
+	  x.pause(); 
+	  } 
+	function playPause()
+		{ 
+		if (x.paused) 
+		  x.play(); 
+		else 
+		  x.pause(); 
+		} 
+	function audioTracks()
+	  { 
+	  document.getElementById("demo").innerHTML = "缓存起始位置Start: " + x.buffered.start(0)
+	  + " 缓存结束位置End: " + x.buffered.end(0);
+	  } 
+
+	 
+	</script>
+</body>
+</html>
