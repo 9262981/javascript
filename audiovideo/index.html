@@ -12,6 +12,7 @@
 	    padding: 0px;
 	    margin: 0px;
 	}
+	body{margin: 0 auto ;text-align:center;}
 	video{
 	    width: 500px;
 	    height: 320px;
@@ -23,17 +24,18 @@
 </head>
 <body>
 	
-	<video id="myVideo" controls="controls"  loop="loop" muted poster="http://image18-c.poco.cn/mypoco/myphoto/20160621/13/6490523020160621135813070_640.jpg" preload="auto">
+	<video id="myVideo" poster="http://image18-c.poco.cn/mypoco/myphoto/20160621/13/6490523020160621135813070_640.jpg" preload="auto" width="500" height="300">
 	<!-- preload:auto - 当页面加载后载入整个视频
 			meta - 当页面加载后只载入元数据
 			none - 当页面加载后不载入视频 
 		autoplay="autoplay"
+		controls="controls"
 			-->
 	  <source id="mp4_src" src="http://localhost/aaa.mp4" type="video/mp4">
 	  您的浏览器不支持 video 标签。
 	</video>
-
-	<p>点击按钮播放或暂停视频。</p>
+http://www.runoob.com/jsref/dom-obj-video.html
+	<p><br></p>
 
 	<button onclick="playVid()"  type="button" >播放视频</button>
 	<button onclick="pauseVid()" type="button">暂停视频</button> 
@@ -43,11 +45,71 @@
 	<button onclick="exitFullscreen(x)" type="button" >退出全屏</button> 
 	<button onclick="mu()" type="button" >静音</button> 
 	<button onclick="camu()" type="button" >扩音</button> 
-http://www.w3school.com.cn/jsref/dom_obj_video.asp
+	<button onclick="enableControls()" type="button">启用控件</button>
+	<button onclick="disableControls()" type="button">禁用控件</button>
+	<button onclick="checkControls()" type="button">查看控件状态</button>
+	<button onclick="currentSrc()" type="button">返回当前视频的 URL</button>
+	<button onclick="currentTime()" type="button">设置或返回视频播放的当前位置（以秒计）</button>
+	<button onclick="PlaybackRateadd()" type="button">加速播放</button>
+	<button onclick="PlaybackRateslow()" type="button">慢速播放</button>
+	<button onclick="duration()" type="button">视频总长度</button>
+
 
 	<div id="demo"></div>
+	<div id="demo2"></div>
+	<div id="demo3"></div>
 	<script>
 	var x = document.getElementById("myVideo"); 
+	document.getElementById('demo2').innerHTML=x.height;
+	document.getElementById('demo3').innerHTML=x.width;
+	setInterval(function () {
+		if(x.ended){
+			alert(123);
+		}
+	},1000);
+	
+	function duration() {
+		document.getElementById('demo2').innerHTML=x.duration;
+	}
+	function PlaybackRateadd() {
+
+		x.defaultPlaybackRate=3.5;
+		x.load();
+		
+		x.play();
+	}
+	function PlaybackRateslow() {
+		x.defaultPlaybackRate=0.8;
+		x.load();
+		x.currentTime;
+		x.play();
+	}
+	// 1.0 正常速度
+	// 0.5 半速（更慢）
+	// 2.0 倍速（更快）
+	// -1.0 向后，正常速度
+	// -0.5 向后，半速
+	function currentTime() {
+		document.getElementById('demo2').innerHTML=x.currentTime;
+	}
+	function currentSrc() {
+		alert(x.currentSrc);
+	}
+	x.controls=true;
+	function enableControls()
+	  { 
+	  x.controls = true;
+	  x.load();
+	  } 
+	function disableControls()
+	  { 
+	  x.controls = false;
+	  x.load();
+	  } 
+	function checkControls()
+	  { 
+	  alert(x.controls);
+	  } 
 	function mu() {
 		x.muted="muted";
 	}
