@@ -34,7 +34,7 @@
 	  <source id="mp4_src" src="http://localhost/aaa.mp4" type="video/mp4">
 	  您的浏览器不支持 video 标签。
 	</video>
-http://www.runoob.com/jsref/dom-obj-video.html
+
 	<p><br></p>
 
 	<button onclick="playVid()"  type="button" >播放视频</button>
@@ -53,30 +53,82 @@ http://www.runoob.com/jsref/dom-obj-video.html
 	<button onclick="PlaybackRateadd()" type="button">加速播放</button>
 	<button onclick="PlaybackRateslow()" type="button">慢速播放</button>
 	<button onclick="duration()" type="button">视频总长度</button>
+	<button onclick="start()" type="button">视频播放首尾时间</button>
+	<button onclick="networkState()" type="button">获得视频的当前网络状态</button>
+	<button onclick="poster()" type="button">修改当前视频数据在无效时显示的图片</button>
+	<button onclick="getVolume()" type="button">音量大小</button>
+	<button onclick="setzeroVolume()" type="button">最小音量</button>
+	<button onclick="setHalfVolume()" type="button">一半音量</button>
+	<button onclick="setFullVolume()" type="button">最大音量</button>
+	<button onclick="setFullAdd()" type="button">加音量</button>
+	<button onclick="setFullDel()" type="button">减音量</button>
 
 
 	<div id="demo"></div>
 	<div id="demo2"></div>
 	<div id="demo3"></div>
+	<div id="demo4"></div>
+	<div id="demo5"></div>
+	<div id="demo6"></div>
+	<div id="demo7"></div>
 	<script>
 	var x = document.getElementById("myVideo"); 
+	function setFullAdd()
+	  { 
+		x.volume+=0.1;
+	  }
+	function setFullDel()
+	  { 
+		x.volume-=0.1;
+	  }
+	function getVolume()
+	  { 
+	  alert(x.volume);
+	  } 
+	function setzeroVolume()
+	  { 
+	  x.volume = 0.1;
+	  } 
+	function setHalfVolume()
+	  { 
+	  x.volume = 0.5;
+	  } 
+	function setFullVolume()
+	  { 
+	  x.volume = 1.0;
+	  } 
+	function poster()
+	{
+	x.poster="http://image18-c.poco.cn/mypoco/myphoto/20160621/13/6490523020160621135727021_640.jpg";
+	}
+	function networkState(){
+		document.getElementById("demo7").innerHTML =x.networkState;
+		// 0 = NETWORK_EMPTY - 音频/视频尚未初始化
+		// 1 = NETWORK_IDLE - 音频/视频是活动的且已选取资源，但并未使用网络
+		// 2 = NETWORK_LOADING - 浏览器正在下载数据
+		// 3 = NETWORK_NO_SOURCE - 未找到音频/视频来源
+	}
+	function start(){
+		document.getElementById("demo4").innerHTML = "Start: " + x.played.start(0) + " End: " + x.played.end(0);
+	}
 	document.getElementById('demo2').innerHTML=x.height;
 	document.getElementById('demo3').innerHTML=x.width;
 	setInterval(function () {
 		if(x.ended){
 			alert(123);
 		}
-	},1000);
+	},1000000);
 	
 	function duration() {
-		document.getElementById('demo2').innerHTML=x.duration;
+		document.getElementById('demo5').innerHTML=x.duration;
 	}
 	function PlaybackRateadd() {
 
-		x.defaultPlaybackRate=3.5;
-		x.load();
+		// x.defaultPlaybackRate=3.5;
+		x.playbackRate = 1.5;
+		// x.load();
 		
-		x.play();
+		// x.play();
 	}
 	function PlaybackRateslow() {
 		x.defaultPlaybackRate=0.8;
@@ -90,7 +142,9 @@ http://www.runoob.com/jsref/dom-obj-video.html
 	// -1.0 向后，正常速度
 	// -0.5 向后，半速
 	function currentTime() {
-		document.getElementById('demo2').innerHTML=x.currentTime;
+		setInterval(function () {
+		document.getElementById('demo6').innerHTML=x.currentTime;
+		},1)
 	}
 	function currentSrc() {
 		alert(x.currentSrc);
