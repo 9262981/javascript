@@ -8,20 +8,47 @@
 	<meta name="description" content="请输入您的描述信息">
 	<meta name="keywords" content="关键字,关键字,关键字">
 	<meta name="author" content="Simon Sun">
+<<<<<<< HEAD
 	<style>video{width:500px;height:300px}</style>
+=======
+	<style>
+
+	*{
+	    padding: 0px;
+	    margin: 0px;
+	}
+
+	video{
+	    width: 500px;
+	    height: 320px;
+	    background-color:#000;
+	}
+	</style>
+>>>>>>> ac7b1efc9e83a9da305bb94758184f5940f670c9
 	<script>
 
 	</script>
 </head>
 <body>
 	
+<<<<<<< HEAD
 	<video id="myVideo" audioTracks>
 	  <source id="mp4_src" src="aaa.mp4" type="video/mp4">
+=======
+	<video id="myVideo" controls="controls"  loop="loop" muted poster="http://image18-c.poco.cn/mypoco/myphoto/20160621/13/6490523020160621135813070_640.jpg" preload="auto">
+	<!-- preload:auto - 当页面加载后载入整个视频
+			meta - 当页面加载后只载入元数据
+			none - 当页面加载后不载入视频 
+		autoplay="autoplay"
+			-->
+	  <source id="mp4_src" src="http://localhost/aaa.mp4" type="video/mp4">
+>>>>>>> ac7b1efc9e83a9da305bb94758184f5940f670c9
 	  您的浏览器不支持 video 标签。
 	</video>
 
 	<p>点击按钮播放或暂停视频。</p>
 
+<<<<<<< HEAD
 	<button onclick="playVid()" onmouseover="playVid()" type="button" >播放视频</button>
 	<button onclick="pauseVid()" type="button">暂停视频</button> 
 	<button onclick="playPause()" type="button">播放暂停</button> 
@@ -32,6 +59,34 @@
 	<p>Video courtesy of <a href="http://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
 	<script>
 	var x = document.getElementById("myVideo"); 
+=======
+	<button onclick="playVid()"  type="button" >播放视频</button>
+	<button onclick="pauseVid()" type="button">暂停视频</button> 
+	<button onclick="playPause()" type="button">播放暂停</button> 
+	<button onclick="audioTracks()" type="button">audioTracks</button> 
+	<button onclick="fullpage(x)" type="button" >全屏</button> 
+	<button onclick="exitFullscreen(x)" type="button" >退出全屏</button> 
+	<button onclick="mu()" type="button" >静音</button> 
+	<button onclick="camu()" type="button" >扩音</button> 
+http://www.w3school.com.cn/jsref/dom_obj_video.asp
+
+	<div id="demo"></div>
+	<script>
+	var x = document.getElementById("myVideo"); 
+	function mu() {
+		x.muted="muted";
+	}
+	function camu() {
+		x.muted="";
+	}
+	x.onclick=function () {
+		fullpage(x);
+	}
+	x.ondblclick=function () {
+		exitFullscreen(x);
+	}
+		
+>>>>>>> ac7b1efc9e83a9da305bb94758184f5940f670c9
 
 	function playVid()
 	  { 
@@ -55,7 +110,62 @@
 	  + " 缓存结束位置End: " + x.buffered.end(0);
 	  } 
 
+<<<<<<< HEAD
 	 
+=======
+
+
+	function fullpage(element)
+		{
+		  //此方法不可以在異步任務中執行，否則火狐無法全屏
+		   if(element.requestFullscreen) {
+		     element.requestFullscreen();
+		   } else if(element.mozRequestFullScreen) {
+		     element.mozRequestFullScreen();
+		   } else if(element.msRequestFullscreen){ 
+		     element.msRequestFullscreen();  
+		   } else if(element.oRequestFullscreen){
+		      element.oRequestFullscreen();
+		  }
+		  else if(element.webkitRequestFullscreen)
+		   {
+		     element.webkitRequestFullScreen();
+		   }else{
+		   
+		      var docHtml  = document.documentElement;
+		      var docBody  = document.body;
+		      var videobox  = document.getElementById('videobox');
+		      var  cssText = 'width:100%;height:100%;overflow:hidden;';
+		      docHtml.style.cssText = cssText;
+		      docBody.style.cssText = cssText;
+		      videobox.style.cssText = cssText+';'+'margin:0px;padding:0px;';
+		      document.IsFullScreen = true;
+
+		    }
+		 }
+	 function exitFullscreen()
+	 {
+	     if (document.exitFullscreen) {
+	       document.exitFullscreen();
+	     } else if (document.msExitFullscreen) {
+	       document.msExitFullscreen();
+	     } else if (document.mozCancelFullScreen) {
+	       document.mozCancelFullScreen();
+	     } else if(document.oRequestFullscreen){
+	          document.oCancelFullScreen();
+	      }else if (document.webkitExitFullscreen){
+	       document.webkitExitFullscreen();
+	     }else{
+	      var docHtml  = document.documentElement;
+	      var docBody  = document.body;
+	      var videobox  = document.getElementById('videobox');
+	      docHtml.style.cssText = "";
+	      docBody.style.cssText = "";
+	      videobox.style.cssText = "";
+	      document.IsFullScreen = false;
+	  }
+	}
+>>>>>>> ac7b1efc9e83a9da305bb94758184f5940f670c9
 	</script>
 </body>
 </html>
