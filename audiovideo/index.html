@@ -24,13 +24,12 @@
 </head>
 <body>
 	
-	<video id="myVideo" poster="http://image18-c.poco.cn/mypoco/myphoto/20160621/13/6490523020160621135813070_640.jpg" preload="auto" width="500" height="300">
+	<video id="myVideo" poster="http://image18-c.poco.cn/mypoco/myphoto/20160621/13/6490523020160621135813070_640.jpg" preload="auto" width="500" height="300" onseeking="seekingFun()" onseeked="seekingFun()">
 	<!-- preload:auto - 当页面加载后载入整个视频
 			meta - 当页面加载后只载入元数据
 			none - 当页面加载后不载入视频 
 		autoplay="autoplay"
-		controls="controls"
-			-->
+		controls="controls" -->
 	  <source id="mp4_src" src="http://localhost/aaa.mp4" type="video/mp4">
 	  您的浏览器不支持 video 标签。
 	</video>
@@ -62,6 +61,7 @@
 	<button onclick="setFullVolume()" type="button">最大音量</button>
 	<button onclick="setFullAdd()" type="button">加音量</button>
 	<button onclick="setFullDel()" type="button">减音量</button>
+	<button onclick="srcFun()" type="button">低画质</button>
 
 
 	<div id="demo"></div>
@@ -71,8 +71,22 @@
 	<div id="demo5"></div>
 	<div id="demo6"></div>
 	<div id="demo7"></div>
+	<div id="demo8"></div>
 	<script>
 	var x = document.getElementById("myVideo"); 
+	var b="";
+	function srcFun()
+	  { 
+	  	b=x.currentTime;
+		x.src = "http://localhost/aaa.mp4";
+		x.load();
+		x.currentTime=b;
+		x.play();
+	  }
+	function seekingFun()
+	  { 
+		document.getElementById("demo8").innerHTML=("Seeking: " + x.seeking);
+	  }
 	function setFullAdd()
 	  { 
 		x.volume+=0.1;
@@ -125,16 +139,17 @@
 	function PlaybackRateadd() {
 
 		// x.defaultPlaybackRate=3.5;
-		x.playbackRate = 1.5;
+		x.playbackRate += 0.2;
 		// x.load();
 		
 		// x.play();
 	}
 	function PlaybackRateslow() {
-		x.defaultPlaybackRate=0.8;
-		x.load();
-		x.currentTime;
-		x.play();
+		x.playbackRate -= 0.2;
+		// x.defaultPlaybackRate=0.8;
+		// x.load();
+		// x.currentTime;
+		// x.play();
 	}
 	// 1.0 正常速度
 	// 0.5 半速（更慢）
