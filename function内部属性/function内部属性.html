@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>function argument callee</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="description" content="请输入您的描述信息">
+	<meta name="keywords" content="关键字,关键字,关键字">
+	<meta name="author" content="Simon Sun">
+	<style></style>
+	<script>
+		function box(num) {
+			if(num<=1){
+				return 1;
+			}else{
+				return num*box(num-1);
+				// 递归：程序调用自身的编程技巧称之为递归（recursion）
+			}
+		}
+		alert(box(4));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
