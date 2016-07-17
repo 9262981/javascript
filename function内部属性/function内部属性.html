@@ -40,9 +40,9 @@
 		// 包含这两个非继承而来的方法。这两个方法的用途都在特定的作用域中调用函数，实际上等
 		// 于设置函数体内this 对象的值。
 		// 
-		// function box(num1,num2) {
-		// 	return num1+num2;
-		// }
+		function box(num1,num2) {
+			return num1+num2;
+		}
 		// function sum(num1,num2) {
 		// 	return box.apply(this,[num1,num2]);
 		// 	//this window作用域，【】传递参数
@@ -56,29 +56,29 @@
 		// alert(sum2(10,10));
 		// 
 		//call 方法可以一个一个传递参数，call 【】数组传递
-		// function sum(num1,num2) {
-		// 	return box.call(this,num1,num2);
-		// }
-		// alert(sum(10,10));
+		function sum(num1,num2) {
+			return box.call(this,num1,num2);
+		}
+		alert(sum(10,10));
 
 		//为什么要冒充：改变作用域；
 		//
-		var color="红色";
-		var box={
-			color:"蓝色"
-		}
-		//用call 实现对象冒充 冒充window
-		function sayColor() {
-			alert(this.color);
-		}
-		// sayColor();
-		// sayColor.call(window);
-		// sayColor.call(this);
-		sayColor();//box,作用域在box对象里面；blue
-		sayColor.call(box);//box,作用域在box对象里面；blue
-		// 使用call()或者apply()来扩充作用域的最大好处，就是对象不需要与方法发生任何耦合
+		// var color="红色";
+		// var box={
+		// 	color:"蓝色"
+		// }
+		// //用call 实现对象冒充 冒充window
+		// function sayColor() {
+		// 	alert(this.color);
+		// }
+		// // sayColor();
+		// // sayColor.call(window);
+		// // sayColor.call(this);
+		// sayColor();//box,作用域在box对象里面；blue
+		// sayColor.call(box);//box,作用域在box对象里面；blue
+		// // 使用call()或者apply()来扩充作用域的最大好处，就是对象不需要与方法发生任何耦合
 		// 关系(耦合，就是互相关联的意思，扩展和维护会发生连锁反应)。也就是说，box 对象和
-		// sayColor()方法之间不会有多余的关联操作，比如box.sayColor = sayColor;
+		// // sayColor()方法之间不会有多余的关联操作，比如box.sayColor = sayColor;
 	</script>
 </head>
 <body>
