@@ -78,17 +78,17 @@
 // }
 
 
-// alert(Box('Lee', 100));					//构造函数，用普通函数调用一般是无效的，必须使用new运算符
-// function Desk2(name, age) {			//创建一个对象，所有构造函数的对象其实就是Object
-// 	this.name = name;					//添加一个属性
-// 	this.age = age;			
-// 	this.run = function () {			//添加一个方法
-// 		return this.name + this.age + '运行中...';
-// 	};
-// };
-// var o = new Object();
-// Desk2.call(o, 'Lee', 100);					//对象冒充
-// alert(o.run());
+alert(Box('Lee', 100));					//构造函数，用普通函数调用一般是无效的，必须使用new运算符
+function Desk2(name, age) {			//创建一个对象，所有构造函数的对象其实就是Object
+	this.name = name;					//添加一个属性
+	this.age = age;			
+	this.run = function () {			//添加一个方法
+		return this.name + this.age + '运行中...';
+	};
+};
+var o = new Object();
+Desk2.call(o, 'Lee', 100);					//对象冒充
+alert(o.run());
 
 // function Box(name, age) {			//创建一个对象，所有构造函数的对象其实就是Object
 // 	this.name = name;					//添加一个属性
@@ -109,20 +109,20 @@
 
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
-function Box(name, age) {			//创建一个对象，所有构造函数的对象其实就是Object
-	this.name = name;					//添加一个属性
-	this.age = age;			
-	this.run = run;
-};
-function run() {	//把构造函数内部的方法通过全局来实现引用地址一致
+// function Box(name, age) {			//创建一个对象，所有构造函数的对象其实就是Object
+// 	this.name = name;					//添加一个属性
+// 	this.age = age;			
+// 	this.run = run;
+// };
+// function run() {	//把构造函数内部的方法通过全局来实现引用地址一致
 
-		return this.name + this.age + '运行中...';
-	};
-var box1= new Box('lee',100);//实例化后地址为1
-var box2= new Box('lee',100);//实例化后地址为2
+// 		return this.name + this.age + '运行中...';
+// 	};
+// var box1= new Box('lee',100);//实例化后地址为1
+// var box2= new Box('lee',100);//实例化后地址为2
 
-alert(box1.run() == box2.run());	// 
-alert(box1.run == box2.run);
+// alert(box1.run() == box2.run());	// 
+// alert(box1.run == box2.run);
 // //值跟
 //////////////////////////////////////////////////////////////////
 

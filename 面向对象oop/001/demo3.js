@@ -14,10 +14,10 @@ function Box(name, age) {
 }
 
 
-var box1 = new Box();
-// var box2 = new Box();
-//alert(box1.name);
-//alert(box1.run());
+var box1 = new Box('lee',111);
+var box2 = new Box();
+alert(box1.name);
+alert(box1.run());
 
 //如果是实例方法，不同的实例化，他们的方法地址是不一样的，是唯一的
 //如果是原型方法，那么他们地址是共享的，大家都是一样
@@ -27,7 +27,7 @@ var box1 = new Box();
 // alert(box1.__proto__);			//这个属性是一个指针指向prototype原型对象
 
 
-alert(box1.constructor);			//构造属性，可以获取构造函数本身
+// alert(box1.constructor);			//构造属性，可以获取构造函数本身
 // 												//作用是被原型指针定位，然后得到构造函数本身
 // 												//其实就是对象实例对应的原型对象的作用
 												
