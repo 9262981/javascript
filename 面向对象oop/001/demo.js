@@ -55,13 +55,13 @@
 
 // //工厂模式
 function createObject(name, age) {
-	var obj = new Object();									//创建对象
-	obj.name = name;											//添加属性
+	var obj = new Object();									//创建对象 //原料
+	obj.name = name;											//添加属性//加工
 	obj.age = age;
 	obj.run = function () {										//添加方法
 		return this.name + this.age + '运行中...';
 	};
-	return obj;														//返回对象引用
+	return obj;														//返回对象引用//出厂
 };
 // 工厂模式解决了重复实例化的问题，但还有一个问题，那就是识别问题，因为根本无法
 // 搞清楚他们到底是哪个对象的实例。
