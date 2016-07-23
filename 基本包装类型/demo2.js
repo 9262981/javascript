@@ -3,9 +3,9 @@
 
 var box = 'Mr. Lee';
 // alert(box.length);					//属性
-// alert(box.constructor);
+alert(box.constructor);
 
-var box = 'Mr. Lee';
+// var box = 'Mr. Lee';
 //alert(box.charAt(1));				//r
 //alert(box.charCodeAt(4));			//L，返回的是acssii码
 //alert(box[1]);
@@ -27,7 +27,7 @@ var box = 'Mr. Lee';
 // alert(box.substring(2,-1));			//参数如果是负，直接0，(2,0); 如果第二个参数比第一个小，那么第二个参数提前，(0,2)
 //alert(box.substr(2, -1));			//第二参数为负，直接0，(2,0)，空
 
-alert(box.substr(-2));				//IE浏览器会遇到负值会全部返回
+// alert(box.substr(-2));				//IE浏览器会遇到负值会全部返回
 
 
 

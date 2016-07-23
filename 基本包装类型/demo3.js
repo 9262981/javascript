@@ -3,7 +3,7 @@
 
 
 
-var box = 'Mr. Lee';
+// var box = 'M.r. L.e.e';
 //alert(box.toLowerCase());		//小写
 //alert(box.toUpperCase());		//大写
 // alert(box.toLocaleLowerCase());
@@ -15,22 +15,25 @@ var box = 'Mr. Lee';
 //alert(box.search('L'));		//找到L的位置
 // alert(box.search(','));		//找到L的位置
 //alert(box.replace('L', 'Q'));	//替换
-//alert(box.split(' '));		//分割成数组
+// alert(box.split('.'));		//分割成数组
+// var b=box.split('.');		//分割成数组
+// alert(b);
+// alert(b.join('-'));
 //alert(String.fromCharCode(76));	//放一个ascii码
 
 //var box = 'Lee';
-//alert(box.localeCompare('Lee'));	//0
-//alert(box.localeCompare('Aee'));		//1
-//alert(box.localeCompare('Zee'));		//-1
-//alert(box.localeCompare('6576'));
-//alert(box.localeCompare('哎'));
-//alert(box.localeCompare('周'));
+// alert(box.localeCompare('Lee'));	//0
+// alert(box.localeCompare('Aee'));		//1
+// alert(box.localeCompare('Zee'));		//-1
+// alert(box.localeCompare('6576'));
+// alert(box.localeCompare('哎'));
+// alert(box.localeCompare('周'));
 
 
 
-// var box = '百度';
-// alert(box.link('http://www.baidu.com'));
-// alert(box.bold());
+var box = '百度';
+alert(box.link('http://www.baidu.com'));
+alert(box.bold());
 
 
 

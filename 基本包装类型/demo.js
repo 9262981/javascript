@@ -2,57 +2,57 @@
 
 
 
-/*
-var box = 'Mr. Lee';					//»ù±¾ÀàĞÍ
+
+var box = 'Mr. Lee';					//åŸºæœ¬ç±»å‹
 //alert(box);
 //alert(typeof box);
-alert(box.substring(2));				//¶ÔÏó.·½·¨(²ÎÊı)£¬ÕâÖÖĞ´·¨Ã÷ÏÔÊÇÒıÓÃÀàĞÍµÄĞ´·¨
-												//Ë÷Òı0¿ªÊ¼£¬´ÓµÚ2¸öÎ»ÖÃ¿ªÊ¼½ØÈ¡µ½Ä©Î²µÄ×Ö·û´®Êä³ö
-												//ÊÇ»ù±¾ÀàĞÍ£¬µ«ÓÖÊÇÌØÊâµÄÒıÓÃÀàĞÍ£¬»ù±¾°ü×°ÀàĞÍ
-												//ÒòÎªËû¿ÉÒÔµ÷ÓÃÏµÍ³ÄÚÖÃµÄ·½·¨
+alert(box.substring(2));				//å¯¹è±¡.æ–¹æ³•(å‚æ•°)ï¼Œè¿™ç§å†™æ³•æ˜æ˜¾æ˜¯å¼•ç”¨ç±»å‹çš„å†™æ³•
+												//ç´¢å¼•0å¼€å§‹ï¼Œä»ç¬¬2ä¸ªä½ç½®å¼€å§‹æˆªå–åˆ°æœ«å°¾çš„å­—ç¬¦ä¸²è¾“å‡º
+												//æ˜¯åŸºæœ¬ç±»å‹ï¼Œä½†åˆæ˜¯ç‰¹æ®Šçš„å¼•ç”¨ç±»å‹ï¼ŒåŸºæœ¬åŒ…è£…ç±»å‹
+// 												//å› ä¸ºä»–å¯ä»¥è°ƒç”¨ç³»ç»Ÿå†…ç½®çš„æ–¹æ³•
 												
-alert('Mr. Lee'.substring(2));		//ÓĞĞ§
+// alert('Mr. Lee'.substring(2));		//æœ‰æ•ˆ
 
 
-var box = 'Mr. Lee';					//»ù±¾ÀàĞÍ
-box.name = 'Lee';						//¸ø»ù±¾ÀàĞÍ¼ÓÊôĞÔ
-box.age = function () {			//¸ø»ù±¾ÀàĞÍ¼Ó·½·¨
-	return 100;
-};
-alert(box);
-alert(typeof box);
-alert(box.substring(2));				//ÓĞĞ§
-alert(box.name);						//undefined£¬´òÓ¡²»³öÀ´
-alert(box.age());						//³ö´í
+// var box = 'Mr. Lee';					//åŸºæœ¬ç±»å‹
+// box.name = 'Lee';						//ç»™åŸºæœ¬ç±»å‹åŠ å±æ€§
+// box.age = function () {			//ç»™åŸºæœ¬ç±»å‹åŠ æ–¹æ³•
+// 	return 100;
+// };
+// alert(box);
+// alert(typeof box);
+// alert(box.substring(2));				//æœ‰æ•ˆ
+// alert(box.name);						//undefinedï¼Œæ‰“å°ä¸å‡ºæ¥
+// alert(box.age());						//å‡ºé”™
 
-												//»ù±¾ÀàĞÍÊÇÎŞ·¨¸ø×Ô¼º´´½¨ÊôĞÔºÍ·½·¨µÄ
-												//µ«ÊÇ£¬¿ÉÒÔµ÷ÓÃÏµÍ³ÄÚÖÃµÄÊôĞÔºÍ·½·¨
+// 												//åŸºæœ¬ç±»å‹æ˜¯æ— æ³•ç»™è‡ªå·±åˆ›å»ºå±æ€§å’Œæ–¹æ³•çš„
+// 												//ä½†æ˜¯ï¼Œå¯ä»¥è°ƒç”¨ç³»ç»Ÿå†…ç½®çš„å±æ€§å’Œæ–¹æ³•
 												
-var box = new String('Mr. Lee');			//ÒıÓÃÀàĞÍ£¬StringµÄÒıÓÃÀàĞÍ		
-box.name = 'Lee';					
-box.age = function () {		
-	return 100;
-};
-alert(box);
-alert(typeof box);									//object			
-alert(box.substring(2));							//ÓĞĞ§
-alert(box.name);									//×Ô¶¨ÒåÊôĞÔÓĞĞ§				
-alert(box.age());									//×Ô¶¨Òå·½·¨ÓĞĞ§
+// var box = new String('Mr. Lee');			//å¼•ç”¨ç±»å‹ï¼ŒStringçš„å¼•ç”¨ç±»å‹		
+// box.name = 'Lee';					
+// box.age = function () {		
+// 	return 100;
+// };
+// alert(box);
+// alert(typeof box);									//object			
+// alert(box.substring(2));							//æœ‰æ•ˆ
+// alert(box.name);									//è‡ªå®šä¹‰å±æ€§æœ‰æ•ˆ				
+// alert(box.age());									//è‡ªå®šä¹‰æ–¹æ³•æœ‰æ•ˆ
 
-var box = 100;
-alert(box.MAX_VALUE);						//ÕâÖÖĞ´·¨½Ğ×öÊôĞÔ
+// var box = 100;
+// alert(box.MAX_VALUE);						//è¿™ç§å†™æ³•å«åšå±æ€§
 
-alert(Number.MAX_VALUE);					//ÕâÖÖĞ´·¨(ÀàĞÍ.ÊôĞÔ)£¬½Ğ×ö¾²Ì¬ÊôĞÔ
-*/
+// alert(Number.MAX_VALUE);					//è¿™ç§å†™æ³•(ç±»å‹.å±æ€§)ï¼Œå«åšé™æ€å±æ€§
+// 
 
 
-var box = 1000.784;
-//alert(typeof box);
-//alert(typeof box.toString());			//toString()°ÑÊıÖµ×ª»»×Ö·û´®
-//alert(box.toLocaleString());				//±¾µØ»¯
-//alert(box.toFixed(2));						//Ğ¡Êıµã±£ÁôÁ½Î»£¬²¢×ª»»×Ö·û´®£¬ËÄÉáÎåÈë
-//alert(box.toExponential());				//ÒÔÖ¸ÊıĞÎÊ½£¬²¢×ª»»×Ö·û´®
-alert(box.toPrecision(8));					//¸ù¾İ´«²ÎÀ´¾ö¶¨Ö¸Êı»òÕßµãÊı
+// var box = 1000.784;
+// //alert(typeof box);
+// //alert(typeof box.toString());			//toString()æŠŠæ•°å€¼è½¬æ¢å­—ç¬¦ä¸²
+// //alert(box.toLocaleString());				//æœ¬åœ°åŒ–
+// //alert(box.toFixed(2));						//å°æ•°ç‚¹ä¿ç•™ä¸¤ä½ï¼Œå¹¶è½¬æ¢å­—ç¬¦ä¸²ï¼Œå››èˆäº”å…¥
+// //alert(box.toExponential());				//ä»¥æŒ‡æ•°å½¢å¼ï¼Œå¹¶è½¬æ¢å­—ç¬¦ä¸²
+// alert(box.toPrecision(8));					//æ ¹æ®ä¼ å‚æ¥å†³å®šæŒ‡æ•°æˆ–è€…ç‚¹æ•°
 
 
 
