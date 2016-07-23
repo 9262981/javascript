@@ -24,39 +24,39 @@
 
 
 // var box = new Box();
-// alert(box.constructor);
+// console.log(box.constructor);
 
 // var desk = new Desk();
-// //alert(desk.age);
-// //alert(desk.name);
+// //console.log(desk.age);
+// //console.log(desk.name);
 
 // var table = new Table();
-// //alert(table.level);
-// //alert(desk.age);
-// //alert(desk.name);
+// //console.log(table.level);
+// //console.log(desk.age);
+// //console.log(desk.name);
 
 
-function Box() {					//被继承的函数叫做超类型(父类，基类)
-	this.name = 'Lee';
-}
+// function Box() {					//被继承的函数叫做超类型(父类，基类)
+// 	this.name = 'Lee';
+// }
 
-Box.prototype.name = 'Jack';
+// Box.prototype.name = 'Jack';
 
-function Desk() {				//继承的函数叫做子类型(子类，派生类)
-	this.age = 100;
-}
+// function Desk() {				//继承的函数叫做子类型(子类，派生类)
+// 	this.age = 100;
+// }
 
-Desk.prototype = new Box();		//通过原型链继承
+// Desk.prototype = new Box();		//通过原型链继承
 
-var box = new Box();
-var desk = new Desk();
-alert(desk.name);					//就近原则，实例里有，就返回，没有就去查找原型
+// var box = new Box();
+// var desk = new Desk();
+// console.log(desk.name);					//就近原则，实例里有，就返回，没有就去查找原型
 
 // //子类型从属于自己或者他的超类型
-// //alert(desk instanceof Object);
-// alert(desk instanceof Desk);
-// alert(desk instanceof Box);
-// alert(box instanceof Desk);
+// //console.log(desk instanceof Object);
+// console.log(desk instanceof Desk);
+// console.log(desk instanceof Box);
+// console.log(box instanceof Desk);
 
 
 
@@ -70,7 +70,7 @@ alert(desk.name);					//就近原则，实例里有，就返回，没有就去�
 // 	this.family = ['哥哥','姐姐','妹妹'];	//引用类型，放在构造里就不会被共享 
 // }
 
-// //Box.prototype.family = '家庭';
+// //Box.prototype.family = '家庭';//原型里面的继承不出来
 
 // function Desk(name, age) {
 // 	Box.call(this, name, age)				//对象冒充，对象冒充只能继承构造里的信息
@@ -78,13 +78,15 @@ alert(desk.name);					//就近原则，实例里有，就返回，没有就去�
 
 
 // var desk = new Desk('Lee', 100);
-// alert(desk.family);
+// var box = new Box('Lee', 100);
+// console.log(desk.family);
 // desk.family.push('弟弟');
-// alert(desk.family);
+// console.log(desk.family);
+// console.log(box.family);
 
 
 // var desk2 = new Desk('Lee', 100);
-// alert(desk2.family);
+// console.log(desk2.family);
 
 
 // function Box(name, age) {
@@ -107,7 +109,7 @@ alert(desk.name);					//就近原则，实例里有，就返回，没有就去�
 
 
 // var desk = new Desk('Lee', 100);
-// alert(desk.run());
+// console.log(desk.run());
 
 
 
