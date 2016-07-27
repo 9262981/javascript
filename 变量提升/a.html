@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>simonDemo</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="description" content="请输入您的描述信息">
+	<meta name="keywords" content="关键字,关键字,关键字">
+	<meta name="author" content="Simon Sun">
+	<style></style>
+	<script>
+		// 函数内var定义局部变量 
+		// var a="hello world";
+		// function bb() {
+		// 	var a="hello bill";
+		// 	console.log(a);
+		// }
+		// bb();//hello bill
+		// console.log(a);//hello world!
+		// 函数内非var定义全局变量
+		// var a="hello world";
+		// function bb() {
+		// 	 a="hello bill";
+		// 	console.log(a);
+		// }
+		// bb();//hello bill
+		// console.log(a);//hello bill!
+////////////////////////////////////////////////////////////////////
+		// 全局作用域下，使用var定义的变量不可以delete，没有var 定义的变量可以delete，
+		// 也就是说明隐含全局变量严格来说不是真正的变量，而是全局对象的属性，
+		// 因为属性可以通过delete删除，变量不可以。
+///////////////////////////////////////////////////////////////////
+	// 使用var 定义的变量还会提升变量声明，
+		//1var定义
+		// function hh() {
+		// 	console.log(a);
+		// 	var a="hello world";
+		// }
+		// hh();//undefined
+		//2 no var
+		function hh() {
+			console.log(a);
+			 a="hello world";
+		}
+		hh();//a is not defined
+
+
+
+
+
+
+
+
+
+
+	// var a ="hello world";
+	// function b() {
+	// 	console.log(a);
+	
+	// 	// a="welcome";
+
+	// 	// console.log(a);
+	// };
+	// b();
+	// // alert(a);
+	</script>
+</head>
+<body>
+	z
+</body>
+</html>
