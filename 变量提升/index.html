@@ -21,7 +21,7 @@
 	// 先来看一段代码：
 
 	// (function() {
-	//   //ReferenceError: noSuchVariable is not defined
+	//   // ReferenceError: noSuchVariable is not defined
 	//   console.log(noSuchVariable);
 	// })();
 	// 运行上面代码立马就报错，不过，这也正是我们期望的，因为 noSuchVariable 变量根本就没有定义过嘛！再来看看下面的代码：
@@ -99,19 +99,19 @@
 
 	// 再来看第二种情况：函数作为值赋值给变量。（还记得吗？在 JavaScript 中，函数也可以作为值赋予变量！）还是先上代码：
 
-	// // Outputs: "Definition hoisted!"
-	// definitionHoisted();
+	// Outputs: "Definition hoisted!"
+	definitionHoisted();
 
-	// // TypeError: undefined is not a function
-	// definitionNotHoisted();
+	// TypeError: undefined is not a function
+	definitionNotHoisted();
 
-	// function definitionHoisted() {  
-	//     console.log("Definition hoisted!");
-	// }
+	function definitionHoisted() {  
+	    console.log("Definition hoisted!");
+	}
 
-	// var definitionNotHoisted = function () {  
-	//     console.log("Definition not hoisted!");
-	// };
+	var definitionNotHoisted = function () {  
+	    console.log("Definition not hoisted!");
+	};
 	// 我们做了一个对比，definitionHoisted 函数被妥妥的执行了，符合第一种类型；definitionNotHoisted 变量“被提前”了，但是他的赋值（也就是函数）并没有被提前，从这一点上来说，和前面我们所讲的变量“被提前”是完全一致的，并且，由于“被提前”的变量的默认值是 undefined ，所以报的错误属于“类型不匹配”，因为 undefined 不是函数，当然不能被调用。
 
 	// 总结
