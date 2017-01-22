@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://deerchao.net/tutorials/regex/common.htm -->
+<html lang="zh"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <title>常用正则表达式</title>
+    <meta name="keywords" content="正则表达式, 常用, 邮件地址, 正则表达式大全">
+    <meta name="description" content="收录常用的正则表达式，比如邮件地址，网址，QQ号等。">
+    <link rel="SHORTCUT ICON" href="http://deerchao.net/images/regex.ico">
+    <style type="text/css">
+        body {
+            font-size: 100%;
+        }
+
+        h1, #meta {
+            text-align: center;
+        }
+
+        .webStandards {
+            text-align: right;
+            font-size: 80%;
+            color: gray;
+        }
+
+            .webStandards a {
+                text-align: right;
+                font-size: small;
+                color: gray;
+            }
+
+        p {
+            text-indent: 2em;
+            line-height: 140%;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: solid 1px gray;
+            border-width: 1px 1px 0 0;
+            width: 85%;
+            margin: 20px 5%;
+        }
+
+        td, th {
+            border: solid 1px gray;
+            border-width: 0 0 1px 1px;
+        }
+
+        .regex {
+            font-family: "Courier New";
+        }
+
+        tbody tr:hover {
+            background: #eee;
+        }
+
+        #top {
+            background: #eee;
+            line-height: 200%;
+        }
+
+            #top a {
+                text-decoration: none;
+                vertical-align: middle;
+                color: Black;
+                display: block;
+                display: inline-block;
+                text-align: center;
+                padding: 3px 15px;
+            }
+
+                #top a:hover {
+                    background: #ccc;
+                }
+    </style>
+    <script src="./常用正则表达式_files/ca-pub-1134642721173543.js.下载"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-376013-6']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body>
+    <div id="top">
+        <a href="http://deerchao.net/">首页</a> | <a href="http://deerchao.net/tutorials/regex/regex.htm">正则表达式30分钟教程</a> | <a href="http://deerchao.net/tools/regex_tester/index.htm">正则表达式测试工具</a>
+    </div>
+    <h1>常用正则表达式</h1>
+    <p id="meta">版本：v0.03 (2013-5-13) 整理：<a href="http://deerchao.net/">deerchao</a>  转载请注明<a href="http://deerchao.net/tutorials/regex/common.htm">来源</a></p>
+    <p>说明：正则表达式通常用于两种任务：1.验证，2.搜索/替换。用于验证时，通常需要在前后分别加上^和$，以匹配整个待验证字符串；搜索/替换时是否加上此限定则根据搜索的要求而定，此外，也有可能要在前后加上\b而不是^和$。此表所列的常用正则表达式，除个别外均未在前后加上任何限定，请根据需要，自行处理。</p>
+    <table>
+        <thead>
+            <tr>
+                <th>说明</th>
+                <th>正则表达式</th>
+            </tr>
+        </thead>
+        <tbody><tr>
+            <td>网址（URL）</td>
+            <td><span class="regex">[a-zA-z]+://[^\s]*</span></td>
+        </tr>
+        <tr>
+            <td>IP地址(IP Address)</td>
+            <td><span class="regex">((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)</span></td>
+        </tr>
+        <tr>
+            <td>电子邮件(Email)</td>
+            <td><span class="regex">\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</span></td>
+        </tr>
+        <tr>
+            <td>QQ号码</td>
+            <td><span class="regex">[1-9]\d{4,}</span></td>
+        </tr>
+        <tr>
+            <td>HTML标记(包含内容或自闭合)</td>
+            <td><span class="regex">&lt;(.*)(.*)&gt;.*&lt;\/\1&gt;|&lt;(.*) \/&gt;</span></td>
+        </tr>
+        <tr>
+            <td>密码(由数字/大写字母/小写字母/标点符号组成，四种都必有，8位以上)</td>
+            <td><span class="regex">(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?=.*[A-Z])(?=.*[a-z])(?!.*\n).*$</span></td>
+        </tr>
+
+        <tr>
+            <td>日期(年-月-日)</td>
+            <td><span class="regex">(\d{4}|\d{2})-((1[0-2])|(0?[1-9]))-(([12][0-9])|(3[01])|(0?[1-9]))</span></td>
+        </tr>
+        <tr>
+            <td>日期(月/日/年)</td>
+            <td><span class="regex">((1[0-2])|(0?[1-9]))/(([12][0-9])|(3[01])|(0?[1-9]))/(\d{4}|\d{2})</span></td>
+        </tr>
+        <tr>
+            <td>时间(小时:分钟, 24小时制)</td>
+            <td><span class="regex">((1|0?)[0-9]|2[0-3]):([0-5][0-9])</span></td>
+        </tr>
+
+        <tr>
+            <td>汉字(字符)</td>
+            <td><span class="regex">[\u4e00-\u9fa5]</span></td>
+        </tr>
+        <tr>
+            <td>中文及全角标点符号(字符)</td>
+            <td><span class="regex">[\u3000-\u301e\ufe10-\ufe19\ufe30-\ufe44\ufe50-\ufe6b\uff01-\uffee]</span></td>
+        </tr>
+        <tr>
+            <td>中国大陆固定电话号码</td>
+            <td><span class="regex">(\d{4}-|\d{3}-)?(\d{8}|\d{7})</span></td>
+        </tr>
+        <tr>
+            <td>中国大陆手机号码</td>
+            <td><span class="regex">1\d{10}</span></td>
+        </tr>
+        <tr>
+            <td>中国大陆邮政编码</td>
+            <td><span class="regex">[1-9]\d{5}</span></td>
+        </tr>
+        <tr>
+            <td>中国大陆身份证号(15位或18位)</td>
+            <td><span class="regex">\d{15}(\d\d[0-9xX])?</span></td>
+        </tr>
+
+        <tr>
+            <td>非负整数(正整数或零)</td>
+            <td><span class="regex">\d+</span></td>
+        </tr>
+        <tr>
+            <td>正整数</td>
+            <td><span class="regex">[0-9]*[1-9][0-9]*</span></td>
+        </tr>
+        <tr>
+            <td>负整数</td>
+            <td><span class="regex">-[0-9]*[1-9][0-9]*</span></td>
+        </tr>
+        <tr>
+            <td>整数</td>
+            <td><span class="regex">-?\d+</span></td>
+        </tr>
+        <tr>
+            <td>小数</td>
+            <td><span class="regex">(-?\d+)(\.\d+)?</span></td>
+        </tr>
+        <tr>
+            <td>不包含abc的单词</td>
+            <td><span class="regex">\b((?!abc)\w)+\b</span></td>
+        </tr>
+    </tbody></table>
+    <p>以上正则表达式均经过多次测试，如果你发现有错误，请通过 <a href="http://weibo.com/deerchao"><img src="./常用正则表达式_files/weibo.png" alt="">微博</a> 联系我．</p>
+    <script type="text/javascript"><!--
+    google_ad_client = "ca-pub-1134642721173543";
+    /* bottom/common-regex/deerchao.net */
+    google_ad_slot = "0071029554";
+    google_ad_width = 728;
+    google_ad_height = 90;
+    //-->
+    </script>
+    <script type="text/javascript" src="./常用正则表达式_files/show_ads.js.下载"></script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" src="./常用正则表达式_files/saved_resource.html"></iframe></ins></ins>
+
+
+<div id="qb-sougou-search" style="display: none; opacity: 0;"><p>搜索</p><p class="last-btn">复制</p><iframe src="./常用正则表达式_files/saved_resource(1).html"></iframe></div></body><div></div><div></div></html>

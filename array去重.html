@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>simonDemo</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<meta name="description" content="请输入您的描述信息" />
+	<meta name="keywords" content="关键字,关键字,关键字" />
+	<meta name="author" content="Simon Sun" />
+	<style></style>
+	<script>
+		var b=0;
+		var array=[1,2,3,4,5];
+		var newArr=[];
+		function abc(){
+			(function(){ 
+				for(var a=0;a<12;a++){
+		//		console.log(rs.rows[a].conversion_id);
+		//		console.log(rs.rows[a]);
+					b++;
+					array.push(b);
+				}
+				console.log("array1",array);
+				for(var i=0;i<array.length;i++){
+				  	for(var j=i+1;j<array.length;j++){
+				  		if (array[i]==array[j]){
+				  			array.splice(j,1);
+		 			          	j--;
+				  		}
+				  	}
+			  	newArr[i]=array[i];
+	  			}	
+			
+
+	  		console.log("b",b);
+			})();
+		};
+		
+		
+		abc();
+		console.log("array全局",array);
+		console.log("newArr全局",newArr);
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

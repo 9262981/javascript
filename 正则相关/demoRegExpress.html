@@ -1,0 +1,37 @@
+<!-- 
+      demoRegExpress.html
+      <project>
+      
+      Created by SimonSun9262981 on 2017-01-16.
+      Copyright 2017 SimonSun9262981. All rights reserved.
+ -->
+ 
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		http://localhost/mx2.0/html/mx2_spxq.html?id=1484201647&skldfjklsj.htm
+		http://localhost/mx2.0/html/mx2_spxq.html?id=148618217&asassdflkj123.html
+		http://localhost/mx2.0/html/mx2_spxq.html?id=1484201647&slkdfjklsdfj.html
+		http://localhost/mx2.0/html/mx2_spxq.html?id=14842016&123.html
+		http://localhost/mx2.0/html/mx2_spxq.html?id=14841618217&123sdklfjskld123.html
+
+	</body>
+	<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		$("body").html();
+
+		var str=$("body").text();
+		console.log('str',str);
+		n=str.replace(/http:\/\/localhost\/mx2\.0\/html\/mx2_spxq\.html\?id\=/igm,"");
+		console.log("n",n);
+		c=n.replace(/(\.html|\.htm)/igm,"");
+		//取出了c为两组数据//分别是get传递出来了两组数据
+		
+		
+		console.log('c',c);
+	</script>
+</html>
