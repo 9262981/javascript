@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script >
+    // function getQueryString(name) {
+    // var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+
+    // '?src=360chrome_newtab_search&ie=utf-8&q=sublime%20text%203破解'
+    var r = 'src=111h&ie=222&q=333'.match(/(^|&)src=([^&]*)(&|$)/);
+    // var r = 'src=111h&ie=222&q=333'.search(/(^|&)src=([^&]*)(&|$)/);
+    // var r = (/(^|&)src=([^&]*)(&|$)/).test('src=111h&ie=222&q=333');
+    // if (r != null) return unescape(decodeURI(r[2])); return null;
+    console.log("r",r);
+// }
+
+// console.log(1,getQueryString("src"));
+// "src=111h&", "", "111h", "&",
+
+// console.log(2,getQueryString("ie"));
+// "&ie=222&", "&", "222", "&",
+//
+// console.log(3,getQueryString("q"));
+// "&q=333", "&", "333", ""
+
+</script>
+</html>
