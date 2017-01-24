@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>simonDemo</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="description" content="请输入您的描述信息">
+	<meta name="keywords" content="关键字,关键字,关键字">
+	<meta name="author" content="Simon Sun">
+	<style></style> 
+	<script>
+		// function myFunction(a, b) {
+		//     return a * b;
+		// }
+		// myArray = [10,2];
+		// console.log(myFunction.apply(myFunction, myArray));   // 返回 20
+		// 
+		// var abc = new Function();
+		// function myFunction(a, b) {
+		//     return a * b;
+		// }
+		// console.log(abc.call(myFunction, 10, 2));      // 返回 20
+		// 
+		/**
+		 * 闭包 
+		 */
+		
+		function add() {
+		    var counter = 0;
+		    counter += 1;
+		}
+
+		add();
+		add();
+		add();
+
+		// 本意是想输出 3, 但事与愿违，输出的都是 1 !
+		var add = (function () {
+		    var counter = 0;
+		    return function () {return counter += 1;}
+		})();
+		add();
+		add();
+		add();
+		add();
+		console.log(add())
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
