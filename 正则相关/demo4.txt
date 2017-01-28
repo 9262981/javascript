@@ -1,0 +1,2 @@
+mx2_st_goodios.html?no=388&payno=1&freeno=22&userId=1123&total=0.00
+(^|&)userId=([^&]*)(&|$)

@@ -1,10 +1,4 @@
-// 
-//  getURLKeyValue.html
-//  <project>
-//  
-//  Created by SimonSun9262981 on 2017-01-19.
-//  Copyright 2017 SimonSun9262981. All rights reserved.
-// 
+
 <!DOCTYPE HTML>
 <html lang="zh-cn">
 <head>
@@ -17,36 +11,23 @@
 	<style></style>
 	<script>
 		
-		function GetQueryString(name) {
-			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-			var b=window.location.search.substr(1);
-			console.log("b",b);
-			//b issueno=38851&payno=1&freeno=1&userId=11235&total=0.00
-			var r = 'issueno=38851&payno=1$freeno=11235$userId=11235$total=0.00'.match('issueno');
-			// alert(r);
-			console.log("r",r);
-			// "issueno=38851&", "", "38851", "&",
-			if(r != null) return unescape(r[2]);
-			return null;
-
-		}
-
-		"issueno=38851&", "", "38851", "&", 
-		console.log("issueno",GetQueryString("issueno"));
-		
+	
+		// https://localhost/index.html?goodsno=38851&payno=1&freeno=1&userId=11235&total=0.00
 		
 		
 		//  ========== 
 		//  = 基础获取 = 
 		//  ========== 
-//		function GetQueryString(name) {
-//			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-//			var r = window.location.search.substr(1).match(reg);
-//			https://localhost/index.html?goodsno=38851&payno=1&freeno=1&userId=11235&total=0.00
-//			if(r != null) return unescape(r[2]);
-//			return null;
-//			console.log('r',r);
-//		}
+		function GetQueryString(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+			var r = window.location.search.substr(1).match(reg);
+			if(r != null) return unescape(r[2]);
+			return null;
+			console.log('r',r);
+		}
+		
+			
+		
 	</script>
 </head>
 <body>

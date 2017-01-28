@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+		function GetQueryString(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+			var b=window.location.search.substr(1);
+			console.log("b",b);
+			//b issueno=32155&payno=1&freeno=1&userId=11235&total=0.00
+			var r = b.match(reg);
+			// alert(r);
+			console.log("r",r);
+			// "issueno=32155&", "", "32155", "&",
+			if(r != null) return unescape(r[2]);
+			return null;
+
+		}
+
+		// "issueno=32155&", "", "32155", "&", 
+		console.log("issueno",GetQueryString("issueno"));
+		
+		
+</script>
+</html>
