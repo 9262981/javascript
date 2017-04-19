@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<!--ul>li{item $}*5-->
+		<ul id="myBtn">
+			<li>item 1</li>
+			<li>item 2</li>
+			<li>item 3</li>
+			<li>item 4</li>
+			<li>item 5</li>
+		</ul>
+		<div id="demo"></div>
+	</body>
+	<script src="http://libs.baidu.com/jquery/1.6.3/jquery.min.js"></script>
+	<script type="text/javascript">
+//			var a=document.getElementById("myBtn");
+//				var lii = document.getElementsByTagName("li");
+//				console.log("null",$("#myBtn"));
+//				console.log(0,$("#myBtn")[0]);
+//			$("#myBtn")[0].addEventListener("click", myFunction);//true
+
+//			$("#myBtn").addEventListener("click", myFunction);//false
+			
+//			$("#myBtn").click(function  () {
+//				alert(111);
+//			})//true
+			
+//			$("#myBtn")[0].click(function  () {
+//				alert(111);
+//			})//false
+
+//				$("li")[0].addEventListener("click", myFunction);//true
+//				a.addEventListener("click", myFunction);//true
+
+				function myFunction(){
+					document.getElementById("demo").innerHTML = "Hello World";
+				}
+				for(var i=0;i<$('li').length;i++){
+					$("li")[i].addEventListener("click",myFunction,false);
+				}
+
+
+			
+			
+
+	</script>
+
+</html>
