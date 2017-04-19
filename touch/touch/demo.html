@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<a href="###">连接一</a>
+<a href="###">连接二</a>
+<a href="###">连接三</a>
+<a href="###">连接四</a>
+<a href="###">连接五</a>
+<a href="###">连接六</a>
+<a href="###">连接七</a>
+<a href="###">连接八</a>
+<a href="###">连接九</a>
+
+<script>
+var myHref = document.getElementsByTagName("a");
+for (var i = 0,mylength = myHref.length; i<mylength; i++) {
+    (function(i){  //这里的i跟外部的i实际不是一个i
+        myHref[i].addEventListener("click",function(e){
+            e.preventDefault();
+            alert(i);
+        },"false");
+    })(i);
+}
+i=555;    //不会影响
+</script>
+</html>

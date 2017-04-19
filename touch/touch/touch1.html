@@ -1,0 +1,19 @@
+<body onload="start();">
+<style type="text/css">
+#dom {
+  width:500px;
+  height:500px;
+  background:black;
+}
+</style>
+<div id="dom"></div>
+<script type="text/javascript">
+function onTouchStart(e){
+    console.log(e);
+}
+function start(){
+    var dom = document.getElementById('dom');
+    dom.addEventListener('touchstart', onTouchStart, false);
+}
+</script>
+</body>

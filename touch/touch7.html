@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+</head>
+
+<style type="text/css">
+	*{
+		background: url('1490588400346.jpg');
+		margin:0;
+		padding:0;
+		position:absolute
+	}
+	body{
+		width:100%;
+		overflow: hidden;
+	}
+	#aaa{
+		float:left;
+		background:url('http://www.divcss5.com/uploads/allimg/130304/1_130304090514_1.png');
+		
+		left:10px;
+		width:555px;
+		height:150px;
+	}
+	
+	.bggreen{
+		background: green;
+	}
+	.bgred{
+		background: red;
+	}
+</style>
+<body>
+	<div id="inp"></div>  
+	<div id="aaa" class="bggreen">
+		
+	</div>  
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript">
+		var startx, starty,ccc;
+    //获得角度
+  
+    //手指接触屏幕
+    document.addEventListener("touchstart", function(e) {
+        startx = e.touches[0].pageX;
+        starty = e.touches[0].pageY;
+    }, false);
+    //手指离开屏幕
+    document.addEventListener("touchend", function(e) {
+        var endx, endy;
+        endx = e.changedTouches[0].pageX;
+        endy = e.changedTouches[0].pageY;
+        ccc=startx-endx;
+        $("#aaa").css("left",ccc);
+    }, false);
+		console.log(ccc);
+        
+
+</script>
+</html>
+
