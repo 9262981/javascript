@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>simonDemo</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<meta name="description" content="请输入您的描述信息" />
+	<meta name="keywords" content="关键字,关键字,关键字" />
+	<meta name="author" content="Simon Sun" />
+	<meta http-equiv="Access-Control-Allow-Origin" content="*" />
+	<style>
+		.loading {
+		  position: fixed;
+		  top: 50%;
+		  left: 50%;
+		  width: 120px;
+		  height: 120px;
+		  margin: -60px 0 0 -60px;
+		  padding: 10px;
+		  background: rgba(0, 0, 0, 0.6) url(loading.gif) no-repeat;
+		  background-size: 50% 50%;
+		  background-position: 50% 50%;
+		  border-radius: 10px;
+		}
+	</style>
+
+</head>
+<body>
+</body>
+
+
+
+
+
+<script src="http://libs.baidu.com/jquery/1.6.3/jquery.min.js"></script>
+	<script>
+		(function loadMore() {
+            $.ajax({
+                url: 'https://api.douban.com//v2/movie/top250',
+                dataType: 'jsonp',
+                contentType:"Access-Control-Allow-Origin",
+                type:"get",
+                beforeSend: function() {
+                    var loading = '<div class="loading"></div>';
+                    $("body").append(loading);
+                },
+                success: function(data) {
+                	html="";
+                        
+                	for(var a=0;a<data.subjects.length;a++){
+                		html+="<img src='"+data.subjects[a].images.large+"'>";
+                	}
+                   		$(".loading").remove();
+                        
+                        $("body").append(html);
+                    console.log(data)
+                },
+                error: function(data) {
+                   console.log(data);
+                }
+            });
+        })()
+	</script>
+</html>
+
