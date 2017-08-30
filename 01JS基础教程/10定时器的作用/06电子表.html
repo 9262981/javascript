@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>电子表</title>
+	<!-- http://www.wandoujia.com/apps/com.happybluefin.android.clock -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<script>
+		// 识别数字为一位或者两位，进行相应的处理
+		function toDouble(n){
+			if(n<10){
+				return "0"+n;
+			}else{
+				return ""+n
+			}
+		}
+		
+
+		window.onload=function  () {
+			
+
+		
+			setInterval(function(){
+				var aImg=document.getElementsByTagName('img');
+				var myDate = new Date();
+				var dNow=toDouble(myDate.getHours())+toDouble(myDate.getMinutes())+toDouble(myDate.getSeconds());
+				var str=dNow;
+				for (var i=0;i<aImg.length;i++){
+					aImg[i].src='img/'+str[i]+'.png';
+				}
+			},100);
+		}
+
+	</script>
+</head>
+<body>
+	<div class="main">
+		<div id="time" class="time">
+			<img src="img/0.png" alt="">
+			<img src="img/0.png" alt="">
+			:
+			<img src="img/0.png" alt="">
+			<img src="img/0.png" alt="">
+			:
+			<img src="img/0.png" alt="">
+			<img src="img/0.png" alt="">
+		</div>
+	</div>
+	
+</body>
+</html>

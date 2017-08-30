@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>继承相关</title>
+	<script type="text/javascript">
+	var o = {
+	  a: 2,
+	  m: function(){
+	    return this.a + 1;
+	  }
+	};
+
+	console.log(o.m()); // 3
+	// 当调用 o.m 时,'this'指向了o.
+
+	// Object.create(proto [, propertiesObject ]) 是E5中提出的一种新的对象创建方式，第一个参数是要继承的原型，如果不是一个子函数，可以传一个null，第二个参数是对象的属性描述符，这个参数是可选的。
+	// ECMAScript 5 中引入了一个新方法：Object.create()。可以调用这个方法来创建一个新对象。新对象的原型就是调用 create 方法时传入的第一个参数：
+	var p = Object.create(o);
+	// p是一个对象, p.[[Prototype]]是o.
+
+	p.a = 12; // 创建 p 的自身属性a.
+	console.log(p.m()); // 13
+	// 调用 p.m 时, 'this'指向 p. 
+	// 又因为 p 继承 o 的 m 函数
+	// 此时的'this.a' 即 p.a，即 p 的自身属性 'a' 
+	</script>
+</head>
+<body>
+	<pre>
+		JavaScript 并没有其他基于类的语言所定义的“方法”。在 JavaScript 里，任何函数都可以添加到对象上作为对象的属性。函数的继承与其他的属性继承没有差别，包括上面的“属性遮蔽”（这种情况相当于其他语言的方法重写）。
+
+		当继承的函数被调用时，this 指向的是当前继承的对象，而不是继承的函数所在的原型对象。
+	</pre>
+</body>
+</html>

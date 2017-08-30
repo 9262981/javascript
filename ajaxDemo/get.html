@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+	//?传参
+//	$("button").click(function(){
+//		$.get("get.php?url=aaa",function(data,status){
+//			alert("数据: " + data + "\n状态: " + status);
+//		});
+//	});
+	//对象传参
+//	$("button").click(function(){
+//		$.get("get.php",{url:"aaa"},function(data,status){
+//			alert("数据: " + data + "\n状态: " + status);
+//		});
+//	});
+	//data传参
+	$("button").click(function(){
+		$.get("get.php",'url=aaa',function(data,status){
+		alert("数据: " + data + "\n状态: " + status);
+		});
+		});
+});
+</script>
+</head>
+<body>
+
+<button>发送一个 HTTP GET 请求并获取返回结果</button>
+
+</body>
+</html>

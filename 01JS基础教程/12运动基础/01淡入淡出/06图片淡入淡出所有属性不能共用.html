@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>淡入淡出的图片</title>
+	<style type="text/css">
+		div{
+			width:300px;
+			height:200px;
+			background: red;
+			filter:alpha(opacity:30);
+			opacity:0.3;
+			margin:10px ;
+			margin-top:55px;
+		}
+		div img{
+			
+			width: 300px;
+			height: 200px;
+		}
+	</style>
+	
+</head>
+<body>
+	<div><img src="img/1.jpg"></div>
+	<div><img src="img/1.jpg"></div>
+	<pre>多物体运动时候 所有的东西都不可以公用</pre>
+</body>
+	<script>	
+	var alpha=30;
+	var timer=null;
+	var oDemo=document.getElementsByTagName('div');//作用域问题
+	console.log(oDemo[0]);
+	
+	window.onload=function  () {
+		for(var i=0 ; i<2 ;i++){
+		oDemo[i].alpha=30;
+		oDemo[i].onmouseover=function  () {
+			startMove(100,this);
+		}
+		oDemo[i].onmouseout=function  () {
+			startMove(30,this);
+			};
+		};
+	};
+		function startMove(iTarget,a){
+
+			clearInterval(a.timer);
+			a.timer=setInterval(function(){
+				var speed=0;
+				if(a.alpha<iTarget){
+					speed=5;
+				}else{
+					speed=-5;
+				}
+
+				if(a.alpha==iTarget){
+					clearInterval(a.timer);
+				}else{
+					a.alpha+=speed;
+					a.style.filter="a.alpha(opacity:"+a.alpha+")";
+					a.style.opacity=a.alpha/100;
+				};
+				//判断物体透明度，做出运动选择；
+			},30);
+		};
+	
+	
+	</script>
+</html>

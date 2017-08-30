@@ -1,0 +1,46 @@
+
+<!--DOCTYPE html-->
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+*{ text-align:center;}
+input{ margin-top:30px; padding:10px 20px;}
+#div1{ width:500px; height:300px; background:red; margin:10px auto;}
+</style>
+</head>
+<body>
+<input type="button" value="style" id="btn" />
+<div id="div1"></div>
+ 
+<script>
+//获取非行间css样式
+function getStyle(obj,attr){    //获取非行间样式，obj是对象，attr是值
+    if(obj.currentStyle){   //针对ie获取非行间样式
+        return obj.currentStyle[attr];
+    }else{
+        return getComputedStyle(obj,false)[attr];   //针对非ie
+    };
+};
+//为对象写入/获取css样式
+function css(obj,attr,value){   //对象，样式，值。传2个参数的时候为获取样式，3个是设置样式
+    if(arguments.length == 2){  //arguments参数数组，当参数数组长度为2时表示获取css样式
+        return getStyle(obj,attr);  //返回对象的非行间样式用上面的getStyle函数
+    }else{
+        if(arguments.length == 3){  //当传三个参数的时候为设置对象的某个值
+            obj.style[attr] = value;
+        };
+    };
+};
+window.onload = function(){
+    var oDiv = document.getElementById("div1");
+    var oBtn = document.getElementById("btn");
+    oBtn.onclick = function(){
+       
+        css(oDiv,"width","40");
+     
+    };
+};
+</script>
+</body>
+</html>

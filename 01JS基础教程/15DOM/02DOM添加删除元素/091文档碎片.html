@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>deleteElement</title>
+</head>
+<body>
+	<pre>
+	
+	</pre>
+	
+	<ul id="ul1">
+
+	</ul>
+</body>
+<script>
+	// window.onload=function  () {
+		
+
+	// 	var oUl=document.getElementById("ul1");
+
+		
+	// 	for (var i=0;i<1000;i++){
+	// 		var oLi=document.createElement('li');
+	// 		oUl.appendChild(oLi);
+	// 	}
+	
+	// }
+	///////////////////////////////////////////
+	window.onload=function  () {
+		
+
+		var oUl=document.getElementById("ul1");
+		var oFrag=document.createDocumentFragment();
+		
+		for (var i=0;i<1000;i++){
+			var oLi=document.createElement('li');
+			oFrag.appendChild(oLi);
+		}
+		oUl.appendChild(oFrag);
+	}
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>createElement</title>
+</head>
+<body>
+	<pre>
+		1创建DOM元素
+		createElement(标签名)	创建一个节点；
+		appendChild(节点)		追加一个节点；
+		
+		2插入元素
+		insertBefore(节点，原有节点)	在已有元素前插入；
+
+		3删除DOM元素
+		removeChild(节点)		删除一个节点
+	</pre>
+	<input type="text" value="123" id="txt1">
+	<input type="button" id="btn1" value="创建li">
+	<ul id="ul1"></ul>
+</body>
+<script>
+	window.onload=function  () {
+		var oBtn=document.getElementById("btn1");
+		var oUl=document.getElementById("ul1");
+		var oTxt=document.getElementById('txt1');
+		oBtn.onclick=function  () {
+			var oLi=document.createElement('li');
+			//系统内存存入；
+			// oLi.innerHTML=oTxt.value;
+			oLi.innerHTML=oTxt.value;
+			// oLi.innerHTMl=oTxt.value;
+			// console.log(oTxt.value);
+			oUl.appendChild(oLi);
+			//在父级上添加一个子节点插入到一个位置
+
+		}
+	}
+</script>
+</html>

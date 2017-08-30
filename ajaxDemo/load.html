@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+//1、load 正常方式 get提交
+//$(document).ready(function(){
+//$("button").click(function(){
+//  $("#div1").load("demo_test.txt h2");
+//});
+//});
+//2、get方式提交直接加？后面是参数
+//$(document).ready(function(){
+//$("button").click(function(){
+//  $("#div1").load("get.php?url=aaa");
+//});
+//});
+//3、post 方式提交 加一个对象过去。
+
+//$(document).ready(function(){
+//$("button").click(function(){
+//  $("#div1").load("loadpost.php",{
+//  	url:"aaaa"
+//  });
+//});
+//});
+
+//4、回调函数
+//response 从服务器返回的内容，
+//status 返回状态，
+//xhr 
+	$(document).ready(function(){
+		$("button").click(function(){
+		    $("#div1").load("loadpost.php",{
+		    	url:"aaa111"
+		    },function  (response,status,xhr) {
+//		    	responseText 作为响应主体被返回的文本
+//					responseXML
+//					如果响应主体内容类型是"text/xml"或"application/xml"，
+//					则返回包含响应数据的 XML DOM 文档
+//					status 响应的 HTTP 状态
+//					statusText HTTP 状态的说明
+
+//status状态声明
+//HTTP 状态码 状态字符串 说明
+//200 OK 服务器成功返回了页面
+//400 Bad Request 语法错误导致服务器不识别
+//401 Unauthorized 请求需要用户认证
+//404 Not found 指定的 URL 在服务器上找不到
+//500 Internal Server Error 服务器遇到意外错误，无法完成请求
+//503 ServiceUnavailable 由于服务器过载或维护导致无法完成请求
+					alert(xhr.status);
+//		    	if(xhr.status=="200"){
+////		    		alert(response);
+//		    		alert(xhr.responseText);
+//		    		alert(xhr.statusText);
+//					
+//		    	}else{
+//		    		alert("post方式不成功");
+//		    	}
+//		    	alert(response);
+//		    	alert(status);
+		    });
+		});
+		});
+
+</script>
+</head>
+<body>
+
+<div id="div1"><h2>使用 jQuery AJAX 修改文本</h2></div>
+<button>获取外部文本</button>
+
+</body>
+</html>

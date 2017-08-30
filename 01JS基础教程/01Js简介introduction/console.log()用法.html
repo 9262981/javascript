@@ -1,0 +1,59 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>javascript的console.log()用法</title> 
+<script type="text/javascript"> 
+/* 
+console.log 原先是 Firefox 的"专利"，严格说是安装了 Firebugs 之后的 Firefox 所独有的调试"绝招"。 
+这一招，IE8 学会了，不过用起来比 Firebugs 麻烦，只有在开启调试窗口(F12)的时候，console.log 才能出结果，不然就报错。 
+今天看到 Opera 也有个叫 dragonfly 的东东，用这东西查看 DOM，已经可以和 Firebug 媲美，然而还是不能用 console.log。于是有人就提供了这样两句代码： 
+window.console = window.console || {}; 
+console.log || (console.log = opera.postError)； 
+经测试，以上代码好使。 
+至此，Firefox/IE/Opera 都能用上 console.log 了。 
+当然，IE 和 Opera 下的 console.log 比起 Firebugs 原创的 console.log，还是太过简单，比如参数是 Object 或者数组就没有进一步的显示功能。 
+*/ 
+//变量 
+var i = 'I am a string'; 
+console.log('变量：',i); 
+//数组 
+var arr = [1,2,3,4,5]; 
+console.log('数组：',arr); 
+
+//对象 
+var obj1 = { 
+key1 : 'value1', 
+key2 : 'value2', 
+key3 : 'value3' 
+}; 
+var obj2 = { 
+key6 : 'value4', 
+key5 : 'value5', 
+key4 : 'value6' 
+}; 
+var obj3 = { 
+key9 : 'value7', 
+key8 : 'value8', 
+key7 : 'value9' 
+}; 
+console.log('对象：',obj1); 
+//对象数组 
+var objArr1 = [obj1,obj2,obj3]; 
+var objArr2 = [[obj1],[obj2],[obj3]]; 
+console.log('对象数组1：',objArr1); 
+console.log('对象数组1：',objArr2); 
+/* 
+输出： 
+变量：I am a string 
+数组：[1, 2, 3, 4, 5] 
+对象：Object { key1="value1", key2="value2", key3="value3"} 
+对象数组1：[Object { key1="value1", key2="value2", key3="value3"}, Object { key6="value4", key5="value5", key4="value6"}, Object { key9="value7", key8="value8", key7="value9"}] 
+对象数组1：[[Object { key1="value1", key2="value2", key3="value3"}], [Object { key6="value4", key5="value5", key4="value6"}], [Object { key9="value7", key8="value8", key7="value9"}]] 
+*/ 
+</script> 
+</head> 
+<body> 
+</body> 
+</html> 

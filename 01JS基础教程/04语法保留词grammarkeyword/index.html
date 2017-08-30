@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>alert("1")</script>
+</head>
+<body>
+	<pre>
+	第三课、JavaScript的语法与关键字
+
+	1、JavaScript的语法
+
+	1、js的变量区分大小写
+		username userName  这是两个不同的变量
+	2、每行结尾的分号可有可无，如果语句的结束处没有分号，那么js会自动将这行
+		代码的结尾作为语句的结尾。
+		alert("Hello World");
+		alert("Hello World")
+	3、变量是弱类型
+		定义变量时至使用var运算符。
+			比如：var username="tom";正确
+			      var age=30;正确
+			      int age=30;错误
+	4、使用大括号标签代码块
+		{  //代码} 被封装在大括号内的语句按照顺序执行。
+
+	5、注释
+		1、单行注释 //
+		    单行注释使用双斜线"//" 开头，在"//"后面的文字即为注释内容，
+		    注释的内容在代码执行过程中不起作用。
+		    var now=new Date();//获取日期对象
+		2、多行注释
+			多行注释以"/*"开头，以"*/"结尾，在两者之间的内容为注释内容，
+			在代码执行过程中不起任何作用。
+			/*
+			*功能：获取当前日期
+			*作者：tom
+			*/
+			function getClock(){
+				//内容
+			}
+2、JavaScript中的关键字
+	var username="tom";
+	关键字不能用作变量名，函数名以及循环标签。
+	abstract 抽象的，理论上的; 难解的; 抽象派的; 茫然的;
+	continue   finally    
+	instanceof       instance情况; 例子，实例; 要求，建议; [法] 诉讼手续;
+	private  this	boolean   default   float      int         public   throw 丢; 抛; 投掷;
+
+	break     do        for        interface界面; <计>接口; 交界面 部分; 关键字; 口;
+  	return   typeof
+	byte  [网络]	比特; 位; 字符;
+    double    function 功能，作用; 应变量，函数; 自定义函数; 方法; 类;
+    long        short    true
+	case      else      goto       
+	native 原生; 本地; 本地人;	     static 静态变量; 内部函数; 靜態;
+  	var	catch 捕获异常; 球; 抓捕;
+    extends  [网络]	继承; 扩展; 关键字;
+ 	implements [网络]	实现; 工具; 施行;vt.	实施，执行; 使生效，实现; 落实; （政策） 把…填满;
+	new         super    void 无效的; 空的，空虚的，没人住的; （职位） 空缺着的;
+	char   [网络]	字符变量; 字符型数据; 字节;
+   false     import 导入数据; 引用; 含义;css
+    null        switch 开关; 转换，  while
+	class    网络]	类; 分类; 压力级;
+ final     in         package  包装   with     synchronized [词典]	同步的;
+
+ JavaScript 关键字
+
+和其他任何编程语言一样，JavaScript 保留了一些关键字为自己所用。
+
+JavaScript 同样保留了一些关键字，这些关键字在当前的语言版本中并没有使用，但在以后 JavaScript 扩展中会用到。
+
+JavaScript 关键字必须以字母、下划线（_）或美元符（$）开始。
+
+后续的字符可以是字母、数字、下划线或美元符（数字是不允许作为首字符出现的，以便 JavaScript 可以轻易区分开关键字和数字）。
+
+以下是 JavaScript 中最​​重要的保留字（按字母顺序）：
+abstract 	else 	instanceof 	super
+boolean 	enum 	int 	switch
+break 	export 	interface 	synchronized
+byte 	extends 	let 	this
+case 	false 	long 	throw
+catch 	final 	native 	throws
+char 	finally 	new 	transient
+class 	float 	null 	true
+const 	for 	package 	try
+continue 	function 	private 	typeof
+debugger 	goto 	protected 	var
+default 	if 	public 	void
+delete 	implements 	return 	volatile
+do 	import 	short 	while
+double 	in 	static 	with
+	</pre>
+</body>
+</html>

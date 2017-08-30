@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>offsetleft</title>
+	<style type="text/css">
+		*{padding:0px;
+			margin:0px;}
+		.gonggao{
+			width:880px;
+			height:150px;
+			border: 3px solid grey;
+			overflow: hidden;
+			position:relative;
+			
+		}
+		.gonggao>ul{
+			width:880px;
+			background: red;
+			/*width:122222px;*/
+			height:150px;
+			list-style: none;
+			position: absolute;
+			overflow: hidden;
+			
+		}
+		.gonggao>ul>li{
+			float:left;
+			width:220px;
+			
+		}
+		.gonggao>ul>li>img{
+			width:220px;
+			height:150px;
+			
+
+		}
+		span{
+			width:21px;	
+			height:59px;
+			position: absolute;
+			z-index:99999;
+			
+			margin-top: 45px;
+			margin-left:
+		}
+		p{
+			width:21px;	
+			height:59px;
+			position: absolute;
+			z-index:99999;
+			display: inline-block;
+			margin-top: 45px;
+			right:0px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function  () {
+			var oDiv=document.getElementById("div1");
+			var oUl=oDiv.getElementsByTagName('ul')[0];
+			var aLi=oUl.getElementsByTagName('li');
+			var speed=5;
+			////////////////////////////////////////////////////////
+			var linkLeft=document.getElementById("left");
+			linkLeft.onmouseover=function  () {
+				speed=-6;
+				
+			}
+			var linkRight=document.getElementById("right");
+			linkRight.onmouseover=function  () {
+				speed=6;
+			
+			}
+			///////////////////////////////////////////////////////
+			oUl.innerHTML=oUl.innerHTML+oUl.innerHTML;
+			oUl.style.width=aLi[0].offsetWidth*aLi.length+'px';
+			function  move() {
+				if(oUl.offsetLeft<-oUl.offsetWidth/2){
+					oUl.style.left='0';
+				}
+				if(oUl.offsetLeft>0){
+					oUl.style.left=-oUl.offsetWidth/2+'px';
+				}
+				oUl.style.left=oUl.offsetLeft+speed+'px';
+			}
+			////////////////////////////////////////////////////////
+			var demo=setInterval(move,30);
+			oDiv.onmouseover=function  () {
+				clearInterval(demo);
+			}
+			oDiv.onmouseout=function  () {
+				demo=setInterval(move,30);
+			}
+		};
+	</script>
+</head>
+<body>
+	
+	<div id="div1" class="gonggao">
+		<span><a href="javascript:;" id="left"><img src="img/btn-left.png" alt=""></a></span>
+		<ul >
+			
+			<li><img src="img/1.jpg"></li>
+			<li><img src="img/2.jpg"></li>
+			<li><img src="img/3.jpg"></li>
+			<li><img src="img/4.jpg"></li>
+		
+		</ul>
+		<p><a href="javascript:;" id="right"><img src="img/btn-right.png" alt=""></a></p>
+	</div>
+	
+		
+</body>
+</html>

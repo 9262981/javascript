@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>获取css样式</title>
+	<style type="text/css">
+		#demo{width: 200px;height: 200px;background: red;}
+	</style>
+	<script type="text/javascript">
+	function getStyle (obj,attr) {
+		if(obj.currentStyle){
+			return obj.currentStyle[attr];	
+		}else{
+			return getComputedStyle(obj,false)[attr];
+		}
+		
+	}
+		window.onload=function  () {
+			var a=document.getElementById("demo");
+			a.onclick=function  () {
+				
+				alert(getStyle(a,'height'));
+			}
+		}
+		
+	</script>
+</head>
+<body>
+	<div id="demo">demo</div>
+</body>
+</html>

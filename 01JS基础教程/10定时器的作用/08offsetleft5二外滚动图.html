@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>offsetleft</title>
+	<style type="text/css">
+		
+		.gonggao{
+			width:922px;
+			height:150px;
+			border: 3px solid grey;
+			overflow: hidden;
+			/*box-sizing:border-box;*/
+			
+		}
+		.gonggao>ul{
+			list-style:none;
+			background: red;
+			width:1960px;
+			height:150px;
+			z-index: -99;
+			position: absolute;
+			padding:0px;
+			margin:0px;
+			margin-left: 21px;
+		}
+		.gonggao>ul>li{
+			float:left;
+			
+
+		}
+		.gonggao>ul>li>img{
+			width:220px;
+			height:150px;
+			float:left;
+
+		}
+	/*	span{
+			width:21px;	
+			height:59px;
+			position: absolute;
+			z-index:99;
+			
+			margin-top: 45px;
+			margin-left: -21px;
+		}
+		p{
+			width:21px;	
+			height:59px;
+			position: absolute;
+			z-index:99;
+			display: inline-block;
+			margin-top: 45px;
+			margin-right: -21px;
+		}*/
+	</style>
+	<script type="text/javascript">
+		window.onload=function  () {
+			
+
+			var oDiv=document.getElementById("div1");
+			// console.log(oDiv);
+			var oUl=oDiv.getElementsByTagName('ul')[0];
+			// console.log(oUl);
+			var oLi=oUl.getElementsByTagName('li');
+			// console.log(oLi);
+			// console.log(oLi.length);
+
+
+			oUl.innerHTML=oUl.innerHTML+oUl.innerHTML;
+			oUl.style.width=oLi.length*220;
+			setInterval(function  () {
+				oUl.style.left=oUl.offsetLeft-22+'px';
+				// console.log("123",oUl.style.left);
+			},100);
+				
+
+
+
+		};
+	</script>
+</head>
+<body>
+	
+	<div id="div1" class="gonggao">
+		<ul >
+			
+			<li><img src="img/1.jpg"></li>
+			<li><img src="img/2.jpg"></li>
+			<li><img src="img/3.jpg"></li>
+			<li><img src="img/4.jpg"></li>
+		
+		</ul>
+	</div>
+	
+		
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>运动框架</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+	
+	function getByClass(oParent, sClass)
+	{
+		var aEle=oParent.getElementsByTagName('*');
+		var aResult=[];
+		
+		for(var i=0;i<aEle.length;i++)
+		{
+			if(aEle[i].className==sClass)
+			{
+				aResult.push(aEle[i]);
+			}
+		}
+		
+		return aResult;
+	}
+	window.onload=function  () {
+		var a=document.getElementById("demo");
+		var	b=getByClass(a,"abc")[0];
+		
+			console.log(b);
+	}
+</script>
+<body>
+	<div id="demo">
+		<ul class="abc">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+
+</body>
+
+<script src="move.js"></script>
+</html>

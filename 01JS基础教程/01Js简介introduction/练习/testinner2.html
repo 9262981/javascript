@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>test innerHTML</title>
+	<script language="javascript" type="text/javascript">
+	function temp()
+	{
+		t=document.getElementById("aa");
+		a=Number(t.innerHTML);
+		a+=1;
+		t.innerHTML=a;
+	}
+	</script>
+	
+</head>
+<body>
+	<div id="aa">0</div>
+	<input type=button value="值加1" onclick=temp()>
+	</body>
+</html>

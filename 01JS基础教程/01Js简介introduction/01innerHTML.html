@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>innerHTML</title>
+	<script >
+		function demo () {
+		
+		document.getElementById("demo").innerHTML="My first text";
+		}
+	</script>
+</head>
+<body>
+	<pre>
+		您会经常看到 document.getElementById("some id")。这个方法是 HTML DOM 中定义的。
+
+		DOM (Document Object Model)（文档对象模型）是用于访问 HTML 元素的正式 W3C 标准。
+
+		您将在本教程的多个章节中学到有关 HTML DOM 的知识。
+	</pre>
+	<input type="button" value="innerHTML给HTML添加内容" onclick="demo()">
+	<div id="demo"></div>
+</body>
+</html>

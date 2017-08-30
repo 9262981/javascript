@@ -1,0 +1,608 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/analytics.js" async=""></script><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/rcfm" async="" type="text/javascript"></script><script charset="utf-8" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/cm.txt"></script><script charset="utf-8" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/id.php"></script><script id="UYScript" charset="utf-8" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/v4.js"></script><script id="uyan_script" charset="utf-8" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/a"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<meta http-equiv="x-ua-compatible" content="ie=7">
+
+<title>移动Web开发必备的9款JavaScript开发框架 - 51CTO.COM</title>
+<meta name="description" content="本文将为你介绍9款基于JavaScript的移动Web开发框架，可以让你的工作变得简单、容易。">
+<meta name="keywords" content="移动Web,JavaScript,开发框架">
+<!-- base href="http://mobile.51cto.com/web-434181.htm" -->
+<link href="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/grid.css" rel="stylesheet" type="text/css">
+<link type="text/css" rel="stylesheet" href="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/art_master_top.css">
+<link href="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/css3.css" rel="stylesheet" type="text/css">
+<script language="javaScript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/base_art.js"></script>
+<script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/index_1_down.js"></script>
+<style type="text/css">
+.bds_tools a{ padding:0; margin:0;}
+</style>
+<style type="text/css"></style><link type="text/css" rel="stylesheet" href="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/bdsstyle.css"><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/m.js"></script><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/logger.js"></script></head>
+<body><div style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;" id="BAIDU_DUP_fp_wrapper"><iframe style="width: 0px; height: 0px; visibility: hidden; display: none;" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/o.htm" id="BAIDU_DUP_fp_iframe"></iframe></div><iframe style="display: none;" frameborder="0"></iframe><div style="display: block;" id="bdshare_s"><iframe id="bdsIfr" style="position:absolute;display:none;z-index:9999;" frameborder="0"></iframe><div style="display: none;" id="bdshare_l"><div id="bdshare_l_c"><h6>分享到</h6><ul><li><a href="#" class="bds_mshare mshare">一键分享</a></li><li><a href="#" class="bds_qzone qqkj">QQ空间</a></li><li><a href="#" class="bds_tsina xlwb">新浪微博</a></li><li><a href="#" class="bds_bdysc bdysc">百度云收藏</a></li><li><a href="#" class="bds_renren rrw">人人网</a></li><li><a href="#" class="bds_tqq txwb">腾讯微博</a></li><li><a href="#" class="bds_bdxc bdxc">百度相册</a></li><li><a href="#" class="bds_kaixin001 kxw">开心网</a></li><li><a href="#" class="bds_tqf txpy">腾讯朋友</a></li><li><a href="#" class="bds_tieba bdtb">百度贴吧</a></li><li><a href="#" class="bds_douban db">豆瓣网</a></li><li><a href="#" class="bds_tsohu shwb">搜狐微博</a></li><li><a href="#" class="bds_bdhome bdhome">百度新首页</a></li><li><a href="#" class="bds_sqq sqq">QQ好友</a></li><li><a href="#" class="bds_thx thx">和讯微博</a></li><li><a href="#" class="bds_more">更多...</a></li></ul><p><a href="#" class="goWebsite">百度分享</a></p></div></div></div>
+<!-- 导航 开始-->
+<script id="allmobilize" charset="utf-8" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/allmobilize.js"></script><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" media="handheld" href="#">
+<div id="home_top">    <div class="top_nav">        <div class="left" style="width:400px"><div class="logo_51cto" title="51CTO.COM - 技术成就梦想 -  中国领先的IT技术网站"></div><a href="http://www.51cto.com/">首页</a><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/top_bg_xian.gif" style="padding-top: 2px;" align="absmiddle" height="25" width="16"><a onmouseover="show(1,this);" onmouseout="popupClose();" href="http://www.51cto.com/col/35/" target="_blank">技术频道<img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/nav_ico1.gif" style="padding-left: 4px;" align="absmiddle"></a><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/top_bg_xian.gif" align="absmiddle" height="25" width="16"><a onmouseover="show(2,this);" onmouseout="popupClose();" href="http://www.51cto.com/" target="_blank">51CTO旗下网站<img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/nav_ico1.gif" style="padding-left: 4px;" align="absmiddle"></a><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/top_bg_xian.gif" align="absmiddle" height="25" width="16"><a href="http://www.51cto.com/about/map.htm" target="_blank">地图</a> <a href="http://www.51cto.com/about/rss.html" target="_blank"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/143749870.gif" style="vertical-align:middle; margin-bottom: 5px; margin-left:5px;"></a>       </div>        <div class="right">            <div class="more"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/top_shequ.gif" align="absmiddle" height="16" width="27"><a href="http://gaozhao.51cto.com/" target="_blank" style="color:#CC0000">招聘</a><a href="http://edu.51cto.com/" target="_blank" style="color:#CC0000">学院</a><a href="http://down.51cto.com/" target="_blank">下载</a><a href="http://bbs.51cto.com/" target="_blank">论坛</a><a href="http://blog.51cto.com/" target="_blank">博客</a><a onmouseover="show(3,this)" onmouseout="popupClose()" href="javascript:viod(0);">更多<img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/nav_ico1.gif" style="padding-left: 4px;" align="absmiddle"></a>            </div>            <span id="login_status"><div class="login" style="padding-top:8px; text-align:right;"><a href="http://home.51cto.com/index?reback=http://mobile.51cto.com/web-434181.htm" target="_self">登录</a><a href="http://ucenter.51cto.com/2015/register.php?reback=http://mobile.51cto.com/web-434181.htm" target="_self">注册</a></div></span>                </div>    </div></div>
+<div class="subMenu1" id="s1" onmouseover="popupNoClose();" onmouseout="popupClose();">
+<ul>
+<li><a href="http://network.51cto.com/" target="_blank">网络</a></li>
+<li><a href="http://netsecurity.51cto.com/" target="_blank">安全</a></li>
+<li><a href="http://developer.51cto.com/" target="_blank">开发</a></li>
+<li><a href="http://database.51cto.com/" target="_blank">数据库</a></li>
+<li><a href="http://server.51cto.com/" target="_blank">服务器</a></li>
+<li><a href="http://os.51cto.com/" target="_blank">系统</a></li>
+<li><a href="http://virtual.51cto.com/" target="_blank">虚拟化</a></li>
+<li><a href="http://cloud.51cto.com/" target="_blank">云计算</a></li>
+<li><a href="http://developer.51cto.com/embed/" target="_blank">嵌入式</a></li>
+<li><a href="http://mobile.51cto.com/" target="_blank">移动开发</a></li>
+</ul>
+</div> 
+<div class="subMenu2" id="s2" onmouseover="popupNoClose()" onmouseout="popupClose()">
+<ul>
+<li><a href="http://www.51cto.com/" target="_blank" title="中国领先的IT技术网站">51CTO.COM</a></li>
+<li><a href="http://www.cioage.com/" target="_blank" title="中国首个专门服务于CIO的专业网站">CIOage.com</a></li>
+<li><a href="http://www.watchstor.com/" target="_blank" title="领先的中文存储网络媒体">WatchStor.com</a></li>
+<li><a href="http://www.hc3i.cn/" target="_blank" title="中国首家专注于数字医疗及医疗信息化的专业网站">HC3i.cn</a></li>
+</ul>
+</div>
+<script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/jquery-1.js"></script>
+<script>
+$(function(){
+	$(".bann").height(265);	 
+	$(".bann").css("background-color","white");
+	$(".hot").css("top","450px");
+	//$(".fixfloat").css("height","640px");
+	$(".g_13").find(".focus").css("height","640px");
+});
+var edunum=2;
+$(function(){
+	$("#change").click(function(){
+		$("#edu > ul").css("display","none");
+		var eduid='edu'+edunum;
+		$("#" + eduid).css("display","block");	
+		if(edunum<4){
+			edunum++;	
+		}else{
+			edunum=1;	
+		}							
+	});  
+});
+</script>
+
+<script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/head_art_more1.js"></script><div class="subMenu3" id="s3" onmouseover="popupNoClose()" onmouseout="popupClose()" style="z-index:9999;position: absolute;">
+<ul>
+<li><a href="http://home.51cto.com/" target="_blank">家园</a></li>
+<li><a href="http://gaozhao.51cto.com/" target="_blank" style="color:red;">招聘</a></li>
+<li><a href="http://edu.51cto.com/" target="_blank">学院</a></li>
+<li><a href="http://blog.51cto.com/" target="_blank">博客</a></li>
+<li><a href="http://bbs.51cto.com/" target="_blank">论坛</a></li>
+<li><a href="http://down.51cto.com/" target="_blank">下载</a></li>
+<li><a href="http://selftest.51cto.com/" target="_blank">自测</a></li>
+<li><a href="http://doctor.51cto.com/" target="_blank">门诊</a></li>
+<li><a href="http://blog.51cto.com/newsletter/" target="_blank">周刊</a></li>
+<li><a href="http://book.51cto.com/" target="_blank">读书</a></li>
+<li><a href="http://t.51cto.com/" target="_blank" style="color:red;">题库</a></li>
+</ul>
+</div>
+
+<!-- 登陆信息 -->
+<!-- 导航 结束--> 
+ <div class="g_39 mb10">
+	<div id="tonglanad" class="fl"><script language="JavaScript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/ad_003.js"></script><script type="text/javascript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/ad.htm"></script><iframe noresize="" scrolling="No" marginheight="0" marginwidth="0" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/mobile.htm" align="middle" frameborder="0" height="90" width="760"></iframe></div>
+	<div id="list4" class="fr">
+		<ul>
+			<li id="wordlinkad1"><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wordlink1.js"></script><script type="text/javascript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/ajs_004.php"></script><a href="http://gg1.51cto.com/www/delivery/ck.php?oaparams=2__bannerid=3736__zoneid=270__cb=6ce75e2dc8__oadest=http%3A%2F%2Fcloud.51cto.com%2Fact%2Fveritas%2F201604" target="_blank"><font color="red">数据保护秘籍 点击免费领取</font></a><div id="beacon_6ce75e2dc8" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/lg.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+</li>
+			<li id="wordlinkad2"><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wordlink2.js"></script><script type="text/javascript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/ajs_002.php"></script><a href="http://gg.51cto.com/www/delivery/ck.php?oaparams=2__bannerid=3546__zoneid=631__cb=9c493e5f44__oadest=http%3A%2F%2Fedutest.51cto.com%2Ftraining%2Ftraining_id-19.html%3Fxiaoshou" target="_blank"><font color="red">Android开发120天完成9个APP项目</font></a><div id="beacon_9c493e5f44" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/lg_003.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+</li>
+			<li id="wordlinkad3"><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wordlink3.js"></script><script type="text/javascript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/ajs_003.php"></script><a href="http://gg1.51cto.com/www/delivery/ck.php?oaparams=2__bannerid=3717__zoneid=594__cb=55598c2053__oadest=http%3A%2F%2Fedu.51cto.com%2Ftraining%2Ftraining_id-18.html%3Fxiaoshou" target="_blank"><font color="red">微软企业级内训课程免费学</font></a><div id="beacon_55598c2053" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/lg_002.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+</li>
+			<li id="wordlinkad4"><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wordlink4.js"></script><script type="text/javascript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/ajs.php"></script><a href="http://gg1.51cto.com/www/delivery/ck.php?oaparams=2__bannerid=3549__zoneid=636__cb=b1f086e9a4__oadest=http%3A%2F%2Fedutest.51cto.com%2Ftraining%2Ftraining_id-17.html%3Fxiaoshou" target="_blank"><font color="red">2016年备战软考-重难点解析</font></a><div id="beacon_b1f086e9a4" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/lg_004.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+</li>
+		</ul>
+	</div>
+<br class="dle">
+</div>
+
+<div class="g_39 menu">
+<div class="subNav_logo"><a href="http://mobile.51cto.com/" title="移动开发"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/143329156.gif"></a></div>
+<div class="subNav_l"><a href="http://mobile.51cto.com/">首页</a> | <a href="http://mobile.51cto.com/android/">Android</a> | <a href="http://mobile.51cto.com/iphone/">iOS</a> | <a href="http://mobile.51cto.com/windows-phone/">Windows Phone</a> | <a href="http://mobile.51cto.com/blackberry/">BlackBerry</a> | <a href="http://mobile.51cto.com/webos/">webOS</a> | <a href="http://mobile.51cto.com/symbian/">Symbian</a> | <a href="http://mobile.51cto.com/bada/">bada</a> | <a href="http://mobile.51cto.com/ophone/">OPhone</a> | <a href="http://mobile.51cto.com/others/" target="_blank">其他</a></div>  
+<div class="search fr">
+<dl>
+<form name="searchform" action="http://www.51cto.com/php/search.php" target="_blank" method="post" style="margin:0px; padding:0px;">
+<dt class="fl"><input name="keyword" class="searchInput f14 input" value="请输入关键字" onfocus="doempty(this, '请输入关键字');" onblur="doempty(this, '请输入关键字');" type="text"></dt>
+<dd class="fl"><input src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/search.gif" type="image"></dd></form>
+</dl>
+</div>
+<br class="dle">
+</div>
+<div class="g_39 b3-s-4273B3 rel">
+<!--width : 26*25 - 15 = 635px-->
+<div class="g_26 fl m_l">
+<div class="brief bgF8F8F8">
+<p class="crumb ">您所在的位置：<a href="http://mobile.51cto.com/"><b>移动开发</b></a> &gt; <a href="http://mobile.51cto.com/web/"><b>移动Web</b></a> &gt;  <b>移动Web开发必备的9款JavaScript开发框架</b> </p>
+<h1>移动Web开发必备的9款JavaScript开发框架</h1>
+<div class="msg">
+<div>2014-03-28 15:36  佚名  iteye <span class="f12-a"><a href="#commment" target="_self"></a></span> 字号：<span class="f14-b"><a href="javascript:setfont(12);" target="_self">T</a></span> | <span class="f16-b"><a href="javascript:setfont(16);" target="_self">T</a></span></div>
+<div class="artHd" id="books" style="padding:5px 25px;display:none;"><script language="JavaScript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/getBookData.htm"></script></div>
+<div class="fav"><a href="javascript:favorBox('open');" title="一键收藏，随时查看，分享好友！" target="_self"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/Fav.gif" alt="一键收藏，随时查看，分享好友！" border="0"></a></div>
+</div>
+<div class="brieftext">
+<p class="f14 green">本文将为你介绍9款基于JavaScript的移动Web开发框架，可以让你的工作变得简单、容易。</p>
+<p class="ad">AD：<script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/keywords_ad_new.js"></script><a href="http://mobile.51cto.com/mobile/mdsa11/" target="_blank" style="text-decoration: none;color:red">网+线下沙龙 | 移动APP模式创新：给你一个做APP的理由&gt;&gt;</a>
+</p>
+</div>
+</div>
+<div class="tag bgF8F8F8" id="indexlist" style="display:none;">
+<ul id="indexliststr">
+</ul>
+<br class="dle">
+</div>
+<div class="content bgF8F8F8 f14">
+<div id="content">
+<p></p><p>如今移动互联网已经占据了主流地位，越来越多的开发者开始从桌面转向移动平台。与桌面开发不同的是，在移动领域中，不同的操作系统、大量不同屏幕尺寸的移动设备、触摸手势操作等，这都给开发者带来了一定的难度和挑战。</p>
+<p>本文将为你介绍9款基于JavaScript的移动Web开发框架，可以让你的工作变得简单、容易。</p>
+<p><strong>1.&nbsp; </strong><a target="_blank" href="https://github.com/ftlabs/fastclick"><strong>FastClick</strong></a></p>
+<p>FastClick 是一个简单，易于使用的JS库，用于消除在移动浏览器上触发click事件与一个物理敲击之间的300毫秒延迟。</p>
+<p style="text-align: center;"><img class="fit-image" onload="javascript:if(this.width>498)this.width=498;" onmousewheel="javascript:return big(this)" alt="" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKioL1M1KtrRAwN7AAAcAWm9P8A640.jpg" height="108" width="480"></p>
+<p><strong>2.&nbsp; </strong><a target="_blank" href="http://eightmedia.github.io/hammer.js/"><strong>Hammer.js</strong></a></p>
+<p>Hammer.js是一个轻量级的JavaScript库（仅有2kb），能让你的网站轻松实现触控事件。它依赖于jQuery，用来控制触摸设备上的多点触控特性。</p>
+<p style="text-align: center;"><img class="fit-image" onload="javascript:if(this.width>498)this.width=498;" onmousewheel="javascript:return big(this)" alt="" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKiom1M1KwLQpQCsAABBOBM1vc4111.jpg" height="285" width="480"></p>
+<p><strong>3.&nbsp; </strong><a target="_blank" href="http://themergency.com/footable/"><strong>FooTable</strong></a></p>
+<p>FooTable 是一个 jQuery 插件，主要的目的是将 HTML 的表格变成支持各种尺寸的设备，特别是在小屏幕设备上也会显示很棒的效果。而不需担心该表格拥有太多的列。</p>
+<p style="text-align: center;"><img class="fit-image" onload="javascript:if(this.width>498)this.width=498;" onmousewheel="javascript:return big(this)" alt="" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKioL1M1KtrhlOr4AABCUwQDbCk513.jpg" height="300" width="480"></p>
+<p><strong>4.&nbsp; </strong><a target="_blank" href="http://quojs.tapquo.com/"><strong>QuoJS</strong></a></p>
+<p>QuoJS是一个小型、模块化、面向对象、功能丰富的JavaScript 库，用于移动 Web 开发中简化 HTML 文档遍历、事件处理和 Ajax 交互等功能，还可以用来管理触摸事件。</p>
+<p style="text-align: center;"><img class="fit-image" onload="javascript:if(this.width>498)this.width=498;" onmousewheel="javascript:return big(this)" alt="" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKioL1M1Ktvg1foPAAAlXLgdEXs671.jpg" height="166" width="480"></p>
+<p><strong>5.&nbsp; </strong><a target="_blank" href="http://www.sencha.com/products/touch"><strong>Sencha Touch</strong></a></p>
+<p>Sencha Touch可以让你的Web App看起来像Native App。美丽的用户界面组件和丰富的数据管理，全部基于最新的HTML5和CSS3的Web标准，全面兼容Android和iOS设备。</p>
+<p style="text-align: center;"><img class="fit-image" onload="javascript:if(this.width>498)this.width=498;" onmousewheel="javascript:return big(this)" alt="" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKiom1M1KwKjf3H1AABYhcGFNv4853.jpg" height="331" width="480"></p>
+<p><strong>6.&nbsp; </strong><a target="_blank" href="http://dhtmlx.com/touch/"><strong>DHTMLX Touch</strong></a></p>
+<p>DHTMLX Touch专门为触摸屏设备而优化，帮助你快速开发精美的移动Web应用程序。其中包含了一个UI Designer，这是一个可视化的编辑器，能帮你使用最少的代码来构建一流的用户界面。</p>
+<p style="text-align: center;"><img class="fit-image" onload="javascript:if(this.width>498)this.width=498;" onmousewheel="javascript:return big(this)" alt="" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKiom1M1KwPhAFqAAAA6nniCHdM679.jpg" height="193" width="480"></p>
+<p><strong>7.&nbsp; </strong><a target="_blank" href="https://github.com/mobilizejs/mobilize.js"><strong>Mobilize.js</strong></a></p>
+<p>Mobilize.js用于从任何现有标准网站快速、简便地构建移动网站，其实就是将需要在移动设备上显示的部分页面以jQuery Mobile的默认主题显示，而不是实现一个全新完整的移动页面。</p>
+<p style="text-align: center;"><img class="fit-image" onload="javascript:if(this.width>498)this.width=498;" onmousewheel="javascript:return big(this)" alt="" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKioL1M1KtzSvkDuAACUbAnpdW4603.jpg" height="422" width="480"></p>
+<p><strong>8.&nbsp; </strong><a target="_blank" href="http://joapp.com/"><strong>Jo</strong></a></p>
+<p>Jo可为支持HTML5的移动设备快速开发应用，它拥有标准、类原生的UI元素，比如用于屏幕登录的Web表单控件，还有弹出小部件可用于在用户点击界面时提供一些额外的信息。</p>
+<p style="text-align: center;"><img class="fit-image" onload="javascript:if(this.width>498)this.width=498;" onmousewheel="javascript:return big(this)" alt="" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKioL1M1KtzBZ5ETAABL2itD-r0024.jpg" height="262" width="480"></p>
+<p><strong>9.&nbsp; </strong><a target="_blank" href="http://jquerymobile.com/"><strong>jQuery Mobile</strong></a></p>
+<p>jQuery Mobile是jQuery在手机上和平板设备上的版本，不仅会给主流移动平台带来jQuery核心库，而且包含一个完整统一的jQuery移动UI框架，支持主流的移动平台。</p>
+<p style="text-align: center;"><img class="fit-image" onload="javascript:if(this.width>498)this.width=498;" onmousewheel="javascript:return big(this)" alt="" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKiom1M1KwTDUsYBAABAPXN37-A738.jpg" height="211" width="481"></p><p>【编辑推荐】</p><div><ol><li><a href="http://mobile.51cto.com/abased-410662.htm" target="_blank">Android开发之WebView中捕获JavaScript事件</a></li><li><a href="http://mobile.51cto.com/aengine-417761.htm" target="_blank">Flash-x开发框架说明</a></li><li><a href="http://mobile.51cto.com/hot-422714.htm" target="_blank">Html5是最适合企业移动开发框架？</a></li><li><a href="http://mobile.51cto.com/web-429996.htm" target="_blank">最流行的JavaScript代码规范</a></li><li><a href="http://mobile.51cto.com/web-433992.htm" target="_blank">构建iOS风格移动Web应用程序的8款开发框架</a></li></ol></div><div align="right">【责任编辑：<a class="ln" href="mailto:yanjm@51cto.com">闫佳明</a> TEL：（010）68476606】</div><br> 
+<p class="blank10"></p> 
+ 
+ 
+
+<p class="blank10"></p>
+<div class="f12"> <span class="fl">原文：<a href="http://mobile.51cto.com/web-434181.htm" class="blue"><b>移动Web开发必备的9款JavaScript开发框架</b></a></span> <span class="fr"><a href="http://mobile.51cto.com/">返回移动开发首页</a></span> </div>
+<p class="blank1"></p>
+</div>
+<hr style="border-top: #555555 1px solid; height: 1px; border-right: medium none; border-bottom: medium none; border-left: medium none">
+<div style="width: 600px; background: #ffffff"><img alt="" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKioL1ZOwrbDjDqxAABJOr5GFjU021.png" border="0" height="140" width="600"></div>
+<hr style="border-top: #555555 1px solid; height: 1px; border-right: medium none; border-bottom: medium none; border-left: medium none">
+<iframe src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/bulkfollow.htm" scrolling="no" frameborder="0" height="239" width="600"></iframe>
+<div class="tips">
+<div style="float:left;">
+<span style="float:left; margin-top:4px;">分享到：</span>
+<!-- Baidu Button BEGIN -->
+    <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare" style="margin-right:5px; float:left;">
+        <a href="#" title="分享到QQ空间" class="bds_qzone"></a>
+        <a href="#" title="分享到新浪微博" class="bds_tsina"></a>
+        <a href="#" title="分享到腾讯微博" class="bds_tqq"></a>
+        <a href="#" title="分享到人人网" class="bds_renren"></a>
+        <a href="#" title="分享到网易微博" class="bds_t163"></a>
+        <span class="bds_more"></span>
+		<a title="累计分享1次" href="#" class="shareCount">1</a>
+
+</div>
+<!--<div class="fl"> 
+    </div>
+--><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/bds_s_v2.js" type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=585532"></script>
+
+<script type="text/javascript">
+	var bds_config = {'snsKey':{'tsina':'2378297317'}};
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?t=" + new Date().getHours();
+</script>
+<!-- Baidu Button END -->
+
+
+
+</div><div class="fr blue"><a href="javascript:AddFavorite(document.location.href,document.title);" target="_self">收藏</a>|<a href="javascript:window.print();" target="_self">打印</a>|<a id="msnqqcopy" title="分享本资源给好友" target="_self">复制</a></div>
+</div>
+</div>
+<!--内容 end-->
+<div class="topbiaoqing">
+<div class="biaoqing fixfloat pad">
+<ul>
+<li><a href="javascript:getcountscom(434181,1)" target="_self"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/bq1.jpg"></a>
+<div><a href="javascript:getcountscom(434181,1)" target="_self">给力</a></div>
+<span id="434181_1">(0票)</span></li>
+<li><a href="javascript:getcountscom(434181,2)" target="_self"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/bq2.jpg"></a>
+<div><a href="javascript:getcountscom(434181,2)" target="_self">动心</a></div>
+<span id="434181_2">(0票)</span></li>
+<li><a href="javascript:getcountscom(434181,3)" target="_self"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/bq3.jpg"></a>
+<div><a href="javascript:getcountscom(434181,3)" target="_self">废话</a></div>
+<span id="434181_3">(0票)</span></li>
+<li><a href="javascript:getcountscom(434181,4)" target="_self"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/bq4.jpg"></a>
+<div><a href="javascript:getcountscom(434181,4)" target="_self">专业</a></div>
+<span id="434181_4">(0票)</span></li>
+<li><a href="javascript:getcountscom(434181,5)" target="_self"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/bq5.jpg"></a>
+<div><a href="javascript:getcountscom(434181,5)" target="_self">标题党</a></div>
+<span id="434181_5">(0票)</span></li>
+<li><a href="javascript:getcountscom(434181,6)" target="_self"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/bq6.jpg"></a>
+<div><a href="javascript:getcountscom(434181,6)" target="_self">路过</a></div>
+<span id="434181_6">(0票)</span></li>
+</ul>
+</div>
+<script language="javascript"> 
+getcountscom(434181,11);
+
+</script>
+</div>
+<p class="blank10"></p>
+<!--reltag end-->
+
+<p class="blank10"></p>
+<div class="uyan">
+<div id="uyan_frame"><iframe src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/a_003.htm" style="display: block ! important; width: 100% ! important; border: 0px none ! important; overflow: hidden ! important; height: 451px;" scrolling="no" id="uyan_ifr_1101293" frameborder="0"></iframe></div>
+<script type="text/javascript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/uyan.js"></script><script type="text/javascript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/plugin.js" charset="utf-8"></script>
+</div>
+<!--box end-->
+
+<div class="bor">
+<div class="titbg pl15">关于<a href="http://www.51cto.com/php/search.php?keyword=%D2%C6%B6%AFWeb" target="_blank" class="underline">移动Web</a>&nbsp;&nbsp;<a href="http://www.51cto.com/php/search.php?keyword=JavaScript" target="_blank" class="underline">JavaScript</a>&nbsp;&nbsp;<a href="http://www.51cto.com/php/search.php?keyword=%BF%AA%B7%A2%BF%F2%BC%DC" target="_blank" class="underline">开发框架</a>的更多文章</div>
+<div class="reltag">
+<ul class="fl list02">
+  <li><a href="http://mobile.51cto.com/web-429996.htm" title="最流行的JavaScript代码规范">最流行的JavaScript代码规范</a></li><li><a href="http://mobile.51cto.com/web-415490.htm" title="网站移动化工具SiteApp介绍">网站移动化工具SiteApp介绍</a></li><li><a href="http://mobile.51cto.com/web-410291.htm" title="移动网站性能优化技巧荟萃">移动网站性能优化技巧荟萃</a></li><li><a href="http://mobile.51cto.com/web-410181.htm" title="案例学习：优化移动Web产品的四个要点">案例学习：优化移动Web产品的四个要点</a></li><li><a href="http://mobile.51cto.com/web-410179.htm" title="如何创建高性能移动web站点">如何创建高性能移动web站点</a></li>
+</ul>
+<div class="fr">
+<div class="h5 f12"><a href="http://book.51cto.com/art/201403/434357.htm" title="Android Web Game App高级编程--使用HTML5、CSS3、JavaScript"><b>Android Web Game App高级编程--使用HTML5、CSS3、JavaScript</b></a></div>
+<a href="http://book.51cto.com/art/201403/434357.htm" title="Android Web Game App高级编程--使用HTML5、CSS3、JavaScript"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKioL1M44z_A2-6sAAAkEvJB0jo411.gif" alt="Android Web Game App高级编程--使用HTML5、CSS3、JavaScript" border="0" height="80" width="100"></a>
+<p class="c666">这是一本介绍如何使用HTML5和JavaScript进行Android游戏开发的书<a class="blue" href="http://book.51cto.com/art/201403/434357.htm" title="Android Web Game App高级编程--使用HTML5、CSS3、JavaScript">[详细]</a></p>
+</div>
+</div></div>
+
+<p class="blank10"></p>
+<div class="relart fl bor">
+<div class="titbg">
+<h3 class="fl t1">栏目热门</h3>
+<a href="http://mobile.51cto.com/col/1606/click1.htm" class="tmore">更多&gt;&gt;</a></div>
+<ul>
+  
+	  <li><a href="http://mobile.51cto.com/web-429996.htm" title="最流行的JavaScript代码规范">最流行的JavaScript代码规范</a></li>
+	  
+	  <li><a href="http://mobile.51cto.com/web-429760.htm" title="移动设备泛滥 响应式网站设计优劣大观">移动设备泛滥 响应式网站设计优劣大观</a></li>
+	  
+	  <li><a href="http://mobile.51cto.com/web-434182.htm" title="移动开发者必须了解的10大跨平台工具">移动开发者必须了解的10大跨平台工具</a></li>
+	  
+	  <li><a href="http://mobile.51cto.com/web-433992.htm" title="构建iOS风格移动Web应用程序的8款开发框架">构建iOS风格移动Web应用程序的8款开发框架</a></li>
+	  
+	  <li><a href="http://mobile.51cto.com/web-433680.htm" title="Hybrid App五大误区：不要为了HTML5而Hybrid">Hybrid App五大误区：不要为了HTML5而Hybri</a></li>
+	  
+</ul>
+</div>
+<div class="cathot fr bor">
+<div class="titbg">
+<h3 class="fl t1">同期最新</h3>
+<a href="http://mobile.51cto.com/col/1606" class="tmore">更多&gt;&gt;</a></div>
+<ul>
+	
+	  <li><a href="http://mobile.51cto.com/web-433992.htm" title="构建iOS风格移动Web应用程序的8款开发框架">构建iOS风格移动Web应用程序的8款开发框架</a></li>
+	  
+	  <li><a href="http://mobile.51cto.com/web-433858.htm" title="基于WebSocket构建移动端实时应用">基于WebSocket构建移动端实时应用</a></li>
+	  
+	  <li><a href="http://mobile.51cto.com/web-433680.htm" title="Hybrid App五大误区：不要为了HTML5而Hybrid">Hybrid App五大误区：不要为了HTML5而Hybri</a></li>
+	  
+	  <li><a href="http://mobile.51cto.com/web-432918.htm" title="HTML5移动开发的几大特性">HTML5移动开发的几大特性</a></li>
+	  
+	  <li><a href="http://mobile.51cto.com/web-429996.htm" title="最流行的JavaScript代码规范">最流行的JavaScript代码规范</a></li>
+	  
+</ul>
+</div>
+<p class="blank10"></p>
+<div class="bor">
+<div class="titbg">
+<h3 class="fl t1"><a href="http://mobile.51cto.com/">移动开发</a></h3>
+<span class="pl10">频道导航</span></div>
+ <ul class="xtlist">
+<li><span class="tit">平台</span>
+<div><a href="http://mobile.51cto.com/web/">移动Web</a>|<a href="http://mobile.51cto.com/android/">Android</a>|<a href="http://mobile.51cto.com/iphone/">iOS</a>|<a href="http://mobile.51cto.com/windows-phone/">Windows Phone</a></div>
+</li>
+
+<li><span class="tit">应用</span>
+<div><a href="http://mobile.51cto.com/app-show/">移动应用</a>|<a href="http://mobile.51cto.com/team/">移动团队</a>|<a href="http://mobile.51cto.com/market/">应用商店</a>|<a href="http://mobile.51cto.com/speclist/">专题汇总</a>|<a href="http://mobile.51cto.com/1603/">Phone Club</a></div>
+</li>
+
+<li><span class="tit">观察</span>
+<div><a href="http://mobile.51cto.com/comment/">业界观察</a>|<a href="http://mobile.51cto.com/data/">调查数据</a>|<a href="http://mobile.51cto.com/informatization/">移动信息化</a></div>
+</li>
+
+<li class="last"><span class="tit">Android</span>
+<div><a href="http://mobile.51cto.com/ahot/">热点</a>|<a href="http://mobile.51cto.com/anews/">资讯</a>|<a href="http://mobile.51cto.com/android/abased/">基础</a>|<a href="http://mobile.51cto.com/android/amedia/">多媒体</a>|<a href="http://mobile.51cto.com/android/adatabase/">数据库</a>|<a href="http://mobile.51cto.com/android/design/">设计</a>|<a href="http://mobile.51cto.com/android/aengine/">工具</a>|<a href="http://mobile.51cto.com/android/aprogram/">编译</a></div>
+</li>
+</ul> 
+</div> 
+<p class="blank10"></p>
+<p class="blank10"></p>
+<div class="leftbotcon">
+<div class="bor jdlist">
+<div class="titbg">
+<h3 class="t2">热点推荐</h3></div>
+<ul>
+<li><a onclick="javascript: _gaq.push(['_trackPageview', '/51cto/neirong/d-t-4']);" href="http://mobile.51cto.com/mobile-182392.htm"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/153546162.jpg"></a> 
+<div class="name"><a onclick="javascript: _gaq.push(['_trackPageview', '/51cto/neirong/d-t-4']);" href="http://mobile.51cto.com/mobile-182392.htm">Android开发应用详解</a></div></li>
+<li><a onclick="javascript: _gaq.push(['_trackPageview', '/51cto/neirong/d-t-4']);" href="http://developer.51cto.com/art/201106/266369.htm"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/133620622.jpg"></a> 
+<div class="name"><a onclick="javascript: _gaq.push(['_trackPageview', '/51cto/neirong/d-t-4']);" href="http://developer.51cto.com/art/201106/266369.htm">那些性感的让人尖叫的程序员</a></div></li>
+<li><a href="http://developer.51cto.com/art/200907/133407.htm"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/134217922.jpg"></a> 
+<div class="name"><a href="http://developer.51cto.com/art/200907/133407.htm">HTML5 下一代Web开发标准详解</a></div></li>
+<li><a href="http://developer.51cto.com/art/201104/257581.htm"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/123123954.jpg"></a> 
+<div class="name"><a href="http://developer.51cto.com/art/201104/257581.htm">高性能WEB开发应用指南</a></div></li>
+<li><a href="http://os.51cto.com/art/200706/49181.htm"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/195816929.jpg"></a> 
+<div class="name"><a href="http://os.51cto.com/art/200706/49181.htm">Ubuntu开源技术交流频道</a></div></li></ul></div>
+<p class="blank10"></p>
+<div class="bor hotTag"><strong>热门标签：</strong> <a onclick="javascript: _gaq.push(['_trackPageview', '/51cto/neirong/d-2]);" href="http://os.51cto.com/windows/">windows频道</a><a onclick="javascript: _gaq.push(['_trackPageview', '/51cto/neirong/d-w']);" href="http://mobile.51cto.com/">移动开发</a><a onclick="javascript: _gaq.push(['_trackPageview', '/51cto/neirong/d-w']);" href="http://cloud.51cto.com/">云计算</a><a onclick="javascript: _gaq.push(['_trackPageview', '/51cto/neirong/d-w']);" href="http://mobile.51cto.com/mobile/objc/">objective-c</a><a onclick="javascript: _gaq.push(['_trackPageview', '/51cto/neirong/d-w']);" href="http://network.51cto.com/art/200909/151122.htm">tp-link路由器设置图解</a><a onclick="javascript: _gaq.push(['_trackPageview', '/51cto/neirong/d-w']);" href="http://developer.51cto.com/art/200907/133407.htm">html5</a> </div></div>
+<div class="leftbotbox"> </div>
+</div>
+<!--left end-->
+<div class="g_13 fr">
+<div style="height: 640px;" class="focus fixfloat"> 
+ <img style="border: 1px solid #CCCCCC; margin:5px 0px 5px;" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/weixin.jpg" width="298"><div style="top: 450px;" class="hot">
+<ul>
+<li class="tit"><em>专题</em> <a href="http://mobile.51cto.com/aengine-448169.htm">Android Studio上手攻略</a> </li>
+<li class="con"><dl><dt><a href="http://mobile.51cto.com/aengine-448169.htm"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKioL1P--2OjD6MyAABa0wWx5Fs253.jpg" border="0"></a></dt>
+<dd>既然强大的Android Studio来了，有什么理由不去用呢？</dd>
+</dl></li></ul><ol class="hotlist"><li><a href="http://mobile.51cto.com/iphone-441694.htm">iOS新语言swift上手指南</a></li><li><a href="http://mobile.51cto.com/anews-449279.htm">MIUI 6 测评：细节的量变</a></li></ol></div>
+<p>
+<script language="JavaScript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/ad_002.js" type="text/javascript"></script><script type="text/javascript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/ad_002.htm"></script><iframe noresize="" scrolling="No" marginheight="0" marginwidth="0" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/14.htm" align="left" frameborder="0" height="260" width="300"></iframe>
+</p>
+</div>
+<div class="rank">
+<div class="tlt">
+      <h3>文章排行</h3>
+      <a onmouseover="change_top10(3);" id="top_3">本月</a><a onmouseover="change_top10(2);" id="top_2">本周</a><a onmouseover="change_top10(1);" class="myon" id="top_1">24小时</a> </div>
+ <div id="top10_1" style="display: block;" class="list"><ul>
+<li><a href="http://mobile.51cto.com/design-250037.htm" target="_blank" title="21个免费的UI界面设计工具、资源及网站">21个免费的UI界面设计工具、资源及网站</a>
+</li><li><a href="http://mobile.51cto.com/android-227548.htm" target="_blank" title="在Eclipse下搭建Android开发环境教程">在Eclipse下搭建Android开发环境教程</a>
+</li><li><a href="http://mobile.51cto.com/hot-292923.htm" target="_blank" title="人人都是开发者：5款傻瓜式APP开发工具">人人都是开发者：5款傻瓜式APP开发工具</a>
+</li><li><a href="http://mobile.51cto.com/web-321296.htm" target="_blank" title="三大移动Web开发框架哪个适合你？">三大移动Web开发框架哪个适合你？</a>
+</li><li><a href="http://mobile.51cto.com/hot-464776.htm" target="_blank" title="哪个市场最挣钱，腾讯告诉你！">哪个市场最挣钱，腾讯告诉你！</a>
+</li><li><a href="http://mobile.51cto.com/news-464843.htm" target="_blank" title="阿里：这是全世界最大的打假团队">阿里：这是全世界最大的打假团队</a>
+</li><li><a href="http://mobile.51cto.com/design-464603.htm" target="_blank" title="Android应当从iOS处窃取的五大最佳功能">Android应当从iOS处窃取的五大最佳功能</a>
+</li><li><a href="http://mobile.51cto.com/iphone-464809.htm" target="_blank" title="iOS 8出色的跨应用通信效果：解读Actio">iOS 8出色的跨应用通信效果：解读Actio</a>
+</li><li><a href="http://mobile.51cto.com/comment-464778.htm" target="_blank" title="看库克如何干掉Android">看库克如何干掉Android</a>
+</li><li><a href="http://mobile.51cto.com/news-464748.htm" target="_blank" title="为什么说2015年将是微服务架构元年？">为什么说2015年将是微服务架构元年？</a>
+</li></ul></div>
+<div id="top10_2" style="display: none;" class="list"><ul>
+<li><a href="http://mobile.51cto.com/comment-464398.htm" target="_blank" title="漫画迎2015：用幽默的语言解读2014年IT">漫画迎2015：用幽默的语言解读2014年IT</a>
+</li><li><a href="http://mobile.51cto.com/aengine-464479.htm" target="_blank" title="盘点50款最实用的开源移动工具">盘点50款最实用的开源移动工具</a>
+</li><li><a href="http://mobile.51cto.com/news-464536.htm" target="_blank" title="微信正式推出Windows版客户端">微信正式推出Windows版客户端</a>
+</li><li><a href="http://mobile.51cto.com/design-464603.htm" target="_blank" title="Android应当从iOS处窃取的五大最佳功能">Android应当从iOS处窃取的五大最佳功能</a>
+</li><li><a href="http://mobile.51cto.com/aprogram-464570.htm" target="_blank" title="android一分钟学会可视化操作数据库（">android一分钟学会可视化操作数据库（</a>
+</li><li><a href="http://mobile.51cto.com/app-show-464555.htm" target="_blank" title="Facebook坏了谁干的？是我！是我！">Facebook坏了谁干的？是我！是我！</a>
+</li><li><a href="http://mobile.51cto.com/hot-464499.htm" target="_blank" title="聊科技：预测2015年手机六大技术趋势">聊科技：预测2015年手机六大技术趋势</a>
+</li><li><a href="http://mobile.51cto.com/abased-464571.htm" target="_blank" title="如何编写高效android代码">如何编写高效android代码</a>
+</li><li><a href="http://mobile.51cto.com/news-464389.htm" target="_blank" title="这才多久谷歌Project Ara就被玩坏了">这才多久谷歌Project Ara就被玩坏了</a>
+</li><li><a href="http://mobile.51cto.com/app-show-464374.htm" target="_blank" title="朋友圈的广告！改名叫商圈算了">朋友圈的广告！改名叫商圈算了</a>
+</li></ul></div>
+<div id="top10_3" style="display: none;" class="list"><ul>
+<li><a href="http://mobile.51cto.com/aengine-463841.htm" target="_blank" title="2014年 Java 工具和技术概览">2014年 Java 工具和技术概览</a>
+</li><li><a href="http://mobile.51cto.com/comment-464398.htm" target="_blank" title="漫画迎2015：用幽默的语言解读2014年IT">漫画迎2015：用幽默的语言解读2014年IT</a>
+</li><li><a href="http://mobile.51cto.com/aengine-463132.htm" target="_blank" title="跨平台开发移动应用程序的五大工具">跨平台开发移动应用程序的五大工具</a>
+</li><li><a href="http://mobile.51cto.com/aengine-464479.htm" target="_blank" title="盘点50款最实用的开源移动工具">盘点50款最实用的开源移动工具</a>
+</li><li><a href="http://mobile.51cto.com/web-463667.htm" target="_blank" title="开发移动应用程序的三种选择：原生、HT">开发移动应用程序的三种选择：原生、HT</a>
+</li><li><a href="http://mobile.51cto.com/iphone-463665.htm" target="_blank" title="最全面 iOS 语言学习资料整理">最全面 iOS 语言学习资料整理</a>
+</li><li><a href="http://mobile.51cto.com/anews-464161.htm" target="_blank" title="谷歌 Ara 项目究竟是何方神圣？">谷歌 Ara 项目究竟是何方神圣？</a>
+</li><li><a href="http://mobile.51cto.com/web-463939.htm" target="_blank" title="如何在Linux上开发跨平台的移动应用程">如何在Linux上开发跨平台的移动应用程</a>
+</li><li><a href="http://mobile.51cto.com/windows-phone-464288.htm" target="_blank" title="关于win10发布会，你必须知道的十件事">关于win10发布会，你必须知道的十件事</a>
+</li><li><a href="http://mobile.51cto.com/news-464536.htm" target="_blank" title="微信正式推出Windows版客户端">微信正式推出Windows版客户端</a>
+</li></ul></div>
+ 
+ </div>
+<p class="blank1"></p>
+<div class="bor">
+<div class="titbg">
+<h3 class="fl t1">热点职位</h3>
+<a href="http://gaozhao.51cto.com/job-search/list" class="tmore">更多&gt;&gt;</a></div>
+	<div class="rmzwn_xx"><dl><dt><a href="http://gaozhao.51cto.com/job/view/id-2276.html" target="_blank"> 高级Android开发工程师 </a></dt><dd><h2>全职/3-5年/本科</h2><span>15k-25k</span><a href="http://gaozhao.51cto.com/company/view/id-532.html" target="_blank">美餐网</a></dd></dl><dl><dt><a href="http://gaozhao.51cto.com/job/view/id-2907.html" target="_blank"> Android软件工程师 </a></dt><dd><h2>全职/3-5年/大专</h2><span>6k-10k</span><a href="http://gaozhao.51cto.com/company/view/id-631.html" target="_blank">广州太乙科技</a></dd></dl><dl><dt><a href="http://gaozhao.51cto.com/job/view/id-2857.html" target="_blank"> IOS高级（资深）开发工程师 </a></dt><dd><h2>全职/3-5年/不限</h2><span>15k-30k</span><a href="http://gaozhao.51cto.com/company/view/id-622.html" target="_blank">蓝信工场</a></dd></dl><dl><dt><a href="http://gaozhao.51cto.com/job/view/id-2377.html" target="_blank"> ios开发工程师 </a></dt><dd><h2>全职/1-3年/大专</h2><span>6k-11k</span><a href="http://gaozhao.51cto.com/company/view/id-551.html" target="_blank">美天科技</a></dd></dl><dl><dt><a href="http://gaozhao.51cto.com/job/view/id-2966.html" target="_blank"> 安卓开发实习生 </a></dt><dd><h2>全职/应届生/大专</h2><span>2k-4k</span><a href="http://gaozhao.51cto.com/company/view/id-641.html" target="_blank">快抢车</a></dd></dl></div>
+</div>
+<div class="blank10"></div>
+<script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/51cto_sha1.js"></script>
+<div class="bor">
+<div class="titbg">
+<h3 class="fl t1">热点专题</h3>
+<a href="http://mobile.51cto.com/col/1606/spec1.htm" class="tmore">更多&gt;&gt;</a></div>
+<ul class="plist01">
+<li><a href="http://mobile.51cto.com/hot-431534.htm" title="手游开发经验分享"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKioL1MdepeyqQ4VAAAwj3xbSHk166.jpg" alt="手游开发经验分享" height="80" width="100"></a>
+<h5><a href="http://mobile.51cto.com/hot-431534.htm" title="手游开发经验分享">手游开发经验分享</a></h5>
+<div class="c666">手机游戏开发可以很简单，如Flappy Bird，一个人一杯</div>
+</li><li><a href="http://mobile.51cto.com/news-430103.htm" title="成功PM必备：一个移动产品经理的自我修养"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKioL1MGifKjaJXpAAA0tfUukDo690.jpg" alt="成功PM必备：一个移动产品经理的自我修养" height="80" width="100"></a>
+<h5><a href="http://mobile.51cto.com/news-430103.htm" title="成功PM必备：一个移动产品经理的自我修养">成功PM必备：一个移动</a></h5>
+<div class="c666">张小龙已经成为产品经理心中的神，无数人纷纷膜拜憧憬</div>
+</li><li><a href="http://mobile.51cto.com/news-426624.htm" title="CES 2014 国际消费类电子产品展览会"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKiom1LLqnrQvEDAAAA9gJ6P46Y025.jpg" alt="CES 2014 国际消费类电子产品展览会" height="80" width="100"></a>
+<h5><a href="http://mobile.51cto.com/news-426624.htm" title="CES 2014 国际消费类电子产品展览会">CES 2014 国际消费类</a></h5>
+<div class="c666">国际消费类电子产品展览会（International Consumer E</div>
+</li> 
+</ul>
+</div>
+<p class="blank10"></p>
+<div class="tagCloud">
+<div class="tlt">
+<h3>热点标签</h3>
+</div>
+<div class="taglist"><a title="iOS开发" href="http://mobile.51cto.com/mobile/objc/">iOS开发</a>  <a title="Android开发" href="http://mobile.51cto.com/mobile-182392.htm">Android开发</a> <a title="Symbian开发" href="http://mobile.51cto.com/mobile-220581.htm">Symbian开发</a>  <a title="MeeGo开发" href="http://mobile.51cto.com/meego-208013.htm">MeeGo开发</a>  <a title="BlackBerry开发" href="http://mobile.51cto.com/blackberry-255350.htm">BlackBerry开发</a>  <a title="Windows Phone开发" href="http://mobile.51cto.com/mobile-219051.htm">Windows Phone开发</a>  <a title="Phone Club" href="http://mobile.51cto.com/1603/">Phone Club</a>  <a title="Android 4.0" href="http://mobile.51cto.com/android-297987.htm" class="imp">Android 4.0</a>  <a title="webOS 3.0" href="http://mobile.51cto.com/webos-256291.htm">webOS 3.0</a>  <a title="智能手机" href="http://www.linkphone.cn/">智能手机</a> <a title="软件下载" href="http://download.linkphone.cn/">软件下载</a> </div>
+</div>
+<div class="rss">
+<ul>
+<li class="lin f12-c"><a href="http://news.51cto.com/col/1323/"><strong>点击这里查看样刊</strong></a></li>
+<li>
+<dl>
+<dt> </dt>
+<dd><a href="http://home.51cto.com/index.php?s=/Subscribe"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/dingy.gif"></a></dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="bor">
+<div class="titbg">
+<h3 class="t1">全站热点</h3>
+</div>
+<div class="webhot fixfloat">
+<ul>
+
+<li>
+  <a href="http://network.51cto.com/network/ruijie/2013/" title="“简网络 享未来”锐捷网络专区"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKiom1M4yH6hovnwAAB_fjn882Y852.jpg"></a>
+  <div><a href="http://network.51cto.com/network/ruijie/2013/" title="“简网络 享未来”锐捷网络专区">“简网络 享未来”锐捷网络专区</a></div>
+</li>
+
+<li>
+  <a href="http://network.51cto.com/network/cisco/2014/ucs0228/" title="思科统一计算系统（UCS）最新促销"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wKioL1Meer3Ts3NrAAAR18TE1c0093.jpg"></a>
+  <div><a href="http://network.51cto.com/network/cisco/2014/ucs0228/" title="思科统一计算系统（UCS）最新促销">思科统一计算系统（UCS）最新促销</a></div>
+</li>
+
+</ul>
+</div>
+<p class="blank1"></p>
+<ul class="list03">
+
+<li><a href="http://os.51cto.com/art/201403/431370.htm" title="教程：两种Windows 8.1 Update 1下载方案">教程：两种Windows 8.1 Update 1下载</a></li>
+
+<li><a href="http://mobile.51cto.com/hot-431356.htm" title="探秘百度移动面试 iOS试题分享">探秘百度移动面试 iOS试题分享</a></li>
+
+<li><a href="http://mobile.51cto.com/hot-431352.htm" title="由苹果的低级Bug想到的编程思考">由苹果的低级Bug想到的编程思考</a></li>
+
+<li><a href="http://cloud.51cto.com/art/201403/431346.htm" title="来看看中国最牛的跨机房5K集群">来看看中国最牛的跨机房5K集群</a></li>
+
+<li><a href="http://mobile.51cto.com/hot-431345.htm" title="开发者盘点：Windows Phone的这几年">开发者盘点：Windows Phone的这几年</a></li>
+
+</ul>
+</div>
+<p class="blank10"></p>
+<div class="bor">
+<div class="titbg">
+<h3 class="t1">读书</h3>
+</div>
+  
+<div class="catbook"><a href="http://book.51cto.com/art/200706/49562.htm" title="C++编程你也行"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/100929427.gif" border="0" height="98" width="66"></a>
+<h5><a href="http://book.51cto.com/art/200706/49562.htm">C++编程你也行</a></h5>
+<div class="c666 text">本书是一本优秀的C++教材，内容包括：基础类型、操作符和简单变量，循环和决策，命名空间和C++标准库，用C++编写函数，行为、序</div>
+</div>
+
+
+<ul class="list03">
+
+<li><a href="http://book.51cto.com/art/200704/46237.htm" title="Linux标准教程">Linux标准教程</a></li>
+
+<li><a href="http://book.51cto.com/art/200704/46240.htm" title="XML基础教程">XML基础教程</a></li>
+
+<li><a href="http://book.51cto.com/art/200704/46252.htm" title="JSP应用开发详解(第三版)">JSP应用开发详解(第三版)</a></li>
+
+<li><a href="http://book.51cto.com/art/200704/46258.htm" title="Java for Flash动态网站开发手札">Java for Flash动态网站开发手札</a></li>
+
+</ul>
+</div>
+<p class="blank10"></p>
+<div class="bor">
+<div class="titbg">
+<h3 class="t1 fl">博文推荐</h3>
+<a class="tmore" href="http://blog.51cto.com/">更多&gt;&gt;</a></div>
+<div class="blogtj">
+<ul>
+<li> <a href="http://nowpaper.blog.51cto.com/"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/3893223_1320825949.jpg" height="65" width="60"></a>
+<h5><a href="http://nowpaper.blog.51cto.com/">nowpaper</a></h5>
+Windows Phone专家</li>
+<li> <a href="http://xiaominghimi.blog.51cto.com/"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/125657389.jpg" height="65" width="60"></a>
+<h5><a href="http://xiaominghimi.blog.51cto.com/">himi</a></h5>
+<p>Android开发专家</p>
+</li>
+</ul>
+</div>
+<ul class="list03">
+ <li><a href="http://drate.blog.51cto.com/1274886/303829/" target="_blank" title="实施顾问集中培训观察（2）-需求调研十大忌">实施顾问集中培训观察（2）-需求调研</a></li><li><a href="http://jimma.blog.51cto.com/904965/303734/" target="_blank" title="InfoPath 揭秘 (一)">InfoPath 揭秘 (一)</a></li><li><a href="http://cnjava.blog.51cto.com/1208887/303654/" target="_blank" title="通过游戏学习java面向对象编程(1) ">通过游戏学习java面向对象编程(1) </a></li><li><a href="http://yuelei.blog.51cto.com/202879/303629/" target="_blank" title="Win2008 R2 RemoteApp深度体验之四，RemoteApp程序测试">Win2008 R2 RemoteApp深度体验之四，</a></li>
+</ul>
+</div>
+<p class="blank10"></p>
+<div class="tj">
+<div class="tlt">
+<h3>最新热帖</h3>
+<a class="more" href="http://bbs.51cto.com/hotthreads.php">更多&gt;&gt;</a></div>
+<ul>
+<li><a href="http://bbs.51cto.com/thread-550558-1.html" target="_blank" title="【JAVA EE企业级开发四步走完全攻略】">【JAVA EE企业级开发四步走完全攻略</a></li><li><a href="http://bbs.51cto.com/thread-26429-1.html" target="_blank" title="通用WAP网站生成系统(PowerDiamond) v.1">通用WAP网站生成系统(PowerDiamond) </a></li><li><a href="http://bbs.51cto.com/thread-11063-1.html" target="_blank" title="八类大学毕业生求职时不受欢迎">八类大学毕业生求职时不受欢迎</a></li><li><a href="http://bbs.51cto.com/thread-6946-1.html" target="_blank" title="IT人为什么难以拿到高薪？【转帖】">IT人为什么难以拿到高薪？【转帖】</a></li><li><a href="http://bbs.51cto.com/thread-4333-1.html" target="_blank" title="想去外企上班">想去外企上班</a></li>
+</ul>
+</div>
+<div class="picAD">
+<iframe class="bann" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/baidu.htm" scrolling="No" style="background-color: white; height: 265px; width: 300px; padding: 0px; margin: 0px; overflow: hidden;" frameborder="0"></iframe>
+</div>
+</div>
+<p class="blank1"></p> 
+<!--leftbotcon end-->
+</div> 
+<div style="width:960px; margin:0 auto;">
+<script type="text/javascript">
+    /*960*90 创建于 2015-11-05文章页 旗下网站上方通栏*/
+    var cpro_id = "u2386966";
+</script>
+<script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/c.js" type="text/javascript"></script><div id="BAIDU_SSP__wrapper_u2386966_0"><iframe id="iframeu2386966_0" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/rcfm.htm" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" style="border:0; vertical-align:bottom;margin:0;" allowtransparency="true" align="center,center" frameborder="0" height="90" width="960"></iframe></div>
+</div>
+<div class="subweb">
+<h4>51CTO旗下网站</h4>
+<div>
+<a target="_blank" href="http://www.51cto.com/">领先的IT技术网站 51CTO</a>
+<a target="_blank" href="http://www.watchstor.com/">领先的中文存储媒体 WatchStor</a>
+<a target="_blank" href="http://www.cioage.com/">中国首个CIO网站 CIOage</a>
+<a target="_blank" href="http://www.hc3i.cn/">中国首家数字医疗网站 HC3i</a>
+</div>
+</div>
+<div id="ft"><div id="foot" align="center"><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/copy_right.js"></script>Copyright&#169;2005-2016 <a href="http://www.51cto.com/">51CTO.COM</a> 版权所有 未经许可 请勿转载<div style="display:none;"><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/h.js" type="text/javascript"></script><a href="http://tongji.baidu.com/hm-web/welcome/ico?s=5f70e4835ac91d9dbad7b7d529c65de7" target="_blank"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/21.gif" border="0" height="20" width="20"></a></div></div></div>
+<script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/count.js"></script><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/count.htm"></script><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/scroll.js"></script>
+
+<script type="text/javascript">
+	$("#uyan_cmt_list").next().remove();	
+	$("#uyan_cmt_list").next().css("display","none");	
+</script>
+<style>
+.Nfloat { position: fixed; right: 2%; top: 35%; z-index: 801; }
+</style>
+
+
+
+<!-- 新监测代码 -->
+<!-- 新监测代码 -->
+<div id="MyMoveAd" style="display: none; height: 2px;">
+<span id="wordlink_1"><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wordlink1.js"></script><script type="text/javascript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/ajs_004.php"></script><a href="http://gg1.51cto.com/www/delivery/ck.php?oaparams=2__bannerid=3736__zoneid=270__cb=6ce75e2dc8__oadest=http%3A%2F%2Fcloud.51cto.com%2Fact%2Fveritas%2F201604" target="_blank"><font color="red">数据保护秘籍 点击免费领取</font></a><div id="beacon_6ce75e2dc8" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/lg.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+</span>
+<span id="wordlink_2"><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wordlink2.js"></script><script type="text/javascript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/ajs_002.php"></script><a href="http://gg.51cto.com/www/delivery/ck.php?oaparams=2__bannerid=3546__zoneid=631__cb=9c493e5f44__oadest=http%3A%2F%2Fedutest.51cto.com%2Ftraining%2Ftraining_id-19.html%3Fxiaoshou" target="_blank"><font color="red">Android开发120天完成9个APP项目</font></a><div id="beacon_9c493e5f44" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/lg_003.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+</span>
+<span id="wordlink_3"><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wordlink3.js"></script><script type="text/javascript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/ajs_003.php"></script><a href="http://gg1.51cto.com/www/delivery/ck.php?oaparams=2__bannerid=3717__zoneid=594__cb=55598c2053__oadest=http%3A%2F%2Fedu.51cto.com%2Ftraining%2Ftraining_id-18.html%3Fxiaoshou" target="_blank"><font color="red">微软企业级内训课程免费学</font></a><div id="beacon_55598c2053" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/lg_002.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+</span>
+<span id="wordlink_4"><script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/wordlink4.js"></script><script type="text/javascript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/ajs.php"></script><a href="http://gg1.51cto.com/www/delivery/ck.php?oaparams=2__bannerid=3549__zoneid=636__cb=b1f086e9a4__oadest=http%3A%2F%2Fedutest.51cto.com%2Ftraining%2Ftraining_id-17.html%3Fxiaoshou" target="_blank"><font color="red">2016年备战软考-重难点解析</font></a><div id="beacon_b1f086e9a4" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/lg_004.gif" alt="" style="width: 0px; height: 0px;" height="0" width="0"></div>
+</span>
+<span id="pinglun"><script language="JavaScript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/getArtCount.htm"></script>0</span>
+<span id="tonglan"></span>
+<span id="wordlink"><script language="JavaScript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/ad.js"></script></span>
+<script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/ad.js"></script>
+<span id="bookss"><script language="JavaScript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/getBookData.htm"></script></span>
+</div>   
+<script language="javascript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/favorite.js"></script>
+
+<script language="javaScript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/dialog_utf8.js"></script>
+<script language="javaScript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/mail.htm"></script>  
+<script type="text/javascript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/favorbox.js"></script>
+<script language="javascript" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/clipboard.js"></script>
+<script language="javaScript"> 
+	var thistid=434181; 
+	
+	//收藏按钮
+	var favor_url = 'http://mobile.51cto.com/web-434181.htm';  // 如：http://bbs.51cto.com/thread-789649-1.html
+	var favor_title = '移动Web开发必备的9款JavaScript开发框架';       //  
+	
+	//绑定复制按钮
+	copy('msnqqcopy', 'http://mobile.51cto.com/web-434181.htm', '分享到MSN/QQ的链接复制成功!');
+//	copy('bbscopy', '[url=http://mobile.51cto.com/web-434181.htm][u]移动Web开发必备的9款JavaScript开发框架[/u][/url]', '分享到论坛的UBB代码复制成功!');
+
+</script><div style="position: absolute; left: 784px; top: 4554px; width: 34px; height: 13px; z-index: 99;"><embed id="ZeroClipboardMovie_1" src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_1" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=34&amp;height=13" wmode="transparent" align="middle" height="13" width="34"></div> 
+<script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/index.htm" charset="utf-8"></script>
+<script src="touch%E8%A7%A6%E6%8E%A7%E6%A1%86%E6%9E%B6_files/count_002.htm" language="javascript"></script>
+<script language="javascript">
+document.getElementById('books').innerHTML = document.getElementById("bookss").innerHTML; 
+</script>
+
+
+
+</body></html>

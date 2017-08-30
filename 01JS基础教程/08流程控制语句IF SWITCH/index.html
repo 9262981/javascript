@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Flow Control  Statements流程控制语句</title>
+	<script>
+		// if(2<1)
+		// 	alert(3);
+		// else
+		// 	alert(4);
+
+		// if(2=1)
+		// 	alert(3);
+		// else
+		// 	alert(4);
+		// else
+		// 	alert(5);
+
+		// var username="";
+		// if(username==""){
+		// 	alert("请输入用户名");
+		// }else{
+		// 	alert("欢迎您"+username);
+		// }
+		
+		// var userName="";
+		// if(userName==""){
+		// 	alert("请输入用户名");}
+		// 	else{
+		// 	alert(userName+"很高兴认识您！");
+		// }
+		// function change(){
+		// 	document.getElementById("aa").src="2.jpg";
+
+		// }
+		// var	username="";
+		// switch(username){
+		// 	case "jack":alert('jack');break;
+		// 	case "simon":alert('孙');break;
+		// 	default:alert("没有匹配到的人");break;
+		// }
+		// var username="b";
+		// if(username=="jack"){
+		// 	alert(1);
+		// }else if(username=="b"){
+		// 	alert(2);
+		// }else if(username=="c"){
+		// 	alert(3);
+		// }else{
+		// 	alert("no matched");
+		// }
+
+
+
+
+	</script>
+</head>
+<body>
+	<pre>
+	<!-- <img id="aa" src="1.jpg" onclick="change();" > -->
+	第七课、流程控制之if、switch语句
+
+	1、if条件判断语句
+	
+	1、if(expression){
+		//expression为true的时候执行里面的内容
+	   }
+
+	2、if(expression){
+		//expression为true的时候执行里面的内容
+	   }else{
+		//expression为false的时候执行里面的内容
+	   }
+
+	3、if(expression1){
+		//expression1为true的时候执行里面的内容
+	    }else if(expression2){
+		//expression2为true的时候执行里面的内容
+	    }else if(expression3){
+		//expression3为true的时候执行里面的内容
+	    }else{
+		//这个else可有可无。如果有的话，则上述条件
+		//都不满足的时候执行else
+	    }
+	2、switch语句
+
+		语法格式：
+		switch(expression表达式){
+
+			case judgement条件1:statement1声明:break;
+			case judgement2:statement2:break;
+
+			...
+			default:defaultstatement;
+		}
+		示例：
+		var username="tiger2";
+		switch(username){
+			case "jerry":alert("小老鼠");break;
+			case "tom":alert("猫");break;
+			case "tiger":alert("老虎");break;
+			default:alert("没有匹配到任何值");
+		 }
+
+		 课下作业：把以上示例用if语句来实现。
+		 It is conventional to indent the body of a control flow statement so the reader might easily determine where it begins and ends.
+	</pre>
+
+</body>
+</html>

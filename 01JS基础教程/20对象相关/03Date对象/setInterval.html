@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+
+	#demo{
+		background: red;
+		height:200px;
+		width:200px;
+	}
+	</style>
+	<SCRIPT TYPE="text/javascript">
+		setInterval("show()",100);
+		function show(){
+		    time=new Date();
+		    hour=time.getHours();
+	       	minu=time.getMinutes();
+	      	sec=time.getSeconds();
+		    datetime=hour+":"+minu+":"+sec;
+		    tt.innerHTML=datetime;
+		   
+		}//这里的datetime是一个动态文本框的变量名字。
+	</SCRIPT>
+	
+</head>
+<body>
+
+	<div id="tt"></div>
+		
+</body>
+</html>

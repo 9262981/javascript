@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://cdn.static.runoob.com/libs/jquery/1.6.2/jquery.min.js">
+</script>
+
+	</head>
+	<body>
+			<div class="box"></div>
+		
+		<form action="" method="post">
+
+			用户名：<input type="text" name="username" />
+			邮件：<input type="text" name="email" />
+			<input type="radio" name="sex" value="男" />男
+			<input type="radio" name="sex" value="女" />女
+			
+			
+			<input type="button" value="提交" />
+		</form>
+
+		<script type="text/javascript">
+	$(function  () {
+//		$('form input[type=button]').click(function  () {
+////			alert(123);
+//			$.ajax({
+//				url:"ajax.php",
+//				type:'post',
+//				data:$('form').serialize(),
+//				success:function  (response,status,xhr) {
+//					$('.box').html(response);
+//				}
+//			});
+//		});
+//		$('form input[name=sex]').click(function  () {
+////			$(".box").html(decodeURIComponent($(this).serialize()));
+////			$(".box").html($(this).serializeArray()); 这里转换成了json数据 不能显示 需要用 console.log
+//			console.log($(this).serializeArray());
+//			var json=$(this).serializeArray();
+//			$(".box").html(json[0].value);
+//			$(".box").html(json[0].username);
+//			
+//			
+//		})
+////		alert($('form').serialize());
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//初始化重复属性
+	
+
+//	$('form input[type=button]').click(function () {
+//		$.ajaxSetup({
+//			type : 'POST',
+//			url : 'ajax.php',
+//			data : $('form').serialize()
+//		});
+//		
+//		$.ajax({
+//			success : function (response, status, xhr) {
+//				$('.box').html(response);
+//			}
+//		});
+//	});
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	解开键值对
+		$('form input[type=button]').click(function () {
+		$.ajaxSetup({
+			type : 'POST',
+			url : 'ajax.php',
+			data:{
+					username:$('form input[name=username]').val(),
+					email:$('form input[name=email]').val()
+				}
+		});
+		
+		$.ajax({
+			success : function (response, status, xhr) {
+				$('.box').html(response);
+			}
+		});
+		
+	});
+	alert($.param({
+					username:$('form input[name=username]').val(),
+					email:$('form input[name=email]').val()
+				}));
+	});
+</script>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <style>
+        * { margin:0; padding:0;}
+        body { font-size:12px;}
+        .comment { margin-top:10px; padding:10px; border:1px solid #ccc;background:#DDD;}
+        .comment h6 { font-weight:700; font-size:14px;}
+        .para { margin-top:5px; text-indent:2em;background:#DDD;}
+    </style>
+    <title></title>
+</head>
+<body>
+<p>
+    <input type="button" id="send" value="加载"/>
+</p>
+<div id="resText" >
+	<ul>
+	</ul>
+</div>
+</body>
+<script type="text/javascript">
+    $(function () {
+        $('#send').click(function() {
+            $.getJSON("flickr.json",
+                    function(data){
+//                  	$(selector).each(function(index,element))
+//						jQuery.each() 函数用于遍历指定的对象和数组。
+//						$.each( object, callback )
+                        $.each(data.items, function( i,item ){
+                            
+                            $("ul").append("<li>"+
+                            
+                            					"<p>"+item.title+"</p>"+
+                            					"<img src='"+item.media.m+"'>"+
+                            					"<p>发布时间："+item.date_taken+"</p>"+
+                            					"<p>tags："+item.tags+"</p>"+
+                            					"<p>author："+item.author+"</p><br/>"+
+                            				"</li>")
+                            .appendTo("#resText");
+//                          $("<img class='para'/> ").attr("src", item.media.m).appendTo("#resText");
+                            if ( i == 55 ) {
+                                return false;
+                            }
+                        });
+                    }
+            );
+        })
+    })
+    /**
+     *  JSONP(JSON with Padding)是一个非官方的协议，它允许在服务器端集成Script tags返回至客户端，通过JavaScript Callback的形式实现跨域访问
+     *  上述的url地址并不能请求到数据，仅用作说明。
+     * */
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Date探讨之后讲到Date对象开始讲</title>
+	<script>
+	var myDate = new Date();
+		myDate.getDate(); 
+	    myDate.getYear();       //获取当前年份(2位)
+	    myDate.getFullYear();   //获取完整的年份(4位,1970-????)
+	    myDate.getMonth();      //获取当前月份(0-11,0代表1月)
+	          //获取当前日(1-31)
+	    myDate.getDay();        //获取当前星期X(0-6,0代表星期天)
+	    myDate.getTime();       //获取当前时间(从1970.1.1开始的毫秒数)
+	    myDate.getHours();      //获取当前小时数(0-23)
+	    myDate.getMinutes();    //获取当前分钟数(0-59)
+	    myDate.getSeconds();    //获取当前秒数(0-59)
+	    myDate.getMilliseconds();   //获取当前毫秒数(0-999)
+	    myDate.toLocaleDateString();    //获取当前日期
+	    var mytime=myDate.toLocaleTimeString();    //获取当前时间
+	    var b=myDate.toLocaleString( );       //获取日期与时间
+		console.log("getYear",myDate.getYear());
+		console.log("getFullYear",myDate.getFullYear());
+		console.log("getMonth",myDate.getMonth());
+		console.log("getDate",myDate.getDate());
+		console.log("getDay",myDate.getDay());
+		console.log("getTime",myDate.getTime());
+		console.log("getHours",myDate.getHours());
+		console.log("getMinutes",myDate.getMinutes());
+		console.log("getSeconds",myDate.getSeconds());
+		console.log("getMilliseconds",myDate.getMilliseconds());
+
+		console.log("mytime:",mytime);
+		console.log("tolocaleTimeString:",Date());
+		console.log("toLocaleString",b);
+		console.log(myDate.getHours(),myDate.getMinutes(),myDate.getSeconds())     //获取当前小时数(0-23)
+	   
+	</SCRIPT>
+	
+</head>
+<body>
+	
+</body>
+</html>

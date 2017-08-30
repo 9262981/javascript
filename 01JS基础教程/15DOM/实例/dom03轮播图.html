@@ -1,0 +1,54 @@
+
+<!DOCTYPE html >
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<title>平滑的移动效果-320的移动拆分出来</title> 
+<style type="text/css"> 
+*{ margin: 0; padding: 0;} 
+ul{ list-style: none;} 
+#view{ position: relative; width: 320px; height: 120px; margin-left:320px; border: 10px solid #bc8f8f;overflow: hidden; } 
+#view:after{ content: '.'; display: block; clear: both; height: 0; visibility:hidden;} 
+#img_list{ position: absolute; width: 960px;} 
+#img_list li{ float: left; width: 320px; height: 120px; } 
+#a{ background: #87ceeb;} 
+#b{ background: #ff69b4;} 
+#c{ background: #98fb98;} 
+</style> 
+</head> 
+<body> 
+<div id="view"> 
+<ul id="img_list"> 
+<li id="a"></li> 
+<li id="b"></li> 
+<li id="c"></li> 
+</ul> 
+</div> 
+<script type="text/javascript"> 
+var img_list = document.getElementById('img_list'); 
+	img_list.style.left = 0; 
+	setInterval(
+		function(){ 
+
+
+
+
+			for(var i = 0 ; i < 100 ; i++)
+			{ 
+				(
+					function(pos)
+					{ 
+					setTimeout(function(){img_list.style.left = parseInt(img_list.style.left) == -640 ? 0: -pos/100 * 640+'px'; },(pos + 1)*10)
+					}
+				)
+				(i) 
+			} 
+
+
+
+
+		}
+	,2500) 
+</script> 
+</body> 
+</html>

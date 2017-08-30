@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>幻灯制作</title>
+	<script src="js/move.js"></script>
+	<style type="text/css">
+	li{width: 100px;height: 100px;background: red;margin: 10px;}
+	#demo{width: 100px;height: 100px;background: red;margin: 10px;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function  () {
+			var a=document.getElementById("demo");
+			a.onclick=function  () {
+				startMove(this,'opacity',30);
+			}
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<ul id="demo">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+</html>

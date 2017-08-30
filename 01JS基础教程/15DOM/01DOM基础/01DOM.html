@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>子节点</title>
+</head>
+<script type="text/javascript">
+	window.onload=function  () {
+		var oUl=document.getElementById("ul1");
+		// console.log(oUl.childNodes.length);	
+		//ie 9 火狐 会获取到文本节点 ie6-8不会获取文本节点
+
+		// childNodes包li前面的文本节点
+		// li属于元素节点
+		// for(var i=0;i<oUl.childNodes.length;i++){
+		
+		// 	oUl.childNodes[i].style.background="red";
+		// }
+		// 文本节点没有样式 所以出问题；
+/////////////////////////////////////////////////////////////
+		// nodeType节点类型文本节点为3 元素节点为1；
+		// for(var i=0;i<oUl.childNodes.length;i++){
+		// 	console.log(oUl.childNodes[i].nodeType);
+		// 	//打印每个节点类型
+		// 	if(oUl.childNodes[i].nodeType==1){
+		// 		oUl.childNodes[i].style.background="red";
+		// 	}
+		// }
+///////////////////////////////////////////////////////////////
+		//children只是获取子元素节点//孙节点获取不到//一般会用children
+			// for(var i=0;i<oUl.children.length;i++){
+			// 	oUl.children[i].style.background="blue";
+			// }
+///////////////////////////////////////////////////////////////
+/////////父节点
+		// console.log(oUl.parentNode);
+		// var aAll=document.getElementsByTagName('a');
+
+		// for(var i=0;i<aAll.length;i++){
+		// 	aAll[i].onclick=function  () {
+		// 		this.parentNode.style.display="none";
+		// 	}
+		// }
+//////////////////////////////////////////////////////////
+		//offsetParent用来寻找有定位的父级
+	}
+</script>
+	
+<body>
+	<ul id="ul1">
+		123123123文本节点
+		<li>送到路口附近开了1<a href="javascript:void(0)">hidden</a></li>
+		<li>送到路口附近开了1<a href="javascript:void(0)">hidden</a></li>
+		<li>送到路口附近开了1<a href="javascript:void(0)">hidden</a></li>
+		
+		<li></li>
+	</ul>
+</body>
+</html>

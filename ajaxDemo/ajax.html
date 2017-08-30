@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script type="text/javascript">
+	$(function  () {
+		$('input').click(function  () {
+			$.ajax({
+				url:"ajax.php",
+				type:'post',
+				data:{
+					url:"aaaa"
+				},
+				success:function  (response,status,xhr) {
+					$('.box').html(response);
+				}
+			});
+		});
+	});
+</script>
+	</head>
+	<body>
+		<div class="box"></div>
+		<input type="button" />
+	</body>
+</html>

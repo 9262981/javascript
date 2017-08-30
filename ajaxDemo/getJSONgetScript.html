@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+	
+	</head>
+	<body>
+	<button>submit</button>
+	</body>
+	<script type="text/javascript">
+//		$(function  () {
+//			$("button").click(function  () {
+//				$.getScript("alert.js");
+//			})
+//		})
+		$(function  () {
+			$("button").click(function  () {
+				$.getJSON("test.json",function  (response,status,xhr) {
+					alert(response[0].username+response[0].content);
+				});
+			})
+		})
+	</script>
+</html>

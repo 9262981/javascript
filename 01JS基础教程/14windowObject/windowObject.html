@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>windowObject</title>
+	<script>
+		// window.defaultStatus="This is the default text in the status bar!!";
+
+		// alert("点击跳转到新页面");
+		// window.location="http://www.html12345.club";
+
+		
+		// console.log("length",(window.length));
+		// console.log("name",(window.name));
+		// console.log("top",(window.top));
+		// console.log("history",(window.history));
+		// console.log("status",(window.status));
+		// console.log("parent",(window.parent));
+		// console.log("opener",(window.opener));
+		// console.log("closed",(window.closed));
+		// console.log("screen",(window.screen));
+		// console.log("navigator",(window.navigator));
+
+		// function newOpen () {
+		// 	window.open("abc.html",'abc','width=500,height=300,top=250,left=500');
+		// }
+		
+		// var flag=confirm("确认关闭？");
+		// alert(flag);
+
+		// var str=window.prompt("输入长","");
+		// var str2=prompt("输入宽","");
+		// var total=str*str2;
+		// alert("面积是:"+total);
+
+		// alert("关闭后窗口关闭");
+		// window.close();
+		//名字起了以后，不会重复弹出窗口//视频网站有一些就是使用了这种功能
+		// open('abc.html',"title",'width=400,height=300,top=300,left=600');
+
+		// resizeTo(300,300);
+		//ie生效测试
+		// moveTo(100,100);
+
+	</script>
+</head>
+<body>
+	<p>Look at the text in the statusbar.</p>
+	<INPUT type="button" id="newopen" value="打开父窗口" onclick="newOpen()">
+	
+	<pre>
+		第十三课、Window对象介绍
+
+		    window对象即为浏览器窗口对象，是所有对象的顶级对象。window对象提供了许多
+		属性和方法，这些属性和方法被用来操作浏览器页面的内容。
+
+		    window对象和Math对象一样，也不需要使用new关键字创建对象实例，而是直接使用
+		对象名.成员 的格式来访问其属性或方法。
+
+		1、window对象的常用属性
+
+			document	对窗口或框架中含有文档的document对象的只读引用
+			defaultStatus	一个可读写的字符，用于指定状态栏中的默认消息
+			frames		表示当前窗口中所有的frame对象的集合
+			location	用于代表窗口或框架的location对象。如果将一个URL赋给该属性，、
+					那么浏览器将加载并显示该URL指定的文档。
+			length		窗口或框架包含的框架个数
+			history		对窗口或框架的history对象的只读引用
+			name		用于存放窗口的名字
+			status		一个可读写的字符，用于指定状态栏中的当前信息
+			top		表示最顶层的浏览器窗口
+			parent		表示包含当前窗口的父窗口
+			opener		表示打开当前窗口的父窗口
+			closed		一个只读的布尔值，表示当前窗口是否关闭。
+			self		表示当前窗口
+			screen		对窗口或框架的screen对象的只读引用，提供屏幕尺寸、颜色深度
+					等信息。
+			navigator	对窗口或框架的navigator对象的只读引用，通过navigator对象
+					可以获得与浏览器相关的信息
+		2、window对象的常用方法
+
+			由于window对象使用十分频繁，而且又是其他对象的父对象，所以在使用window对象
+			的属性和方法时，JavaScript允许省略window对象的名称。
+
+			alert()				弹出一个警告对话框
+			confirm()			显示一个确认对话框，单击确认按钮时返回true,
+							否则返回false
+			prompt()			弹出一个提示对话框，并要求输入一个简单的
+							字符串
+			blur()				把键盘的焦点从顶层浏览器窗口中移走
+			close()				关闭窗口
+			focus()				把键盘的焦点赋予给顶层的浏览器窗口
+			open()				打开一个新窗口
+			scrollTo(x,y)			把窗口滚动到(x,y)坐标指定的位置
+			scrollBy(offsetx,offsety)	按照指定的位移量滚动窗口
+			setTimeout(timer)		在经过指定的时间后执行代码
+			clearTimeout()			取消对指定代码的延迟执行
+			moveTo(x,y)			将窗口移动到一个绝对位置
+			moveBy(offsetx,offsety)		将窗口移动到指定的位移量处
+			resizeTo(x,y)			设置窗口的大小
+			print()				相当于浏览器工具栏的打印按钮
+			setInterval()			周期执行指定的代码
+			clearInterval()			取消周期性的执行代码
+
+	</pre>
+</body>
+</html>

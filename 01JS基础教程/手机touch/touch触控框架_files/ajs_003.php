@@ -1,0 +1,3 @@
+var OX_babe33ea = '';
+OX_babe33ea += "<"+"a href=\'//gg1.51cto.com/www/delivery/ck.php?oaparams=2__bannerid=3717__zoneid=594__cb=55598c2053__oadest=http%3A%2F%2Fedu.51cto.com%2Ftraining%2Ftraining_id-18.html%3Fxiaoshou\' target=\'_blank\'><"+"font color=\'red\'>微软企业级内训课程免费学<"+"/font><"+"/a><"+"div id=\'beacon_55598c2053\' style=\'position: absolute; left: 0px; top: 0px; visibility: hidden;\'><"+"img src=\'//gg.51cto.com/www/delivery/lg.php?bannerid=3717&amp;campaignid=779&amp;zoneid=594&amp;loc=1&amp;referer=http%3A%2F%2Fmobile.51cto.com%2Fweb-434181.htm&amp;cb=55598c2053\' width=\'0\' height=\'0\' alt=\'\' style=\'width: 0px; height: 0px;\' /><"+"/div>\n";
+document.write(OX_babe33ea);

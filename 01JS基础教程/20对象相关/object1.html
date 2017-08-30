@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script>
+///////////最基础的面向对象程序///////////////
+// 	var obj=new Object();//创建
+
+// 	obj.name='simon';//属性
+// 	obj.qq='9262981';  
+
+// 	obj.showName=function  () {//方法
+// 		alert('My Name Is '+obj.name);
+// 	}   
+// 	obj.showQQ=function  () {
+// 		alert('My QQ Is '+obj.qq);
+// 	}   
+// 	obj.showName();//调用
+// 	obj.showQQ();
+// 构造函数//用函数包装面向对象程序//////构建一个对象出来
+// 	function creatPerson (name,qq) {
+// 		var obj=new Object();//创建
+
+// 		obj.name=name;//属性
+// 		obj.qq=qq;  
+
+// 		obj.showName=function  () {//方法
+// 			alert('My Name Is '+this.name);
+// 		};   
+// 		obj.showQQ=function  () {
+// 			alert('My QQ Is '+this.qq);
+// 		};
+// 		return obj;
+// 	}
+	
+// 	var obj=creatPerson('simon','9262981');
+// 	obj.showName();
+// 	obj.showQQ();
+
+// 	var obj2=creatPerson('simon2','92629812');
+// 	obj2.showName();
+// 	obj2.showQQ();
+// 工厂方式///////1没有new 2函数重复资源浪费//////////////////////
+// 原料---》加工-》出场
+// 	function creatPerson (name,qq) {
+// 		// 原料
+// 		var obj=new Object();//创建 
+// 		// 加工
+// 		obj.name=name;//属性
+// 		obj.qq=qq;  
+
+// 		obj.showName=function  () {//方法
+// 			alert('My Name Is '+this.name);
+// 		};   
+// 		obj.showQQ=function  () {
+// 			alert('My QQ Is '+this.qq);
+// 		};
+// 		// 出场
+// 		return obj;
+// 	}
+	
+// 	var obj=creatPerson('simon','9262981');
+	
+
+// 	var obj2=creatPerson('simon2','92629812');
+// 	alert(obj.showName==obj2.showName);
+// this写法////////////////////////////////////////////
+// 	function creatPerson (name,qq) {
+// 		//系统将this var this=new Object();
+// 		// var obj= new Object();
+// 		this.name=name;//属性
+// 		this.qq=qq;  
+
+// 		this.showName=function  () {//方法
+// 			alert('My Name Is '+this.name);
+// 		};   
+// 		this.showQQ=function  () {
+// 			alert('My QQ Is '+this.qq);
+// 		};
+// 		//return this;
+// 	}
+	
+// 	var obj=new creatPerson('simon','9262981');
+// 	obj.showName();
+// 	obj.showQQ();
+
+// 	var obj2=new creatPerson('simon2','92629812');
+// 	obj2.showName();
+// 	obj2.showQQ();
+
+// //给自己的类添加对象//////////prototype////////////
+// 	function creatPerson (name,qq) {
+// 		//系统将this var this=new Object();
+// 		// var obj= new Object();
+// 		this.name=name;//属性
+// 		this.qq=qq;  
+
+// 	}
+// 	creatPerson.prototype.showName=function  () {
+// 		alert('My Name Is '+this.name);
+// 	}
+// 	creatPerson.prototype.showQQ=function  () {
+// 		alert('My QQ Is '+this.qq);
+// 	}
+// 	var obj=new creatPerson('simon','9262981');
+// 	// obj.showName();
+// 	// obj.showQQ();
+
+// 	var obj2=new creatPerson('simon2','92629812');
+// 	// obj2.showName();
+// 	// obj2.showQQ();
+// 	alert(obj.showName==obj2.showName);
+	//名称：混合方式；//全称混合的构造函数/原型方式
+	//原则：1在构造函数里加属性//2在原型里面加方法//
+	//对象命名规范//类名首字母大写
+	
+	///名词释义//
+	//抽象
+	//封装
+	//继承 重用已有代码 从父类上继承出一些方法跟属性；子类又有自己的特性
+		// 多重继承，一子多父继承多个属性方法
+		// 多态 java c++ 强语言比较重视
+</script>
+<body>
+
+	
+</body>
+</html>

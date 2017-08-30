@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>01匀速运动小问题</title>
+	<style type="text/css">
+		#div1{width:100px;height: 100px;background: red;position: absolute;left:800px;top:100px;}
+		/*如果从右向左运动，那么又有相同的问题出现*/
+		#div2{width: 1px;height: 200px;position: absolute;left:500px;background: black;color:black;}
+	</style>
+
+</head>
+<body>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3"></div>
+	<INPUT type="button" value="500" id="a">
+	<INPUT type="button" value="600" id="b">
+	<pre>
+		逐渐变慢的感觉
+		距离大的时候，速度越大
+		距离小的时候，速度越小
+	</pre>
+</body>
+	<script type="text/javascript">
+		window.onload=function  () {
+		
+			var oDiv=document.getElementById('div1');
+			var a=document.getElementById("a");
+			var b=document.getElementById('b');
+			var time=null;
+			a.onclick=function  () {
+
+				time=setInterval(move,30);
+
+			}
+			function move() {
+			var speed=0;
+			if(oDiv.offsetLeft<500){
+				speed=7;
+			}else{
+				speed=-7;
+			}
+			oDiv.style.left=oDiv.offsetLeft+speed+"px";
+			console.log(oDiv.style.left);
+			
+			}
+	
+
+
+			
+		}
+	</script>
+</html>

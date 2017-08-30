@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>for while do-while</title>
+	<script>
+		//for循环
+		// for (var i=0; i<5; i++)
+		// 	  {
+		// 	 //var x=x + "The number is " + i + "<br>";
+		// 	 //console.log('vari',i);
+		// 	 alert(i);
+		//  }
+		
+		// cars=["BMW","Volvo","Saab","Ford"];
+		// for (var i=0;i<cars.length;i++)
+		// {
+		// document.write(cars[i] + "<br>");
+		// }
+		// 通常我们会使用语句 1 初始化循环中所用的变量 (var i=0)。
+		// 语句 1 是可选的，也就是说不使用语句 1 也可以。
+		// 您可以在语句 1 中初始化任意（或者多个）值：
+		// cars=["BMW","Volvo","Saab","Ford"];
+		// for (var i=0,l=cars.length; i<l; i++)
+		// {
+		// document.write(cars[i] + "<br>");
+		// }
+		// 同时您还可以省略语句 1（比如在循环开始前已经设置了值时）：
+		// var i=2,len=cars.length;
+		// for (; i<len; i++)
+		// {
+		// document.write(cars[i] + "<br>");
+		// }
+		// 语句 2
+		// 通常语句 2 用于评估初始变量的条件。
+		// 语句 2 同样是可选的。
+		// 如果语句 2 返回 true，则循环再次开始，如果返回 false，则循环将结束。
+		// 提示：如果您省略了语句 2，那么必须在循环内提供 break。否则循环就无法停下来。这样有可能令浏览器崩溃。
+
+		// 通常语句 3 会增加初始变量的值。
+		// 语句 3 也是可选的。
+		// 语句 3 有多种用法。增量可以是负数 (i--)，或者更大 (i=i+15)。
+		// 语句 3 也可以省略（比如当循环内部有相应的代码时）：
+		// cars=["BMW","Volvo","Saab","Ford"];
+		// var i=0,len=cars.length;
+		// for (; i<len; )
+		// {
+		// document.write(cars[i] + "<br>");
+		// i++;
+		// }
+
+		var sum=0;
+		var i=1;
+		while(sum<=3){
+			sum+=i;
+			console.log("i:",sum);	
+			// alert(sum);
+			
+		}	
+
+		// dowhile循环
+		// var i=0;
+		// do{
+		// 	alert(i);
+		// 	i++;
+		// }while(i>55);
+
+		For/In 循环
+
+		JavaScript for/in 语句循环遍历对象的属性：
+
+		
+	</script>
+</head>
+<body>
+	<pre>
+	
+	第八课、流程控制之for、while、do-while语句
+
+	1、for循环语句
+		initialize 初始化
+		increment递增量; 自动增长; 增值;
+		statement[网络]	语句; 陈述句; 语句级;
+
+		语法格式：for(①initialize;②test;④increment){
+				③statement
+			  }
+			  ①->②(true)->③->④->②(true)->③->④->......
+			  ①->②(true)->③->④->②(false) for循环结束
+			  示例：
+			 var sum=0;
+			 for(var i=1;i<=10;i++){
+				sum+=i;
+			 }
+			 alert("总和为："+sum);
+
+	2、while循环语句
+
+		while循环的循环体可能一次都不执行。
+		expression表达式
+		语法格式：while(①expression){
+				②statement
+			 }
+			 ①(true)->②->①(true)->②.....
+			 ①(false) 直接终止while循环。
+			 示例：
+			 var sum1=0;
+			 var i=100;
+			 while(i<=1){
+				sum1+=i;
+				i++;
+			 }
+			 alert("while总和为："+sum1);
+	3、do-while循环语句
+		do-while循环的循环体能够保证至少执行一次。
+		语法格式：
+		do{
+			①statement
+		}while(②expression);
+
+		示例：
+		var sum2=0;
+		 var i2=1;
+		 do{
+			sum2+=i2;
+			i2++;
+		 }while(i2<=10);
+		 alert("do-while总和为："+sum2);
+
+		while循环是 先判断条件是否成立，然后再根据判断的结果是否执行循环体。也就是
+			说循环体有可能一次都执行不了。
+		do-while循环是 先执行一次循环体，然后再判断条件是否成立。所以不管条件
+			是否成立，至少能够执行一次。
+	</pre>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>宽度缓慢变化</title>
+<style>
+#can { width:180px; background-color:#000; margin:auto; padding:10px; color:#FFF; font-size:12px; line-height:18px;}
+#chg { width:200px; height:120px; background-color:#390; margin:auto;}
+#btn { width:200px; height:30px; background-color:#000; margin:auto; display:block; cursor:pointer; color:#FFF; font-size:12px; text-align:center; line-height:30px; font-weight:bolder;}
+</style>
+</head>
+
+<body>
+<div id="can">
+点击最下面的按钮可以使绿色块缓慢展开或收缩,但是如果在绿块在展开或收缩的过程中再次点击按钮则会出现异常情况,以后再点击按钮都不会出现展开或收缩效果了.为何?另外,如何实现在宽度展开或收缩动作完成后接着出现高度的展开或收缩?
+</div><br />
+<div id="chg"></div><br />
+<div id="btn" onclick="$d3()">展开</div>
+</body>
+</html>
+<script>
+
+function $d1(){
+	var l=document.getElementById("chg");
+	var w=l.offsetWidth;
+	var maxw=500;
+	function chgws(){
+		w += 1;
+		if(w>=maxw){
+			l.style.width='500px';
+			clearInterval(iIntervalId);
+			}else{
+				l.style.width=w+'px';
+				}
+		}
+	iIntervalId=setInterval(chgws,10);
+	}
+
+function $d2(){
+	var m=document.getElementById("chg");
+	var n=m.offsetWidth;
+	var maxw=500;
+	function chgwh(){
+		n -= 1;
+		if(n<=200){
+			m.style.width='200px';
+			clearInterval(iIntervalId);
+			}else{
+				m.style.width=n+'px';
+				}
+		}
+	iIntervalId=setInterval(chgwh,10);
+	}
+
+function $d3(){
+	var q=document.getElementById("chg");
+	var chgb=document.getElementById('btn');
+	if(chgb.innerHTML=="展开"){
+		chgb.innerHTML="收缩";
+		$d1();
+		}else{
+			chgb.innerHTML="展开";
+			$d2();
+			}
+	}
+</script>

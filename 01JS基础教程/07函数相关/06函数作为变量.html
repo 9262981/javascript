@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>function-variable</title>
+</head>
+<body>
+	<p>函数可以存储在变量中:</p>
+	<p id="demo"></p>
+
+	<script>
+	// var x = function (a, b) {return a * b};
+	// document.getElementById("demo").innerHTML = x;
+	// var x = function (a, b) {return a * b};
+	// document.getElementById("demo").innerHTML = x(4, 3);
+	</script>
+	<pre>
+		1.以上函数实际上是一个 匿名函数 (函数没有名称)。
+
+		函数存储在变量中，不需要函数名称，通常通过变量名来调用。
+
+
+		Function() 构造函数
+
+		在以上实例中，我们了解到函数通过关键字 function 定义。
+
+		函数同样可以通过内置的 JavaScript 函数构造器（Function()）定义。
+	</pre>
+	<script>
+		// var myFunction = new Function("a", "b", "return a * b");
+		// document.getElementById("demo").innerHTML = myFunction(4, 3);
+		// 	多种方式，以后遇到，从意思去理解；
+		// var myFunction = function (a, b) {return a * b}
+
+		// var x = myFunction(4, 3);
+	</script>
+
+	
+
+</body>
+</html>

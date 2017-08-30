@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>variable变量的命名规则，作用域</title>
+	<script type="text/javascript">
+		var a= 1;
+		var b= new Number;
+		var c= new Boolean;
+		var d= new Array;
+		var e= new Object;
+			function abc () {
+				var aa=2;
+			}
+
+		alert(aa);
+	</script>
+</head>
+<body>
+	<pre>
+	第五课、变量的定义与使用
+
+	1、变量的命名规则
+
+		
+
+		1.必须以字母或下划线开头,中间可以是数字,字母或下划线.
+		2.变量名不能包含空格或加号,减号或符号;
+		3.Javascript的变量名是严格区分大小写的,例如user与User代表两个变量.
+		4.不能使用Javascript中的关键字.
+		   虽然Javascript的变量可以任意命名,但为了在编程时使代码更加规范,请尽量以具有意义的名称来命名,以增加程序的可读性.
+		   Javascript变量的声明与赋值
+		   在Javascript中,一般使用变量前需要声明变量,但有时变量可以不必先声明,而是在使用时根据变量的实际作用来确定其所属的数据类型,所有的Javascript变量都由关键字var声明.
+		   语法:var variable;
+		   		var year,day,month,date;
+		   也可以在声明变量的同时对变量进行赋值.
+		   var variable=11;
+		 建议在使用变量前就对其声明,因为声明变量的最大好处就是能及时发现代码的错误,由于Javascript是采用动态编译的,而动态编译是不易发现代码中的错误的,特别是变量命名方面的错误.
+			
+			break 	case 	catch 	continue 	default
+			delete 	do 	else 	finally 	for
+			function 	if 	in 	instanceof 	new
+			return 	switch 	this 	throw 	try
+			typeof 	var 	void 	while 	with
+
+			　　2、js中的保留字：
+
+			　　
+			abstract 	boolean 	byte 	char 	class
+			const 	debugger 	double 	enum 	export
+			extends 	final 	float 	goto 	implements
+			import 	int 	interface 	long 	native
+			package 	private 	protected 	public 	short
+			static 	super 	synchronized 	throws 	transient
+			volatile 	
+			
+			小驼峰法
+			变量一般用小驼峰法标识。驼峰法的意思是：除第一个单词之外，其他单词首字母大写。譬如
+			int myStudentCount;
+			变量myStudentCount第一个单词是全部小写，后面的单词首字母大写。
+			大驼峰法
+			相比小驼峰法，大驼峰法把第一个单词的首字母也大写了。常用于类名，函数名，属性，命名空间。譬如
+			public class DataBaseUser; 
+
+	2、变量的声明
+
+		var variable;
+
+		可以使用一个var 声明多个变量，比如
+			var now,year,month,date;
+
+		可以在声明变量的同时对它进行赋值，也就是初始化。
+			var now="2015-10-10",year="2015",month="10",date="10";
+
+		如果只是声明了变量，没有赋值，那么该变量的默认值是undefined
+
+		JavaScript是弱类型，声明的时候不需要指定变量的类型，变量的类型将根据
+		变量的值来确定。
+
+		全局变量的声明：
+
+				1、在函数体外声明的都是全局变量。无论是否有var 声明。
+				2、在函数体内部使用var声明的变量是局部变量，不使用var
+				   声明直接赋值的变量是全局变量。
+
+			var quanju=123;//这是全局变量
+			
+			 //如果给一个尚未声明的变量赋值时，JavaScript会自动使用该变量创建一个
+			 //全局变量。
+			  quanju1="abc";//这也是全局变量
+
+			  function test(){
+				var quanju3="aaaaa";//这是局部变量
+				quanju2="12345";//这也是全局变量
+				test2();
+			  }
+
+			  function test2(){
+				alert(quanju2);
+			  }
+
+	3、变量的作用域
+
+		变量的作用域是指变量在程序中的有效范围。
+		全局变量：定义在所有函数之外，作用于整个代码的变量。
+		局部变量：定义在函数体内，只作用于函数体内的变量。
+
+		二：声明变量类型
+
+		当您声明新变量时，可以使用关键词 "new" 来声明其类型：
+		var carname=new String;
+		var x=      new Number;
+		var y=      new Boolean;
+		var cars=   new Array;
+		var person= new Object;
+
+		var lastname="Doe", age=30, job="carpenter"; 
+
+		var lastname="Doe",
+		age=30,
+		job="carpenter"; 
+
+		Value = undefined
+
+		var carname="Volvo";
+		var carname;
+	</pre>
+</body>
+</html>

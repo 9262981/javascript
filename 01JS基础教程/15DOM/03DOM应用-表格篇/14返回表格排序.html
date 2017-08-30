@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>01dom操作表格</title>
+	<style type="text/css">
+		table,td{border:3px solid grey;}
+		td{width:80px;height:30px;}
+	</style>
+	<script>
+window.onload=demo;
+function demo () {
+	var oTab=document.getElementById('tab1');
+	var oBtn2=document.getElementById('btn2');
+	var arr=[];
+	oBtn2.onclick=function  () {
+		for (var i=0;i<oTab.tBodies[0].rows.length;i++){
+			arr[i]=oTab.tBodies[0].rows[i];
+		}
+		arr.sort(function  (tr1,tr2) {
+			var n1=parseInt(tr1.cells[0].innerHTML);
+			var n2=parseInt(tr2.cells[0].innerHTML);
+
+			return n1-n2;
+		});
+		for(var i=0;i<arr.length;i++){
+			oTab.tBodies[0].appendChild(arr[i]);
+		}
+	}
+}
+////////////////////多关键词 ////////////////////////
+	</script>
+</head>
+<body>
+	<input type="button" value="排序" id="btn2">
+	<table id="tab1">
+		<thead>
+			<td>id</td>
+			<td>name</td>
+			<td>age</td>
+			<td>操作</td>
+		</thead>
+		<tbody>
+			<tr>
+				<td>5</td>
+				<td>simon</td>
+				<td>33</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>孙志鹏</td>
+				<td>33</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>张三</td>
+				<td>03</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>31</td>
+				<td>张三</td>
+				<td>03</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>42</td>
+				<td>李四</td>
+				<td>13</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>21</td>
+				<td>李志</td>
+				<td>33</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>52</td>
+				<td>王五</td>
+				<td>23</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	
+	
+</body>
+</html>

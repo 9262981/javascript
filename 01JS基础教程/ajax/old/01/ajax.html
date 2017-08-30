@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>cengciparentchild</title>
+	<script src="js/jquery.min.js"></script>
+	<style type="text/css">
+	body{width:1020px;height:800px;}
+	div{display: inline-block}
+	div,span,p{background: #999;float:left;height: 200px;width: 200px;border:1px solid black;}
+	.one{height: 200px;width: 200px;border:1px solid black;}
+	.mini{height: 40px;width: 150px;border:1px solid black;float:left;}
+	</style>
+	
+	
+</head>
+<body>
+	<input type="button" value="body all div" id="btn1">
+	
+	<hr>
+	<div class="one" id="one">
+		发送一个ajax请求
+	</div>
+	<script type="text/javascript">
+	//get方式  url,get参数 
+		$("#btn1").click(function  () {
+		// 	$.get("demo.php",{'username':'科学家'},function  (data) {
+		// 		$("#one").html(data);
+		// 	});
+		
+	
+		
+		// $.post();
+
+		// $.post("demo.php",{"username":"simon"},function  (data) {
+		// 	$("#one").html(data);
+		// })
+		// $.ajax();
+			$.ajax({
+				'url':'demo.php',
+				'data':{"username":"simon"},
+				'success':function  (data) {
+					$("#one").html(data);
+				},
+				'dataType':'html',
+				'type':'post'
+
+			})
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>offsetleft</title>
+	<style type="text/css">
+		*{padding:0px;
+			margin:0px;}
+		.gonggao{
+			width:880px;
+			height:150px;
+			border: 3px solid grey;
+			overflow: hidden;
+			
+			
+		}
+		.gonggao>ul{
+			width:880px;
+			background: red;
+			/*width:122222px;*/
+			height:150px;
+			
+			position: absolute;
+			overflow: hidden;
+			
+		}
+		.gonggao>ul>li{
+			float:left;
+			width:220px;
+
+		}
+		.gonggao>ul>li>img{
+			width:220px;
+			height:150px;
+			
+
+		}
+	/*	span{
+			width:21px;	
+			height:59px;
+			position: absolute;
+			z-index:99;
+			
+			margin-top: 45px;
+			margin-left: -21px;
+		}
+		p{
+			width:21px;	
+			height:59px;
+			position: absolute;
+			z-index:99;
+			display: inline-block;
+			margin-top: 45px;
+			margin-right: -21px;
+		}*/
+	</style>
+	<script type="text/javascript">
+		window.onload=function  () {
+			
+
+			var oDiv=document.getElementById("div1");
+			// console.log(oDiv);
+			var oUl=oDiv.getElementsByTagName('ul')[0];
+			// console.log(oUl);
+			var aLi=oUl.getElementsByTagName('li');
+			// console.log(oLi);
+			// console.log(oLi.length);
+			// 循环滚动，从左到右，列出两组相同的列表出来
+			oUl.innerHTML=oUl.innerHTML+oUl.innerHTML;
+			// oUl.style.width="19999px";
+			// 
+			// var b=oLi.length*220;
+			oUl.style.width=aLi[0].offsetWidth*aLi.length+'px';
+			// ul的长度 应该为一个li的长度乘以4组
+			// console.log(oLi.length);
+			// console.log(b);
+			setInterval(function  () {
+					if(oUl.offsetLeft<-oUl.offsetWidth/2){
+						oUl.style.left='0';
+					}else{
+					oUl.style.left=oUl.offsetLeft-2+'px';
+				}
+				// console.log("123",oUl.style.left);
+			},10);
+			
+
+
+
+		};
+	</script>
+</head>
+<body>
+	
+	<div id="div1" class="gonggao">
+		<ul >
+			
+			<li><img src="img/1.jpg"></li>
+			<li><img src="img/1.jpg"></li>
+			<li><img src="img/1.jpg"></li>
+			<li><img src="img/1.jpg"></li>
+			<li><img src="img/1.jpg"></li>
+			<li><img src="img/1.jpg"></li>
+			<li><img src="img/2.jpg"></li>
+			<li><img src="img/3.jpg"></li>
+			<li><img src="img/4.jpg"></li>
+		
+		</ul>
+	</div>
+	
+		
+</body>
+</html>

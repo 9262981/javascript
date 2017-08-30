@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Operators</title>
+	<script>
+		// var num=11;
+		// var name="Simon Sun";
+		// var numf=2;
+		// alert(num%=numf);
+		// alert(++num);
+		// alert(1/0);//无穷
+		
+		// var a=null;
+		// var b=undefined;
+		// alert(a===b);
+		// alert('11'===11);
+		// alert(!('11'===11));
+		// var a=0;
+		// var b=1;
+		// var c=2;
+
+		//  alert((a==1)|(b==0)|(c==2));
+
+		// alert((a==0)&&(b==1));
+		// alert((a==0)&(b==1));
+		// 三元运算符
+		// var a=1<2?3:4;
+		//  alert(a);
+		//  console.log('var:',a);
+		// 字符链接
+		// var a="hello";
+		// var b="world";
+		// var c=a+b;
+		// 	a+="\n"+" every body!";
+		// console.log('c:',a);
+		// console.log('a:',a);
+		// var y=1;
+	 //    alert(y||0);
+	 	var i=1;
+	 	
+	 	alert(++i);
+	 	alert(i);
+	 	// alert(++i);
+
+	</script>
+</head>
+
+<body>
+	<pre>
+	第六课、运算符的应用
+
+	1、赋值运算符
+		var userName="tom";//简单赋值运算符
+		复合赋值运算符
+		a+=b; //相当于a=a+b;
+		a-=b; //相当于a=a-b;
+		a*=b; //相当于a=a*b;
+		a/=b; //相当于a=a/b;
+		a%=b; //相当于a=a%b;
+		a&b=b;//相当于a=a&b; 与
+		a|=b; //相当于a=a|b; 或
+		a^=b; //相当于a=a^b; 异或
+
+	2、算术运算符
+
+		+  alert(3+5); 
+		-  *  /  %
+		++ i=1;j=i++;//j是1，i是2。因为i++是先用后加。
+				j+=2;
+				i+=1
+				i+1=i;
+				i++
+		   i=1;j=++i;//j是2，i是2。因为++i是先加后用。
+		-- 同理。
+		除法运算时，0不能作为除数，如果0是除数，则返回结果为Infinity。
+
+	3、比较运算符
+
+		<  小于   alert(1<9);//true
+		>   大于　alert(1>9);//false
+		<=
+		>=
+		==  等于       只根据表面值进行判断，不涉及数据类型。alert("11"==11);
+		=== 绝对等于   不仅判断表面值，还要判断数据类型是否一样。
+		!=  不等于     只根据表面值进行判断，不涉及数据类型。
+		!== 不绝对等于 不仅判断表面值，还要判断数据类型是否一样。
+
+	4、逻辑运算符
+
+		!    逻辑非。!真=假，！假=真  !("11"===11) 返回true
+		&&   逻辑与。只有当两个操作数的值都为true的时候，结果才会true。 
+			false&&true 返回值是false
+			true&&false 返回值为false
+			true&&true  返回值为true
+			比如： (1<2)&&(2>3) 返回的是false
+		||   逻辑或。只要两个操作数有一个是true，则结果就是true。
+			false||true  返回值是true
+			true||false  返回值是true
+			false||false 返回值是false
+			比如： (1<2)||(2>3) 返回的是true
+
+			按位与：a&b是把a和b都转换成二进制数然后再进行与的运算；
+			逻辑与：a&&b就是当且仅当两个操作数均为 true时，其结果才为 true；只要有一个为零，a&&b就为零。
+
+		$a and $b	And（逻辑与）	TRUE，如果 $a 和 $b 都为 TRUE。
+		$a or $b	Or（逻辑或）	TRUE，如果 $a 或 $b 任一为 TRUE。
+		$a xor $b	Xor（逻辑异或）	TRUE，如果 $a 或 $b 任一为 TRUE，但不同时是。
+		! $a		Not（逻辑非）	TRUE，如果 $a 不为 TRUE。
+		$a && $b	And（逻辑与）	TRUE，如果 $a 和 $b 都为 TRUE。
+		$a || $b	Or（逻辑或）	TRUE，如果 $a 或 $b 任一为 TRUE。
+
+按位或，逻辑或 |  ||
+按位与，逻辑与 &  && 
+3|2 2进制就是11与10  就是11，也就是3
+
+3&2  结果是11或10 是  10   也就是2
+
+	5、条件运算符
+
+		条件运算符是JavaScript支持的一种特殊的三元运算符。
+		语法格式：  操作数?结果1:结果2;
+		    如果操作数的值为true，则整个表达式的结果为结果1
+	            如果操作数的值为false，则整个表达式的结果为结果2
+		    var a=30;
+		    var b=28;
+		    var c=a>b?a:b;//30
+
+	6、字符串运算符
+
+		连接字符串的两种方式
+		+ 。var a="Hello"+" World";
+		+=。a+=" Hello EveryOne!";//相当于a=a+"Hello EveryOne!";
+	</pre>
+</body>
+</html>

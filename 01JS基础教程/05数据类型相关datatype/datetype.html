@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>datatype</title>
+	<SCRIPT TYPE="text/javascript">
+		var person={firstname:"John", lastname:"Doe", id:5566};
+
+
+		// alert("大家好，我叫'tom'");
+		alert(typeof person["0"]);
+	</SCRIPT>
+</head>
+<body>
+	<pre>
+	第四课、JavaScript的数据类型
+
+	字符串（String）、数字(Number)、布尔(Boolean)、数组(Array)、对象(Object)、空（Null）、未定义（Undefined）。
+
+	1、数值型
+		整型：123   //十进制
+		      0123  //八进制，以0开头
+		      0x123 //十六进制，以0x开头
+
+		浮点型：整数部分加小数部分组成，只能用十进制来表示，不过可以使用科学记数法
+			3.1415926  //标准形式的浮点数
+			3.14E9     //采用科学记数法来表示，代表的是3.14乘以10的9次方
+
+	2、字符型
+
+		字符型数据是使用单引号或者双引号括起来的一个或者多个字符。
+		'a' 'Hello World'
+		"a" "Hello World"
+		 
+		 JavaScript与Java不一样，js没有char数据类型，如果要表示单个字符，必须
+		 使用长度为1的字符串。
+
+		 单引号包含双引号:'大家好，我叫"tom"'
+		 双引号包含单引号："大家好，我叫'tom'"
+	3、布尔型
+
+		布尔型数据只有true或者false。在js中也可以使用整数0代表false，使用非0的
+		整数来代表true。
+		var x=true;
+		var y=false;
+	4、转义字符
+
+		以反斜杠开头的不可显示的特殊字符通常称为控制字符，也被称为转义字符。
+		\b	退格
+		\n	换行
+		\f	换页
+		\t	Tab符
+		\r	回车符
+		\'	单引号
+		\"	双引号
+		\\	反斜杠
+
+	5、空值
+
+		null ,用于定义空的或者不存在的引用。
+
+		var a=null;
+
+	6、未定义值
+
+		已经声明但是没有赋值的变量。
+
+		var a;
+		alert(a);
+		undefined 是关键字，用来代表未定义值。
+	7.数组
+		 下面的代码创建名为 cars 的数组：
+		var cars=new Array();
+		cars[0]="Saab";
+		cars[1]="Volvo";
+		cars[2]="BMW";
+
+		或者 (condensed array):
+		var cars=new Array("Saab","Volvo","BMW");
+		var cars=["Saab","Volvo","BMW"]; 
+	8.对象
+		对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔：
+		var person={firstname:"John", lastname:"Doe", id:5566};
+
+		上面例子中的对象 (person) 有三个属性：firstname、lastname 以及 id。
+
+		空格和折行无关紧要。声明可横跨多行：
+		var person={
+		firstname : "John",
+		lastname  : "Doe",
+		id        :  5566
+		};
+
+		对象属性有两种寻址方式：
+		实例
+		name=person.lastname;
+		name=person["lastname"]; 
+
+		JavaScript 数据类型
+
+		在 JavaScript 中有 5 中不同的数据类型：
+
+		    string
+		    number
+		    boolean
+		    object
+		    function
+
+		3 种对象类型：
+
+		    Object
+		    Date
+		    Array
+
+		2 个不包含任何值的数据类型：
+
+		    null
+		    undefined
+
+
+
+
+	</pre>
+</body>
+</html>

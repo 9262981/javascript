@@ -1,0 +1,65 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<style>
+		body img{width:500px;height:400px;}
+	</style>
+	<title>changepic2</title>
+		<script>
+		// function changeImage()
+		// {
+		// var imgPic=document.getElementById('myimage')
+		// if (imgPic.src.match("2.jpg"))
+		//   {
+		//   imgPic.src="3.jpg";
+		//   }
+		// else if(imgPic.src.match("3.jpg"))
+		//   {
+		//   imgPic.src="4.jpg";
+		//   }
+		// else if(imgPic.src.match("4.jpg"))
+		//   {
+		//   imgPic.src="5.jpg";
+		//   }
+		// else if(imgPic.src.match("5.jpg"))
+		//   {
+		//   imgPic.src="2.jpg";
+		//   }  
+		  
+		// }
+		function changeImage(aBtn){
+			var imgPic=document.getElementById("myimage");
+			switch(aBtn){
+				case 1:imgPic.src="1.jpg";
+				break;
+				case 2:imgPic.src="2.jpg";
+				break;
+				case 3:imgPic.src="3.jpg";
+				break;
+				case 4:imgPic.src="4.jpg";
+				break;
+				case 5:imgPic.src="5.jpg";
+				break;
+				case 6:imgPic.src="6.jpg";
+				break;
+			}
+		}
+		
+		</script>
+</head>
+<body>
+	
+
+<img id="myimage"  src="2.jpg" ><br>
+
+<button onclick="changeImage(1)" >01</button>
+<button onclick="changeImage(2)" >02</button>
+<button onclick="changeImage(3)" >03</button>
+<button onclick="changeImage(4)" >04</button>
+<button onclick="changeImage(5)" >05</button>
+
+<p>点击切换图片	</p>
+</body>
+</html>

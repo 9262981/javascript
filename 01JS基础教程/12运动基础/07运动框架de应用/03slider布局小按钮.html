@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>幻灯制作</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+
+</head>
+<body>
+	<div id="playimages" class="play">
+	    <ul class="big_pic">
+
+			<div class="prev"></div>
+			<div class="next"></div>
+
+			<div class="text">加载图片说明……</div>
+			<div class="length">计算图片数量……</div>
+			
+			<a class="mark_left" href="javascript:;"></a>
+			<a class="mark_right" href="javascript:;"></a>
+			<div class="bg"></div>
+			
+	        <li style="z-index:1;"><img src="img/1.jpg" /></li>
+	        <li><img src="img/2.jpg" /></li>
+	        <li><img src="img/3.jpg" /></li>
+	        <li><img src="img/4.jpg" /></li>
+	        <li><img src="img/5.jpg" /></li>
+	        <li><img src="img/6.jpg" /></li>
+	    </ul>
+	    <div class="small_pic">
+	        <ul style="width:390px;">
+	            <li style="filter: 100; opacity: 1;"><img src="img/1.jpg" /></li>
+	            <li><img src="img/2.jpg" /></li>
+	            <li><img src="img/3.jpg" /></li>
+	            <li><img src="img/4.jpg" /></li>
+	            <li><img src="img/5.jpg" /></li>
+	            <li><img src="img/6.jpg" /></li>
+	        </ul>
+	    </div>
+	</div>
+<script src="js/move.js"></script>
+<script>
+	window.onload=function  () {
+		var oDiv=document.getElementById('playimages');
+		var oBtnPrev=getByClass(oDiv,'prev')[0];
+		var oBtnNext=oDiv.getElementsByTagName('div')[1];
+		var oMarkPrev=oDiv.getElementsByTagName('a')[0];
+		var oMarkNext=oDiv.getElementsByTagName('a')[1];
+		//////////左右小按钮/////////////////
+		console.log(oBtnPrev);
+		oBtnPrev.onmouseover=oMarkPrev.onmouseover=function  () {
+			startMove(oBtnPrev,'opacity',80);
+			// oBtnPrev.style.opacity="1";
+		}
+		oBtnNext.onmouseover=oMarkNext.onmouseover=function  () {
+			startMove(oBtnNext,'opacity',80);
+		}
+		oBtnPrev.onmouseout=oMarkPrev.onmouseout=function  () {
+			startMove(oBtnPrev,'opacity',0);
+			// oBtnPrev.style.opacity="1";
+		}
+		oBtnNext.onmouseout=oMarkNext.onmouseout=function  () {
+			startMove(oBtnNext,'opacity',0);
+		}
+	}
+
+</script>
+
+</body>
+</html>

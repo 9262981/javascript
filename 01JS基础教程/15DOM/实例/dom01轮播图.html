@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<title></title> 
+<style type="text/css"> 
+*{ margin: 0; padding: 0;} 
+ul{ list-style: none;} 
+
+	#view{ 
+		position: relative; 
+		width: 320px; 
+		height: 120px; 
+		margin-left:320px; 
+		border: 10px solid #bc8f8f;
+		 } 
+	#view:after{ 
+		content: '.'; 
+		display: block; 
+		clear: both; 
+		height: 0; 
+		} 
+	#img_list{ 
+		position: absolute; 
+		width: 960px;
+	} 
+	#img_list li{ 
+		float: left;
+		width: 320px; 
+		height: 120px; 
+		} 
+	#a{ background: #87ceeb;} 
+	#b{ background: #ff69b4;} 
+	#c{ background: #98fb98;} 
+</style> 
+</head> 
+<body> 
+	<div id="view"> 
+		<ul id="img_list"> 
+			<li id="a">1</li> 
+			<li id="b">2</li> 
+			<li id="c">3</li> 
+		</ul> 
+	</div> 
+</body> 
+<script type="text/javascript"> 
+	var img_list = document.getElementById('img_list'); 
+	setInterval(function(){ 
+	img_list.appendChild(img_list.firstChild); 
+	},500) 
+</script> 
+</html>

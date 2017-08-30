@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>运动</title>
+</head>
+<style type="text/css">
+#div1{
+	width: 100px;height: 100px;background: red;alpha(opacity:0.3);opacity:0.3;
+	}
+
+</style>
+<script src="js/move2.js"></script>
+<script type="text/javascript">
+	window.onload=function  () {
+	var oDiv=document.getElementById("div1");
+	var oBtn=document.getElementById("btn1");
+	oBtn.onclick=function  () {
+		startMove(oDiv,{width:301,height:300,opacity:100});
+		////////这里宽度变成目标点定时器就关闭了////
+	}	
+
+}
+
+</script>
+<body>
+	<div id="div1"></div>
+	<input type="button" value="运动" id="btn1">
+	<pre>
+		链式运动框架
+		回调函数
+		运动停止时，执行函数
+		运动停止时，开始下一次运动
+		
+		///////////////////////////////////
+		完美运动框架
+		多个值同时变化
+		setStyle同时设置多个属性
+		参数传递
+		Json的使用
+		for in遍历属性
+		运用到运动框架
+		检测运动停止
+		标志变量
+		例子：伸缩同时淡入淡出的菜单
+		//////////////////////////////////
+		运动框架演变过程
+		startMove(iTarget)			运动框架
+		startMove(obj, iTarget)			多物体
+		startMove(obj, attr, iTarget)		任意值
+		startMove(obj, attr, iTarget, fn)		链式运动
+		startMove(obj, json)			多值运动
+		startMove(obj, json, fn)		完美运动框架
+
+
+	</pre>
+</body>
+</html>

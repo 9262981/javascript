@@ -1,0 +1,46 @@
+
+
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>引数</title>
+</head>
+<body>
+	Arguments 对象
+
+	JavaScript 函数有个内置的对象 arguments 对象.
+
+	argument 对象包含了函数调用的参数数组。
+
+	通过这种方式你可以很方便的找到最后一个参数的值：
+	<p>查找最大的数。</p>
+	<p id="demo"></p>
+
+	<script>
+	// function findMax() {
+	//     var i, max = 0;
+	//     for(i = 0; i < arguments.length; i++) {
+	// 		if (arguments[i] > max) {
+	//             max = arguments[i];
+	//         }
+	//     }
+	//     return max;
+	// } 
+	// document.getElementById("demo").innerHTML = findMax(4, 5, 3,999,6,7);
+	</script>
+
+利用arguments求和
+	<script>
+	function sumAll() {
+	    var i, sum = 0;
+	    for(i = 0; i < arguments.length; i++) {
+	        sum += arguments[i];
+	    }
+	    return sum;
+	} 
+	document.getElementById("demo").innerHTML =
+	sumAll(1, 123, 500, 115, 44, 88);
+	</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script type="text/javascript">
+	$(function  () {
+		$('form input[type=button]').click(function  () {
+//			alert(123);
+			$.ajax({
+				url:"ajax.php",
+				type:'post',
+				data:{
+					username:$('form input[name=username]').val(),
+					email:$('form input[name=email]').val()
+				},
+				success:function  (response,status,xhr) {
+					$('.box').html(response);
+				}
+			});
+		});
+	});
+</script>
+	</head>
+	<body>
+		<form action="" method="post">
+			<div class="box"></div>
+			用户名：<input type="text" name="username" />
+			邮件：<input type="text" name="email" />
+			<input type="button" value="提交" />
+		</form>
+		
+		
+	</body>
+</html>

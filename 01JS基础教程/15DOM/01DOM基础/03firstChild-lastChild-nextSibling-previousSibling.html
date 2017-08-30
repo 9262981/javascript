@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>firstChild</title>
+	<script type="text/javascript">
+		window.onload=function  () {
+			var oUl=document.getElementById("ul1");
+			//有没有文本节点的判断
+			if(oUl.firstElementChild){
+				//高版本浏览器
+				oUl.firstElementChild.style.background="red";
+			}else{
+				//ie6-8
+				oUl.firstChild.style.background="red";
+			}
+			console.log(oUl.firstElementChild);
+			//判断是否存在li
+		}
+	</script>
+</head>
+<body>
+	<ul id="ul1">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+	首位子节点
+	firstChild/firstElementChild
+	lastChild/lastElementChild
+
+	兄弟节点
+	nextSibling/nextElementSibling
+	previousSibling/previousElementSibling
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>幻灯制作</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+
+</head>
+<body>
+	<div id="playimages" class="play">
+	    <ul class="big_pic">
+
+			<div class="prev"></div>
+			<div class="next"></div>
+
+			<div class="text">加载图片说明……</div>
+			<div class="length">计算图片数量……</div>
+			
+			<a class="mark_left" href="javascript:;"></a>
+			<a class="mark_right" href="javascript:;"></a>
+			<div class="bg"></div>
+			
+	        <li style="z-index:1;"><img src="img/1.jpg" /></li>
+	        <li><img src="img/2.jpg" /></li>
+	        <li><img src="img/3.jpg" /></li>
+	        <li><img src="img/4.jpg" /></li>
+	        <li><img src="img/5.jpg" /></li>
+	        <li><img src="img/6.jpg" /></li>
+	    </ul>
+	    <div class="small_pic">
+	        <ul style="width:390px;">
+	            <li style="filter: 100; opacity: 1;"><img src="img/1.jpg" /></li>
+	            <li><img src="img/2.jpg" /></li>
+	            <li><img src="img/3.jpg" /></li>
+	            <li><img src="img/4.jpg" /></li>
+	            <li><img src="img/5.jpg" /></li>
+	            <li><img src="img/6.jpg" /></li>
+	        </ul>
+	    </div>
+	</div>
+<script src="js/move.js"></script>
+<script>
+	window.onload=function  () {
+		var oDiv=document.getElementById('playimages');
+		// 左右按钮
+		var oBtnPrev=getByClass(oDiv,'prev')[0];
+		var oBtnNext=getByClass(oDiv,'next')[0];
+		// 遮罩层
+		var oMarkPrev=getByClass(oDiv,'mark_left')[0];
+		var oMarkNext=getByClass(oDiv,'mark_right')[0];
+		//小图区域
+		var oDivSmall=getByClass(oDiv,'small_pic')[0];
+		var oUlSmall=oDivSmall.getElementsByTagName('ul')[0];
+		var aLiSmall=oDivSmall.getElementsByTagName('li');
+		// console.log(aLiSmall.length);
+		
+		//大图区域
+		var oUlBig=getByClass(oDiv,'big_pic')[0];
+		var aLiBig=oUlBig.getElementsByTagName('li');
+		//初始化大图区域的INDEX层级
+		var nowZIndex=2;
+		//记录图片点击的当前图片
+		var now=0;
+
+		//////////左右小按钮/////////////////
+		console.log(oBtnPrev);
+		oBtnPrev.onmouseover=oMarkPrev.onmouseover=function  () {
+			startMove(oBtnPrev,'opacity',80);
+			// oBtnPrev.style.opacity="1";
+		}
+		oBtnNext.onmouseover=oMarkNext.onmouseover=function  () {
+			startMove(oBtnNext,'opacity',80);
+		}
+		oBtnPrev.onmouseout=oMarkPrev.onmouseout=function  () {
+			startMove(oBtnPrev,'opacity',0);
+			// oBtnPrev.style.opacity="1";
+		}
+		oBtnNext.onmouseout=oMarkNext.onmouseout=function  () {
+			startMove(oBtnNext,'opacity',0);
+		}
+
+		///////////////大图切换//////////////
+		for(var i=0;i<aLiSmall.length;i++){
+			aLiSmall[i].index=i;
+			//tab选项卡的自定义属性
+			aLiSmall[i].onclick=function  () {
+				
+
+				// 通过点击，每次层级加1显示最新点击的图片
+				aLiBig[this.index].style.zIndex=nowZIndex++;
+				//加载动画，使之高度变化从0到320 增加效果
+				aLiBig[this.index].style.height=0;
+				startMove(aLiBig[this.index],'height','320');
+			}
+		}
+		//////////问题点击第一章图片还在刷新同样的效果//
+
+
+
+	}
+
+</script>
+
+</body>
+</html>

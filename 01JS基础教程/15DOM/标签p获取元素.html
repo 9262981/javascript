@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>标签p获取元素</title>
+	<title>标签p获取元素</title>
+</head>
+<body>
+<div id="main">
+	<p >该实例展示了1</p>
+	<p>该实例展示了2 </p>
+
+</div>
+
+<script>
+	var x=document.getElementById("main");
+	var y=x.getElementsByTagName("p");
+	y[1].innerHTML="123";
+	
+</script>
+</body>
+</html>

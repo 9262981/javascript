@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>透明度</title>
+	<style type="text/css">
+		#demo{
+			width: 100px;height: 100px;left:10px;background: red;
+		}
+	</style>
+	<script type="text/javascript">
+		// window.onload=demo;
+		// function demo () {
+		// 	var oDemo=document.getElementById("demo");
+		// 	oDemo.onmouseover=function  () {
+		// 		alert(123);
+		// 	}
+		// }
+
+		// window.onload=demo;
+		// function demo () {
+		// 	var oDemo=document.getElementById("demo");
+		// 	oDemo.onmouseover=function  () {
+		// 		oDemo.style.opacity=1;
+		// 	}
+		// }
+
+		// var timer=null;
+		// window.onload=function  () {
+		// 	var oDemo=document.getElementById("demo");
+			
+		// 	oDemo.onmouseover=function  () {
+		// 		setInterval(function  () {
+		// 			// console.log(oDemo.style.opacity);
+		// 			oDemo.style.opacity=parseFloat(oDemo.style.opacity)+0.1;
+		// 		},30);
+		// 	};
+		// }
+		////////////////////////////////////函数内opacity小数位运算问题/ 变换为 浮点型运算///////////
+		
+		window.onload=function  () {
+			var oDemo=document.getElementById("demo");
+			var timer=null;
+		
+			oDemo.onmouseover=function  () {
+				change(100,+5);
+				
+ 			};
+ 		
+ 			oDemo.onmouseout=function  () {
+				change(30,-5)
+ 			};
+ 			
+ 			function change (a,b) {
+ 				clearInterval(timer);
+				timer=setInterval(function  () {
+					if(oDemo.style.opacity*100==a){
+						clearInterval(timer);
+					}else{
+						oDemo.style.opacity=(oDemo.style.opacity*100+b)/100;
+						console.log(oDemo.style.opacity);	
+					}
+				},30);
+ 			}
+ 			
+ 		
+		}
+	
+	</script>
+</head>
+<body>
+	<div id="demo" style="opacity: 0.3"></div>
+</body>
+</html>

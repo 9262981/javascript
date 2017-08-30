@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>eventProcess</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script type="text/javascript">
+		function dis(){
+			var dis=document.getElementById("diss");
+			dis.style.display="block";
+		}
+		function show(){
+			var i=document.getElementById("diss");
+			i.style.display="none";
+		}
+		</script>
+</head>
+<body>
+	<input type="text" value="onblur" onblur="alert('onblur');">
+	<input type="text" value="onchange" onchange="alert('onchange');">
+	<input type="text" value="onfocus" onfocus="alert('onfocus');">
+	<input type="text" value="onkeypress" onkeypress="dis();">
+	<input type="button" value="onmouseoverdis"  onmouseover="dis();">
+	<input type="button" value="onmouseovershow"  onmouseover="show();">
+	<input type="button" value="onclickdis"  onclick="dis();">
+	<input type="button" value="onclickshow"  onclick="show();">
+	<input type="button" id="showalert1" value="showalert按钮文字"  >
+	<script type="text/javascript">
+	var showAlert=document.getElementById("showalert1");
+			showAlert.onclick=function(){
+				alert("您点击了我！");
+			}
+	</script>
+	<pre>
+		<div id="diss" class="pic">来隐藏我啊<br><img src="1.jpg"></div>
+		第十课、事件与事件处理
+
+		1、事件
+			
+			什么是事件？例如在页面载入完毕时，将触发onload(载入)事件；当用户单击按钮时，
+			将触发按钮的onclick事件等。
+			
+			常用事件：
+			onabort:	对象载入被中断时触发
+			onblur:		元素或窗口本身失去焦点时触发
+			onchange:	改变<select>元素中的选项或其他表单元素失去焦点，并且在其
+						获取焦点后内容发生过改变时触发
+			onerror:	出现错误时触发
+			onfocus:	任何元素或窗口本身获得焦点时触发
+			onkeydown:	键盘键（包括Shift、Alt等）被按下时触发
+			onkeypress:	键盘键被按下，并产生一个字符时触发。也就是说按下Shift或Alt等键
+						不会触发
+			onkeyup:	释放键盘上的按键时触发
+			onload:		页面完全载入后触发
+			onunload:	页面完全卸载后触发
+			onclick:	单击鼠标左键时触发。当光标的焦点在按钮上，并按Enter键时也会触发
+			ondblclick:	双击鼠标左键时触发
+			onmousedown:	单击任何一个鼠标按键时触发
+			onmousemove:	鼠标在某个元素上移动时持续触发
+			onmouseout:	鼠标从指定的元素上移开时触发
+			onmouseover:	鼠标移到某个元素时触发
+			onmouseup:	释放任意一个鼠标按键时触发
+			onreset:	单击重置按钮时，在<form>上触发
+			onresize:	窗口或框架的大小发生改变时触发
+			onscroll:	在任何带滚动条的元素或窗口上滚动时触发
+			onselect:	选中文本时触发
+			onsubmit:	单击提交按钮时，在<form>上触发
+			ps:	onblur是输入焦点失去
+				onchange是内容发生改变 
+		
+
+		2、事件处理
+
+			事件处理程序是用于响应某个事件而执行的处理程序。事件处理程序可以是任意的
+			JavaScript语句，通常使用函数来对事件进行处理。
+
+			第一种方式，在HTML中绑定：
+			<script language="javascript">
+				 // function save(){
+					// alert("保存按钮被点击");
+				 // }
+				  
+			</script>
+
+			<input type="button" name="save" value="保存" onclick="save()"/>
+
+			第二种方式，在JavaScript中绑定：
+			<!-- ①<input type="button" name="save" id="save" value="保存"/> -->
+
+			 <script language="javascript">
+				 
+				//②var bt_save=document.getElementById("save");
+				//bt_save.onclick=function(){
+				//	alert("保存按钮被单击");
+				//};
+				  
+			</script>
+
+			第二种方法要注意先执行①，才能执行②。
+	</pre>
+	<img src="1.jpg" width="100%">
+	<img src="2.jpg" width="100%">
+</body>
+</html>

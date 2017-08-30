@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>表单</title>
+</head>
+<script type="text/javascript">
+	window.onload=function  () {
+		var oForm=document.getElementById('form1');
+		oForm.onsubmit=function  () {
+			alert(123);
+		}
+	}
+</script>
+<body>
+	<form id="form1" action="http://www.html12345.club">
+		用户名：<input type="text" name="user" id="">
+		密码: <input type="password" name="pass" id="">
+		<input type="submit" value="">	
+	</form>
+</body>
+</html>

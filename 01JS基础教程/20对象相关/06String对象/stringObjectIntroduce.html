@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>stringObjectIntroduce</title>
+	<script type="text/javascript">
+		// alert("大家好".length);
+		// alert("
+		// 	HELLOWORLD".length);
+
+		// indexOf方法
+		// var str="www.html12345.club";
+		// var index=str.indexOf("html",1);
+		// console.log(".:",index);
+		// document.write(index);
+		// alert(index);
+	
+		
+	
+		//substr方法 起始值为负从字符串的后面开始算，第二个参数代表开始截取多少位字符
+		// var email="9262981@qq.com"
+		// var subS=email.substr(-9,5);
+		// console.log("ss",subS);
+
+		//substring方法 两个参数分别为起始位置，跟结束位置。
+		// var email="9262981@qq.com"
+		// var subS=email.substring(3,8);
+		// console.log("ssing",subS);
+
+		//split(delimiter,[limit])以第一个字符分割，
+		// var url="www.html12345.club";
+		// var sp=url.split(".");
+		// console.log("分割后：",sp);
+
+		// var str="sdfefslkdfjsuoi efskldjfklsdfjlkefsadfsdf";
+		// var sp=str.split("ef",2);
+		// console.log("将带有ef字符的字符串分割为:",sp);
+		
+		// 复习下for循环
+		//  for(var i=0;i<sp.length;i++){
+		// 	alert(sp[i]);	
+		// }
+		
+
+		// 结合使用
+		// var email="9262981@qq.com"
+		// var emaillen=email.indexOf("@");
+		// var subS=email.substring(emaillen+1);
+		// console.log("客户所用邮件服务器：",subS);
+
+
+	</script>
+</head>
+<body>
+	<pre>
+	第十一课、String对象介绍
+
+1、属性
+
+	在JavaScript中可以用单引号或者双引号括起来的一个字符串当作一个字符串对象
+	的实例，所以可以在某个字符串后面加上.去调用String对象的属性和方法。
+
+	length:返回String对象的长度。代表的是字符串当中字符的个数。
+	       每个汉字按一个字符计算
+	"大家好".length;//值为3.
+	"Hello World".length;//值为11
+
+2、常用方法
+	indexOf(subsString,[startIndex])
+		用于返回第一次出现子字符串的字符位置。如果没有找到指定的子字符串，
+		则返回-1。
+		subString：必选参数。要在String对象中查找的子字符串
+		startIndex:可选参数。
+		示例：
+		  var str="admin@html12345.club";
+		  var index=str.indexOf("@",6);
+		  alert(index);
+
+	substr(start,[length])
+		用于返回指定字符串的一个子串。
+		start:必选参数，用于指定获取子字符串的起始下标。如果是一个负数，
+		      那么表示从字符串的尾部开始算起始位置。-1代表最后一个字符，
+		      -2代表倒数第二个字符，以此类推。
+		length:可选参数，用于指定字符串中字符的个数。如果省略，则返回从
+			start开始位置到字符串结尾的子串。
+		 
+		 示例：
+		  var word="One World One Dream!";
+		  var subs=word.substr(4,5);// World
+
+		  var word="One World One Dream!";
+		  var subs=word.substr(4);// World One Dream!
+
+	substring(from,[to])
+		from:用于指定要获取子字符串的第一个字符在string中的位置
+		to:可选参数，指定最后的位置。
+		[from,to)  包含from，不包含to.所以如果要获取to的字符，需要to+1
+		示例： 
+		  var word="One World One Dream!";
+		  var subs=word.substring(4,8+1);// World
+
+	split(delimiter,[limit])
+	 split分牌; 分; 裂
+	delimiter分隔符; 定界符; 分隔符號;
+		用于将字符串分割为字符串数组。
+		delimiter:指定的分隔符
+		limit:可选参数，用于指定返回数组的最大长度。
+		返回值：一个字符串数组
+
+		示例：
+		var str="www.html12345.com";
+		  var arr=str.split(".");
+		  for(var i=0;i < arr.length;i++){
+			alert(arr[i]);
+		  }
+		 
+
+		 var str="www.html12345.com";
+		  var arr=str.split(".",2);
+		  for(var i=0;i < arr.length;i++){
+			alert(arr[i]);
+		  }
+		  //以上代码弹出的值依次为：www html12345
+
+</pre>
+</body>
+</html>

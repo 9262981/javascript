@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>改变css的属性</title>
+	<style type="text/css">
+		#demo{
+			background:red;
+			width: 200px;
+			height: 200px;
+			opacity: 0.6;
+		}
+	</style>
+	<script>
+	function getStyle(obj,name){
+		if(obj.currentStyle){
+			return obj.currentStyle[name];
+		}else{
+			return getComputedStyle(obj,false)[name];
+		}
+	}
+		window.onload=function  () {
+			var oDiv=document.getElementById("demo");
+			//兼容处理 百分之九十 都用判断
+			alert(getStyle(oDiv,"background"));
+
+		}
+	</script>
+</head>
+<body >
+	<div id="demo" ></div>
+	<pre>
+		如何改变css样式表的属性；
+	</pre>
+</body>
+</html>

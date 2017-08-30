@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>People at Clearleft</title>
+  <style type="text/css">
+  	@import url("clearleft.css");
+  </style>
+  <script src="../js/jquery.min.js"></script>
+  <script type="text/javascript">
+     $(function  () {
+       $("a").click(function  () {
+         var url= this.href;
+         //ajax 请求目标的url
+         var args={"time":new Date()};
+         //args 传递的参数，json类型
+         $.post(url,args,function(data) {
+          // data:ajax相应成功后的数据。xml json html
+           var name = data.person.name;
+           var email = data.person.email;
+           var website = data.person.website;
+
+           $("#details").empty()
+           .append(name+" "+email+" "+website);
+         },"JSON");
+         return false;
+       });
+     });
+  </script>
+</head>
+<body>
+  <h1>People</h1>
+  <ul>
+    <li>
+      <a href="files/andy.js">Andy</a>
+    </li>
+    <li>
+      <a href="files/richard.js">Richard</a>
+    </li>
+    <li>
+      <a href="files/jeremy.js">Jeremy</a>
+    </li>
+  </ul>
+  <div id="details"></div>
+  <pre>
+    1.什么是ajax？不用刷新，跟服务器通信
+    2.使用XMLHttpRequest对象实现Ajax{了解}
+    3.ajax传输3种方式
+    xml 解析难 通用数据交换格式
+    html 不需要解析 直接放，更新一部分 区域 ，传输不是很方便 拼装完成
+    json 小巧，有面向对象的特征
+    4.使用jquery完成ajax
+      load 方法，用于html文档的元素节点，把结果直接价位对应节点的子元素，load方法加载后的数据是一个html片段
+
+      get 方法
+      post 方法
+      getJSON 更加灵活
+      除去使用load方法的情况，大部分都使用后三
+
+  </pre>
+</body>
+</html>

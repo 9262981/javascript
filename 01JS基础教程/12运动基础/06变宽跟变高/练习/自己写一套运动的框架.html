@@ -1,0 +1,82 @@
+
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>运动框架</title>
+<link rel="stylesheet" href="css/css.css">
+	
+</head>
+<body>
+	<div id="div1" >demo</div>
+	<input type="button" value="" id="btn">
+	<script type="text/javascript">
+	//获取非行间css样式
+	var demo=document.getElementById("div1");
+	console.log(demo.style.width);
+	function getStyle(obj,attr){    //获取非行间样式，obj是对象，attr是值
+	    if(obj.currentStyle){   //针对ie获取非行间样式
+	        return obj.currentStyle[attr];
+	    }else{
+	        return getComputedStyle(obj,false)[attr];   //针对非ie
+	    };
+	};
+		// var demo=document.getElementById("div1");
+		// console.log(getStyle(demo,"width"));
+		////////测试是否能获取到css样式////////////
+	function startMove(obj,attr,iTarget){
+		clearInterval(obj.timer);
+		obj.timer=setInterval(function  () {
+			var cur=0;
+			cur=parseInt(getStyle(obj,attr));
+
+			speed=(iTarget-cur)/6;
+			speed=speed>0?Math.ceil(speed):Math.floor(speed);
+			if(iTarget==cur){
+				clearInterval(obj.timer);
+			}else{
+				obj.style[attr]=cur+speed+"px";
+			}
+		},30);
+		
+	}
+	///////////////////以上提炼出主核心，opacity的属性后期加入/////////////
+	
+	// function startMove (obj,attr,iTarget) {
+	// 	clearInterval(obj.timer);
+	// 	obj.timer=setInterval(function  () {
+	// 		var cur=0;
+	// 		if(attr=='opacity'){
+	// 			cur=Math.round(parseInt(getStyle(obj,attr))*100);}else{
+	// 				cru=parseInt(getStyle(obj,attr));
+	// 			};
+	// 			///四舍五入
+	// 		var speed=(iTarget-cur)/6;
+	// 		speed=speed>0?Math.ceil(speed):Math.floor(speed);
+	// 		///////////获取速度（变化量的值）////////
+	// 		if(cur==iTarget){
+	// 			clearInterval(obj.timer);
+	// 		}else{
+	// 				if(attr=='opacity'){
+	// 					obj.style.filter='alpha(opacity:'+(cur+speed)+')';
+	// 					obj.style.opacity=(cur+speed)/100;
+						
+	// 				}else{
+	// 					obj.style[attr]=cur+speed+'px';
+	// 				}
+	// 			}
+				
+	// 	},30);
+	// }
+window.onload = function(){
+    var oDiv = document.getElementById("div1");
+    var oBtn = document.getElementById("btn");
+    oBtn.onclick = function(){
+       
+        startMove(oDiv,"width","40");
+    
+    };
+
+};	
+	</script>
+</body>
+</html>

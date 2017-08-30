@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>电子表</title>
+	<!-- http://www.wandoujia.com/apps/com.happybluefin.android.clock -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/date.js"></script>
+	<script>
+		
+		window.onload=function  () {
+			function getTime () {
+				// body...
+			}
+			var aImg=document.getElementsByTagName('img');
+			var str=dNow;
+			for (var i=0;i<aImg.length;i++){
+				aImg[i].src='img/'+str[i]+'.png';
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<div class="main">
+		<div id="time" class="time">
+			<img src="img/0.png" alt="">
+			<img src="img/0.png" alt="">
+			:
+			<img src="img/0.png" alt="">
+			<img src="img/0.png" alt="">
+			:
+			<img src="img/0.png" alt="">
+			<img src="img/0.png" alt="">
+		</div>
+	</div>
+	
+</body>
+</html>

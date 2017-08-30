@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>关闭定时器</title>
+	<script>
+		window.onload=function  () {
+			var oBtn1=document.getElementById("btn1");
+			var oBtn2=document.getElementById("btn2");
+			oBtn1.onclick=function () {
+				acTest=setInterval(function () {
+					alert('helloWorld')
+				},1000);
+
+			};
+			oBtn2.onclick=function () {
+					clearInterval(acTest);
+				};
+				
+		};
+	</script>
+</head>
+<body>
+	<input type="button" value="开启" id="btn1">
+	<input type="button" value="关闭" id="btn2">
+</body>
+</html>

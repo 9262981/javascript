@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn" id="ht">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+	<script>
+		function getElement (node) {
+			if(node.nodeType==1){//检查node是否为element对象
+				console.log(node.nodeName);
+				var childrens=node.childNodes;
+				for(var m=node.firstChild;m!=null;m=m.nextSibling){
+					getElement(m);
+				}
+			}
+		}
+	</script>
+	<!-- 递归调用是一种特殊的嵌套调用，是某个函数调用自己，而不是另外一个函数。递归调用一种解决方案，一种是逻辑思想，将一个大工作分为逐渐减小的小工作，比如说一个和尚要搬50块石头，他想，只要先搬走49块，那剩下的一块就能搬完了，然后考虑那49块，只要先搬走48块，那剩下的一块就能搬完了……，递归是一种思想，只不过在程序中，就是依靠函数嵌套这个特性来实现了。 -->
+</head>
+<body onload="getElement(document.getElementById('ht'));" >
+	<pre>
+		第十四课、DOM技术概述
+		css 标签 - js元素 -dom 节点
+		1、DOM概述
+			DOM是一种与浏览器、平台及语言无关的接口，能够以编程方式访问和操作文档。
+			1、DOM是Document Object Model（文档对象模型）的简称。
+			2、提供了访问、操作该模型的API。
+
+		2、DOM的分层结构
+			在DOM中，文档的层次结构被表示为树形结构。树是倒立的，树根在上，枝叶
+			在下面，树的节点表示文档中的内容。
+
+			在树形结构中，
+			直接位于一个节点之下的节点被称为该节点的子节点；
+			直接位于一个节点之上的节点被称为该节点的父节点；
+			具有相同父节点的节点是兄弟节点；
+			一个节点的下一个层次的节点集合是该节点的后代；
+			一个节点的父节点，祖先节点以及其他所有位于他之上的节点都是该节点的祖先；
+
+		3、遍历文档
+			在DOM中，HTML文档各个节点被视为各种类型的Node对象，并且将HTML文档表示为
+			Node对象的树。
+
+					    Node对象的属性
+
+			属性		类型		描述
+			parentNode	Node		节点的父节点，没有父节点是为null
+			childNodes	NodeList	节点的所有子节点的NodeList
+			firstChild	Node		节点的第一个子节点，没有则为null
+			lastChild	Node		节点的最后一个子节点，没有则为null
+			nodeName	String		节点名
+			nodeValue	String		节点值
+			previousSibling Node		上一个兄弟节点
+			nextSibling	Node		下一个兄弟节点
+			nodeType	short		表示节点类型的常量
+			
+			Element <a > <img >
+			Text  文本
+			function getElement (node) {
+				if(node.nodeType==1){//检查node是否为element对象
+					alert(node.nodeName);
+					var childrens=node.childNodes;
+					for(var m=node.firstChild;m!=null;m=m.nextSibling){
+						getElement(m);
+					}
+				}
+			}
+			ie6-8 10% ie9类似火狐
+ 			chrome 60%
+			ff	99%
+	</pre>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>functionArguments</title>
+	<script>
+		function test(){
+			 // console.log(arguments);
+			
+			var sum=0;
+			for (i=0;i<arguments.length;i++){
+				sum+=arguments[i];
+			}
+			console.log(sum);
+		}
+
+	</script>
+</head>
+<body onload="test(1,2,3,2,3,1,2)">
+
+适用于函数可变的参数，不定参数！
+	
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>淡入淡出的图片</title>
+	<style type="text/css">
+		#demo{
+			width:300px;
+			height:200px;
+			background: red;
+			filter:alpha(opacity:30);
+			opacity:0.3;
+		}
+	</style>
+	
+</head>
+<body>
+	<div id= "demo"></div>
+</body>
+	<script>	
+	var alpha=30;
+	var timer=null;
+	var oDemo=document.getElementById("demo");//作用域问题
+	window.onload=function  () {
+		oDemo.onmouseover=function  () {
+			startMove(100);
+		}
+		oDemo.onmouseout=function  () {
+			startMove(30);
+		}
+	}
+	
+	function startMove(iTarget){
+		clearInterval(timer);
+		 timer=setInterval(function(){
+			var speed=0;
+			if(alpha<iTarget){
+				speed=10;
+			}else{
+				speed=-10;
+			}
+
+			if(alpha==iTarget){
+				clearInterval(timer);
+			}else{
+				alpha+=speed;
+				oDemo.style.filter="alpha(opacity:"+alpha+")";
+				oDemo.style.opacity=alpha/100;
+			};
+			//判断物体透明度，做出运动选择；
+		},30);
+	};
+	</script>
+</html>

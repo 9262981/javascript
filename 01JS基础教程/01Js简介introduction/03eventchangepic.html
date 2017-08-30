@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+</body>
+</html> 
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>eventchangepic</title>
+	<script>
+		function changeImage()
+		{
+		var element=document.getElementById('pic');
+		element.src="2.jpg";
+		}
+		function changeImage2()
+		{
+		element=document.getElementById('pic')
+		element.src="3.jpg";
+		}
+		
+	</script>
+</head>
+<body>
+	<h1>我的第一个 JavaScript</h1>
+
+	<p>
+	JavaScript 能够对事件作出反应。比如对按钮的点击：
+	</p>
+
+	<button type="button" onclick="alert('JAVASCRIPT的世界欢迎您的到来!')">欢迎按钮</button>
+	<button type="button" onmouseover="changeImage()">学会了，升值加薪，出任ceo 赢取白富美！</button>
+	<button type="button" onclick="changeImage2()">真的没有了！</button>
+	<img src="1.jpg" id="pic" width="500">
+</body>
+</html>

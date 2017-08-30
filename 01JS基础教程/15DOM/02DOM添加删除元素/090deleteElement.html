@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>deleteElement</title>
+</head>
+<body>
+	<pre>
+		removeChild父级 	的子节点
+		
+	</pre>
+	
+	<ul id="ul1">
+		<li>123<a href="javascript:;">删除</a></li>
+		<li>123<a href="javascript:;">删除</a></li>
+		<li>123<a href="javascript:;">删除</a></li>
+		<li>123<a href="javascript:;">删除</a></li>
+		<li>123<a href="javascript:;">删除</a></li>
+	</ul>
+</body>
+<script>
+	window.onload=function  () {
+		
+		var aA=document.getElementsByTagName('a');
+
+		var oUl=document.getElementById("ul1");
+			// console.log(oUl);
+		for (var i=0;i<aA.length;i++){
+			aA[i].onclick=function  () {
+				// oUl.removeChild(this.parentNode);
+				oUl.removeChild(this.parentNode);
+				console.log(this);
+				// ul下移除li；
+			}
+		}
+	
+	}
+</script>
+</html>

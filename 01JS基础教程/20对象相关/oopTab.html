@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>oopTab</title>
+</head>
+<style type="text/css">
+	#div1 input{
+		background: red;
+	}
+	#div1 input.active{
+		background: yellow;
+	}
+	#div1 div{width: 200px;height: 200px;background: #ccc;display:none;}
+</style>
+<script type="text/javascript">
+	//原始面向过程写法//
+	// window.onload=function  () {
+	// 	var oDiv=document.getElementById('div1');
+	// 	var aBtn=oDiv.getElementsByTagName('input');
+	// 	var aDiv=oDiv.getElementsByTagName('div');
+
+	// 	for(var i=0;i<aBtn.length;i++){
+	// 		aBtn[i].index=i;
+	// 		aBtn[i].onclick=function  () {
+	// 			for(var i=0;i<aBtn.length;i++){
+	// 				aBtn[i].className='';
+	// 				aDiv[i].style.display='none';
+	// 			}
+	// 			this.className='active';
+	// 			aDiv[this.index].style.display='block';
+	// 		}
+	// 	}
+	// }
+	//2面向对象写法
+	// window.onload=function  () {
+	// 		var oDiv=document.getElementById('div1');
+	// 		var aBtn=oDiv.getElementsByTagName('input');
+	// 		var aDiv=oDiv.getElementsByTagName('div');
+
+	// 		for(var i=0;i<aBtn.length;i++){
+	// 			aBtn[i].index=i;
+	// 			aBtn[i].onclick=fnClick;
+	// 		};
+
+	// 		function  fnClick() {
+	// 				for(var i=0;i<aBtn.length;i++){
+	// 					aBtn[i].className='';
+	// 					aDiv[i].style.display='none';
+	// 				}
+	// 				this.className='active';
+	// 				aDiv[this.index].style.display='block';
+	// 			}
+	// 	}
+	//3面向对象写法
+		window.onload=function  () {
+			new TabSwitch('div1'); 
+		}
+
+		function TabSwitch  (id) {
+			var _this=this;
+			var oDiv=document.getElementById(id);
+			this.aBtn=oDiv.getElementsByTagName('input');
+			this.aDiv=oDiv.getElementsByTagName('div');
+
+			for(var i=0;i<this.aBtn.length;i++){
+				this.aBtn[i].index=i;
+				this.aBtn[i].onclick=function  () {
+					_this.fnClick(this);
+				};
+		};
+
+			TabSwitch.prototype.fnClick=function(oBtn) {//函数变成方法
+					for(var i=0;i<this.aBtn.length;i++){
+						this.aBtn[i].className='';
+						this.aDiv[i].style.display='none';
+					}
+					oBtn.className='active';
+					this.aDiv[oBtn.index].style.display='block';
+				}
+		}
+
+</script>
+<body>
+	<div id="div1">
+		<input type="button" value="aaa">
+		<input type="button" value="bbb">
+		<input type="button" value="ccc">
+		<div style="display:block">aaaaaaaaaaaaaaaaaaaaaa</div>
+		<div>bbbbbbbbbbbbbbbbbbbbbb</div>
+		<div>cccccccccccccccccccccc</div>
+	</div>
+	<pre>
+		1面向过程的写法
+		2改面向对象》清理嵌套；
+		3window.onload==初始化整个程序
+		 构造函数==初始化整个对象
+		 将onload改写成构造函数
+		 将变量变成对象的属性
+	</pre>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery.mini.js"></script>
+	<script type="text/javascript">
+	//1获取username的节点
+	//2为username添加change响应函数	//3获取username的value，去除前后空格且不为空，发送ajax请求
+	//4发送ajax检验是否可用
+	//5添加文本 是否可用/返回一个html片段<font color="red">该用户名已经被注册</font>
+
+		$(function  () {
+			$(":input[name='username']").change(function  () {
+				var val=$(this).val();
+				//$.trim（str）去除前后空格，返回：string；说明：去掉字符串首尾空格。
+				val=$.trim(val);
+
+				if(val != ''){
+					var url="validateUserName.php";
+					var args={"userName":val,"time":new Date()};
+					$.post(url,args,function  (data) {
+						$("#message").html(data);
+					})
+
+				}
+			})
+		});
+
+
+	</script>
+</head>
+<body>
+	<form action="" method="post">
+		username: <input type="text" name="username"><br>
+		<div id="message"></div><br>
+		<input type="submit" value="submit"><br>
+	</form>
+</body>
+</html>

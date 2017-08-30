@@ -1,0 +1,8 @@
+.pic{
+	display:none;
+	width:500px;
+	margin:0 auto;
+}
+.pic img{
+	width: 100%;
+}

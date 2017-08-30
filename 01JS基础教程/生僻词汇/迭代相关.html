@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>迭代</title>
+	<script>
+		var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+		        //every()和some()最相似
+		        //every()  item:当前遍历项，index:当前项索引，array:数组对象本身
+		        var everyResult = numbers.every(function (item, index, array) {
+		            return item > 2;
+		        });
+		        alert(everyResult);//false
+		        //some()
+		        var someResult = numbers.some(function (item, index, array) {
+		            return item > 2;
+		        });
+		        alert(someResult);//true
+		        //filter
+		        var filterResult = numbers.filter(function (item, index, array) {
+		            return item > 2;
+		        });
+		        alert(filterResult);//[3,4,5,4,3]
+		        //map()
+		        var mapResult = numbers.map(function (item, index, array) {
+		            return (item * 2);
+		        });
+		        alert(mapResult);//[2,4,6,8,10,8,6,4,2]
+		        //forEach 本质上和for循环没有区别
+		        var forEachResult=numbers.forEach(function(item,index,array){
+		            alert(item)
+		        });
+	</script>
+</head>
+<body>
+	<pre>
+		迭代：
+		1、自己调用自己的方法，或者称递归。这个应该不用多说。
+		2、还有一种解释：很多程序有迭代器。这是一种用于“遍历”数组的工具对象。一般遍历一个数组都是使用循环变量从0到最后一个，或者使用链表遍历量表中内容。使用迭代器可以不关注数组的具体实现方式，遍历数组中所有成员。
+		遍历：
+		对数据结构中每一个成员都进行一次访问的操作就是遍历。比如遍历列表。最为常见得问题是遍历树，遍历树的常见方法有：先序/中序/后序，或者按照另一个纬度划分有，广度遍历和深度遍历。相关具体算法可以查找其他资料。
+
+		五个迭代方法 都接受两个参数：要在每一项上运行的函数 和 运行该函数的作用域（可选）
+
+        every():对数组中的每一项运行给定函数。如果函数对每一项都返回true，则返回true。
+        filter():对数组中的每一项运行给定函数。返回该函数会返回true的项组成的数组。
+        forEach():对数组中每一项运行给定函数。该函数没有返回值。
+        map():对数组中每一项运行给定函数。返回每次函数调用的结果组成的函数。
+        some():对数组中每一项运行给定函数。如果函数对 任一项返回true，则返回true
+	</pre>
+</body>
+</html>

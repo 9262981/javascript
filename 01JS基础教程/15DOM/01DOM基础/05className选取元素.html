@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>className选择元素</title>
+	<script type="text/javascript">
+		window.onload=function  () {
+			var oUl=document.getElementById("ul1");
+			var aLi=oUl.getElementsByTagName("li");
+			for(var i=0;i<aLi.length;i++){
+				if(aLi[i].className=="box"){
+					aLi[i].style.background="red";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	批量获取元素
+	<ul id="ul1"> 
+		<li class="box"></li>
+		<li></li>
+		<li></li>
+		<li class="box"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li class="box"></li>
+		<li></li>
+	</ul>
+</body>
+</html>

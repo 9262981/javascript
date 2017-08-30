@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>function</title>
+	<script>
+		// function account(price,number){
+		// 		var sum=price*number;
+		// 		return sum;
+		// 	     }
+
+		// 	    var i=account(10,5);//函数调用
+		// 		console.log("总价：",i);
+
+
+		function checkName(){
+				var str=form1.userName.value;
+				if(str==""||str>5){
+					alert("用户名不能为空 或 不能超过5位");
+				}else{
+					alert("用户名可以注册");
+				}
+			 }
+
+		// 事件分离
+		// window.onload=function  () {
+		// 	var a=document.getElementById("test");
+		// 	a.onclick=function(checkName){
+		// 		var str=form1.userName.value;
+		// 		if(str==""){
+		// 			alert("用户名不能为空");
+		// 		}else{
+		// 			alert("用户名可以注册");
+		// 		}
+		// 	}
+		// }
+
+	</script>
+</head>
+<body>
+	<form name="form1" method="post" action="">
+		请输入姓名：<input type="text" name="userName" id="userName" size="30"/>
+		<br/>
+		<input type="button" value="检测" onclick="checkName()"/>
+		<input type="button" value="mvc" id="test"/>
+	</form>
+	<pre>
+		第九课、函数的定义与调用
+
+		1、函数的定义
+
+			function functionName([parameter1, 参数 ,parameter2,...]){
+				statments;
+				[return expression;]
+			}
+			function是必须要写的，因为这是定义函数的关键字。
+			functionName 是函数名，必须要写，而且在同一个页面中，函数名是唯一的。
+				并且区分大小写。
+			parameter:可选参数，用于指定参数列表。当使用多个参数时，参数间使用
+				逗号进行分隔。一个函数最多可以有255个参数。
+			statements:必选参数，这是函数体，用于实现函数功能的语句。
+			expression:可选参数，用于返回函数值。expression可以是任意的表达式、变量或常量。
+				
+				//函数定义
+			示例：function account(price,number){
+				var sum=price*number;
+				return sum;
+			     }
+
+			     var i=account(10,5);//函数调用
+
+		2、函数的调用
+			function checkName(){
+					var str=form1.userName.value;
+					if(str==""){
+						alert("用户名不能为空");
+					}else{
+						alert("用户名可以注册");
+					}
+				 }
+		
+	</pre>
+	
+</body>
+</html>

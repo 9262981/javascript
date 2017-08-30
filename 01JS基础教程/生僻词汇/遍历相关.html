@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>遍历相关</title>
+	<script>
+		// forin遍历数组
+		// var b = {3:1,42:2,11:3,9:4}
+		// for( var key in b ){
+		//     alert( b[key] )
+		//     console.log("b:",b);
+		// }
+		// 遍历对象
+		var zhangsan={}
+		zhangsan.name = "张三";
+		zhangsan.sex = "男";
+		zhangsan.say = function(){
+		        return "嗨！大家好，我来了。";
+		    }
+		zhangsan.contact = {
+		    tel : "010-1111111",
+		    qq : "9262981",
+		    email : "9262981@qq.com"
+		}
+		var strTem="";  // 临时变量
+		for(value in zhangsan){
+		   strTem+=value+'：'+zhangsan[value]+"\n";
+		}
+		alert(strTem);
+	</script>
+</head>
+<body>
+	所谓遍历(Traversal)是指沿着某条搜索路线，依次对树中每个结点均做一次且仅做一次访问。访问结点所做的操作依赖于具体的应用问题。
+	遍历是二叉树上最重要的运算之一，是二叉树上进行其它运算之基础。
+
+</body>
+</html>

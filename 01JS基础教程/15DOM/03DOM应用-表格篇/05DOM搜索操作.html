@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>01dom操作表格</title>
+	<style type="text/css">
+		table,td{border:3px solid grey;}
+		td{width:80px;height:30px;}
+	</style>
+	<script>
+		window.onload=demo;
+		function demo () {
+			var oTab=document.getElementById('tab1');
+			var oTxt=document.getElementById("search");
+			var oBtn=document.getElementById('btn1');
+			oBtn.onclick=function  () {
+				for(var i=0;i<oTab.tBodies[0].rows.length;i++){
+					if(oTab.tBodies[0].rows[i].cells[1].innerHTML==oTxt.value){
+						oTab.tBodies[0].rows[i].style.background='yellow'}
+				}
+			
+			}
+			
+		}
+
+	</script>
+</head>
+<body>
+	<input type="text"  id="search">
+	<input type="button" value="搜索" id="btn1" >
+	<table id="tab1">
+		<thead>
+			<td>id</td>
+			<td>name</td>
+			<td>age</td>
+			<td>操作</td>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>simon</td>
+				<td>33</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>孙志鹏</td>
+				<td>33</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>张三</td>
+				<td>03</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>李四</td>
+				<td>13</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>王五</td>
+				<td>23</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<pre>
+		表格的获取
+		tBodies;tHead;tFoot;rows;cells;
+		注意下ID的问题
+	</pre>
+	
+</body>
+</html>

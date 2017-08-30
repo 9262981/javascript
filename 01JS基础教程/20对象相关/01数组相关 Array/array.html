@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+	<html lang="zh-cn">
+	<head>
+		<meta charset="UTF-8">
+		<title>array</title>
+		<script type="text/javascript">
+			
+				var myCars=new Array();
+				myCars[0]="Saab";      
+				myCars[1]="Volvo";
+				myCars[2]="BMW";
+
+				alert(myCars[2]);
+				alert(myCars.length);
+				myCars=3;
+				console.log(myCars);
+		</script>
+	</head>
+	<body>
+		<pre>
+			数组对象的作用是：使用单独的变量名来存储一系列的值。
+		创建数组
+			1: 常规方式:
+			var myCars=new Array();
+			myCars[0]="Saab";      
+			myCars[1]="Volvo";
+			myCars[2]="BMW";
+
+			2: 简洁方式:
+			var myCars=new Array("Saab","Volvo","BMW");
+
+			3: 字面:
+			var myCars=["Saab","Volvo","BMW"];
+			
+		访问数组
+
+			通过指定数组名以及索引号码，你可以访问某个特定的元素。
+
+			以下实例可以访问myCars数组的第一个值：
+			var name=myCars[0];
+
+			以下实例修改了数组 myCars 的第一个元素:
+			myCars[0]="Opel";
+			
+		</pre>
+	</body>
+	</html>	

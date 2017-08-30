@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>缓冲运动</title>
+	<style type="text/css">
+		div{width:100px;height: 100px;background: red;position: absolute;left:0px;top:100px;}
+	</style>
+	<script type="text/javascript">
+		function startMove () {
+			var oDiv=document.getElementById('div1');
+			setInterval(function () {
+				// 距离减去当前的left距离等于speed
+				var speed=500-oDiv.offsetLeft;
+				oDiv.style.left=oDiv.offsetLeft+speed+"px";
+				//距离太大一下子就跳过去了
+
+			},300);
+		}
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+	<INPUT type="button" value="开始运动" onclick="startMove()">
+	<pre>
+		逐渐变慢的感觉
+		距离大的时候，速度越大
+		距离小的时候，速度越小
+	</pre>
+</body>
+	
+</html>

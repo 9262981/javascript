@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>缓冲运动完结</title>
+	<style type="text/css">
+		#div1{width:100px;height: 100px;background: red;position: absolute;left:1100px;top:100px;}
+		/*如果从右向左运动，那么又有相同的问题出现*/
+		#div2{width: 1px;height: 200px;position: absolute;left:500px;background: black;color:black;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function  () {
+		
+			var oDiv=document.getElementById('div1');
+			var a=document.getElementById("a");
+			var b=document.getElementById('b');
+			a.onclick=function  () {
+				demo=setInterval(move,30);
+
+			}
+
+			b.onclick=function  () {
+				clearInterval(demo);
+			}
+
+
+			function move () {
+				
+				// 距离减去当前的left距离等于speed
+				var speed=(500-oDiv.offsetLeft)/10;
+				speed>0?oDiv.style.left=oDiv.offsetLeft+Math.ceil(speed)+"px":oDiv.style.left=oDiv.offsetLeft+Math.floor(speed)+"px";
+				
+					
+				
+					
+				//距离太大一下子就跳过去了.除以10.-30 -50 控制速度；
+				console.log(oDiv.style.left);
+				console.log(speed);
+				//从右边移动过来速度变成了负数需要改成floor向下取整； 
+				//问题解决
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<INPUT type="button" value="开始运动" id="a">
+	<INPUT type="button" value="停止" id="b">
+	<pre>
+		逐渐变慢的感觉
+		距离大的时候，速度越大
+		距离小的时候，速度越小
+	</pre>
+</body>
+	
+</html>

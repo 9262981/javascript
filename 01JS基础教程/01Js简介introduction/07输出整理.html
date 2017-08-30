@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>js 输出</title>
+	<SCRIPT TYPE="text/javascript">
+
+		// window.alert(5 + 6);
+		// alert(5 + 6);
+		// var p=document.getElementById("p");
+		// p.innerHTML="在p标签中插入新的文本";
+
+		// function funcName () {
+		// 	var p=document.getElementById("p");
+		// 	p.innerHTML="新的内容";
+		// }
+
+		// var demo=123;
+		
+		// console.log("demo的内容",demo);
+
+	</SCRIPT>
+</head>
+<body>
+	<pre>
+		JavaScript 可以通过不同的方式来输出数据：
+
+		    使用 window.alert() 弹出警告框。
+		    使用 document.write() 方法将内容写到 HTML 文档中。
+		    使用 innerHTML 写入到 HTML 元素。
+		    使用 console.log() 写入到浏览器的控制台。
+
+	</pre>
+	<div id="p">
+		<BUTTON type="button" onclick="funcName()">通过函数进行事件触发</BUTTON>
+		<script type="text/javascript">			
+			// document.write("在html p id中写入文本！");
+		</script>
+	</div>
+
+	<div id="demo" >scripte 的 读取顺序从上到下，以下的js 代码提到上面就没有办法显示了</div>
+
+	<script type="text/javascript">
+		// document.getElementById("demo").innerHTML = "display";
+	</script>
+
+</body>
+</html>

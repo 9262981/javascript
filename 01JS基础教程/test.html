@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>小测试</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
+	<script>
+		 // var name = "Bob";  
+		 // var nameObj ={  
+		 //     name : "Tom",  
+		 //     showName : function(){  
+		 //         alert(this.name);  
+		 //     },  
+		 //     waitShowName : function(){  
+		 //         setTimeout(this.showName, 500);  
+		 //     }  
+		 // };  
+		 
+		 // nameObj.waitShowName();
+	</script>
+</head>
+<body>
+	<pre>
+		this指向哪里？
+
+		一般而言，在Javascript中，this指向函数执行时的当前对象。值得注意，该关键字在Javascript中和执行环境，而非声明环境有关。
+	</pre>
+	<script type="text/javascript">
+		var someone = {
+		    name: "Bob",
+		    showName: function(){
+		        alert(this.name);
+		    }
+		};
+
+		var other = {
+		    name: "Tom",
+		    showName: someone.showName
+		}
+
+		other.showName();　　//Tom
+	</script>
+	this关键字虽然是在someone.showName中声明的，但运行的时候是other.showName，所以this指向other.showName函数的当前对象，即other，故最后alert出来的是other.name。
+
+	 
+
+	没有明确的当前对象时
+
+	当没有明确的执行时的当前对象时，this指向全局对象window。
+	<script>
+		// var name = "window";
+
+		// var Bob = {
+		//     name: "Bob",
+		//     showName: function(){
+		//         alert(this.name);
+		//     }
+		// };
+
+		// var Tom = {
+		//     name: "Tom",
+		//     showName: function(){
+		//         var fun = Bob.showName;
+		//         fun();
+		//     }
+		// };
+
+		// Tom.showName();　　//window
+	</script>
+http://www.cnblogs.com/justany/archive/2012/11/01/the_keyword_this_in_javascript.html
+</body>
+</html>

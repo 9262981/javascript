@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>math&date</title>
+	<script type="text/javascript">
+		  	//手册使用
+		
+			// console.log("substr:",Math.PI);
+			// console.log("random:",Math.random());
+			// console.log("max:",Math.min(3,88,90,6,-3));
+		
+		function sysTime () {
+			var now=new Date();
+			var year=now.getFullYear();
+			var month=now.getMonth()+1;
+			var date=now.getDate();
+			var day=now.getDay();
+			var hour=now.getHours();
+			var minutes=now.getMinutes();
+			var sec=now.getSeconds();
+			var arr_week=new Array("星期一","星期二","星期三","星期四","星期五","星期六","星期日")
+			var week=arr_week[day];
+			var time=year+"年"+month+"月"+date+"日 "+week+" "+hour+"点"+minutes+"分"+sec+"秒";
+			// alert(time);
+			// document.write(time);
+			// console.log("当前系统时间为：",time);
+			 document.getElementById("clock").innerHTML="当前系统时间为："+time;
+		};
+		window.onload=function(){
+			window.setInterval("sysTime()",1000);
+		};
+		// Interval[网络] 	时间; 定距; 間隔
+		//setInterval 设置间隔时间 循环调用
+
+		// var now=new Date();//创建Date对象
+		// var year=now.getFullYear();//获取年份
+		// var month=now.getMonth()+1;//获得月份
+		// var date=now.getDate();//获取日期
+		// var day=now.getDay();//获取星期
+		// var hour=now.getHours();//获取小时
+		// var minutes=now.getMinutes();//获取分钟
+		// var sec=now.getSeconds();//获取秒
+		// 	console.log("now",now);
+		// 	console.log("year",year);
+		// 	console.log("month",month);
+		// 	console.log("date",date);
+		// 	console.log("day",day);
+		// 	console.log("hour",hour);
+		// 	console.log("minutes",minutes);
+		// 	console.log("sec",sec);
+		// var xingqi=new Array("星期一","星期2","星期3","星期4","星期5","星期6","星期7");
+		// 	console.log("day",xingqi[day-1]);
+	</script>
+</head>
+<body onload="sysTime()"> <!-- onload="sysTime()" -->
+
+	<div id="clock"></div>
+	<pre>
+		第十二课、Math与Date对象介绍
+
+			1、Math对象
+
+				在使用Math对象时不能使用new关键字创建实例，而是直接使用对象名.成员 这种格式
+				  alert(Math.PI);
+				  alert(Math.random());
+				  alert(Math.max(3,76,21,90,5,6,-5,-903));
+				  alert(Math.min(3,76,21,90,5,6,-5,-903));
+
+			2、Date对象
+				
+				var now=new Date();//创建Date对象
+				var year=now.getFullYear();//获取年份
+				var month=now.getMonth()+1;//获得月份
+				var date=now.getDate();//获取日期
+				var day=now.getDay();//获取星期
+				var hour=now.getHours();//获取小时
+				var minutes=now.getMinutes();//获取分钟
+				var sec=now.getSeconds();//获取秒
+	</pre>
+</body>
+</html>

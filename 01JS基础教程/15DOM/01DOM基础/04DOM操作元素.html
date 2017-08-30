@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>dom操作元素</title>
+	<script type="text/javascript">
+	window.onload=function  () {
+		var oTxt=document.getElementById("txt1");
+		var oBtn=document.getElementById("bt1");
+		oBtn.onclick=function  () {
+			// oTxt.value="333";
+			//第一种老方法
+			// oTxt['value']="value";
+			// 第二种老方法
+			// oTxt.setAttribute("value","值");
+			oTxt.removeAttribute("value");
+			// 新的方式
+		}
+	}
+		
+	</script>
+</head>
+<body>
+	<input type="text" value="222" id="txt1">
+	<input type="button" value="123" id="bt1">
+	设置 setAtrribute(名称)
+	获取 getAtrribute(名称，值)
+	删除 removeAtrribute(名称)
+</body>
+</html>

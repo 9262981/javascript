@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>setInterval</title>
+	
+	<style>
+		div{
+			
+			
+			border-radius: 30px;
+			background: #333;
+			color:#fff;
+			text-indent: center;
+			width:100px;height:100px;
+			position:relative;
+		
+		}
+	</style>
+	<script>
+		
+	
+
+		function test(){
+			var demo=document.getElementById("demo");
+			setInterval(function(){
+			
+				demo.style.width=demo.offsetWidth+10+'px';
+			},30)
+		}
+		console.log(demo.style.left);
+	
+		
+	</script>
+</head>
+<body onload="test()">
+
+	<div id="demo" style="width:200px;height:300px;">
+		heloooooo!
+	</div>
+	<input type="button" value="">
+	<pre>
+		setInterval 间隔
+		setTimeout  延时
+
+		clearInterval
+		clearTimeout
+	</pre>
+
+
+		
+	
+</body>
+</html>

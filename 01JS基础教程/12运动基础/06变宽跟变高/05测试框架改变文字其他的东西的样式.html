@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>变高变宽</title>
+</head>
+	<style type="text/css">
+	div{display: absolute;margin:20px;float:left;}
+		#div1{
+			width: 100px;height: 100px;background: red;border: 10px solid black;
+		}
+		#div2{
+			width: 100px;height: 100px;background: red;
+		}
+		#div3{
+			width: 100px;height: 100px;background: red;font-size:12px;
+		}
+		#div4{
+			width: 100px;height: 100px;background: red;font-size:12px;border:11px solid 
+		}
+	</style>
+<body>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3">HelloWorld</div>
+	<div id="div4"></div>
+</body>
+<script type="text/javascript">
+	window.onload=function  () {
+		var oDiv1=document.getElementById("div1");
+		var oDiv2=document.getElementById("div2");
+		var oDiv3=document.getElementById("div3");
+		var oDiv4=document.getElementById("div4");
+		function getStyle (obj,name) {
+		if(obj.currentStyle){
+				return obj.currentSytle[name];
+			}else{
+				return getComputedStyle(obj,false)[name];
+			}
+		}
+
+		oDiv1.onmouseover=function  () {
+			startMove(this,'height',400);
+		}
+		oDiv1.onmouseout=function  () {
+			startMove(this,'height',100);
+		}
+		oDiv2.onmouseover=function  () {
+			startMove(this,'width',400);
+		}
+		oDiv2.onmouseout=function  () {
+			startMove(this,'width',100);
+		}
+		oDiv3.onmouseover=function  () {
+			startMove(this,'fontSize',33);
+		}
+		oDiv3.onmouseout=function  () {
+			startMove(this,'fontSize',12);
+		}
+		oDiv4.onmouseover=function  () {
+			startMove(this,'border-width',44);
+		}
+		oDiv4.onmouseout=function  () {
+			startMove(this,'border-width',11);
+		}
+		console.dir(oDiv4);
+		function startMove (obj,attr,iTarget) {
+			// curStyle=getStyle(oDiv1,'height');
+			//attr属性
+			// console.log(curStyle);
+			// console.log(getStyle(obj,'height'));
+			clearInterval(obj.timer);
+			obj.timer=setInterval(function(){
+				curStyle=parseInt(getStyle(obj,attr));
+				var speed=(iTarget-curStyle)/6;
+				speed=speed>0?Math.ceil(speed):Math.floor(speed);
+				if(curStyle==iTarget){
+					clearInterval(obj.timer);
+				}else{
+					obj.style[attr]=curStyle+speed+"px";
+				}
+			},30)
+		}
+		
+	}
+</script>
+
+</html>

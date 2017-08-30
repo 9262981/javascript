@@ -1,0 +1,3 @@
+var OX_7deecb94 = '';
+OX_7deecb94 += "<"+"a href=\'//gg1.51cto.com/www/delivery/ck.php?oaparams=2__bannerid=3736__zoneid=270__cb=6ce75e2dc8__oadest=http%3A%2F%2Fcloud.51cto.com%2Fact%2Fveritas%2F201604\' target=\'_blank\'><"+"font color=\'red\'>数据保护秘籍 点击免费领取<"+"/font><"+"/a><"+"div id=\'beacon_6ce75e2dc8\' style=\'position: absolute; left: 0px; top: 0px; visibility: hidden;\'><"+"img src=\'//gg3.51cto.com/www/delivery/lg.php?bannerid=3736&amp;campaignid=815&amp;zoneid=270&amp;loc=1&amp;referer=http%3A%2F%2Fmobile.51cto.com%2Fweb-434181.htm&amp;cb=6ce75e2dc8\' width=\'0\' height=\'0\' alt=\'\' style=\'width: 0px; height: 0px;\' /><"+"/div>\n";
+document.write(OX_7deecb94);

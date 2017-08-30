@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>for/in 循环</title>
+	<script>
+	//11111111111111111111111111111111111111111111111111111111111111111111
+		function myFunction()
+		{
+		var x;
+		var txt="";
+		 			var person={fname:"Bill",lname:"Gates",age:56}; 
+
+					var person = new Array()
+					person[0] = "Saab"
+					person[1] = "Volvo"
+					person[2] = "BMW"
+					person[3] = "BM2W"
+					person[4] = "BM3W"
+					person[5] = "BM4W"
+
+					console.log("person:",person)
+		for (x in person)
+		{
+		txt=txt + person[x]+" ";
+		}
+		console.log("person:",txt)
+		document.getElementById("demo").innerHTML=txt;
+
+		 }
+//2222222222222222222222222222222222222222222222222222222222222222222222222
+
+// var b = {3:1,42:2,11:3,9:4,12:55}
+// for( var key in b ){
+//     // alert( b[key] )
+//     console.log("b:",b);
+// }
+
+
+</script>
+</head>
+<body>
+<p>点击下面的按钮，循环遍历对象 "person" 的属性。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+
+
+</body>
+</html>
