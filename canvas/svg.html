@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>simonDemo</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<meta name="description" content="请输入您的描述信息" />
+	<meta name="keywords" content="关键字,关键字,关键字" />
+	<meta name="author" content="Simon Sun" />
+	<style>
+	.horse-run {
+    /* 之前语法 始于2015年9月，M58版本会移除，大约2017年4月 */
+    motion-path: path("M119,1V56H1V1H119m1-1H0V57H120V0Z");
+     
+    /* 当前规范上的语法 2016年12月支持 */
+    offset-path: path("M199.5,136.127261 C185.746951,176.199026 147.736889,205 103,205 C46.6669555,205 1,159.333044 1,103 C1,46.6669555 46.6669555,1 103,1 C147.736889,1 185.746951,29.8009744 199.5,69.872739 C213.253049,29.8009744 251.263111,1 296,1 C352.333044,1 398,46.6669555 398,103 C398,159.333044 352.333044,205 296,205 C251.263111,205 213.253049,176.199026 199.5,136.127261 Z");
+    animation: move 3s linear 11;
+}
+   
+@keyframes move {
+  /* 之前语法 */
+  100% { motion-offset: 50%;}
+  /* 当前规范语法 */
+  100% { offset-distance: 100%;}
+}
+</style>
+	<script></script>
+</head>
+<body>
+	CSS代码：
+
+
+
+HTML代码：
+<img src="1.jpg" width="40" height="43" class="horse-run">
+<svg width="280" height="150" viewBox="0 0 280 150">
+    <path d="M10,80 q100,120 120,20 q140,-50 160,0" stroke="#cd0000" stroke-width="2" fill="none" />
+</svg>
+helloworld
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+	$(function() {
+		$('img').mouseover(function() {
+			alert(111);
+		})
+	})
+</script>
+</html>

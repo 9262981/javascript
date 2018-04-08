@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas</title>
+	<style>
+		body{}
+		.myCanvas{border:2px solid grey;}
+		.demo{
+			width: 200px;height: 250px;float:left;text-align: center;
+			padding:10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo"><canvas class="myCanvas" id="myCanvas1" width="200" height="200"></canvas><span>矩形</span></div>
+	<div class="demo"><canvas class="myCanvas" id="myCanvas2" width="200" height="200"></canvas><span>原型</span></div>
+	<div class="demo"><canvas class="myCanvas" id="myCanvas3" width="200" height="200"></canvas><span>线条</span></div>
+	<div class="demo"><canvas class="myCanvas" id="myCanvas4" width="200" height="200"></canvas><span>2曲线</span></div>
+	<div class="demo"><canvas class="myCanvas" id="myCanvas5" width="200" height="200"></canvas><span>3贝塞尔曲线</span></div>
+	<div class="demo"><canvas class="myCanvas" id="myCanvas6" width="200" height="200"></canvas><span>jianbian</span></div>
+	<div class="demo"><canvas class="myCanvas" id="myCanvas7" width="200" height="200"></canvas><span>jianbian</span></div>
+	<div class="demo"><canvas class="myCanvas" id="myCanvas8" width="200" height="200"></canvas><span>text</span></div>
+	<div class="demo"><canvas class="myCanvas" id="myCanvas9" width="200" height="200"></canvas><span>scale</span></div>
+	<div class="demo"><canvas class="myCanvas" id="myCanvas10" width="200" height="200"></canvas><span>juzhen</span></div>
+	<script>
+	
+
+	var c=document.getElementById('myCanvas1');
+	var context=c.getContext("2d");
+	context.globalAlpha=0.5;
+	context.fillStyle="yellow";
+	context.fillRect(0,0,150,150);
+	context.globalAlpha=0.5;
+	context.fillStyle="green";
+	
+	context.fillRect(50,50,150,150);
+	context.clearRect(80,80,50,50);
+
+	// 1:x轴坐标;2:y轴坐标;3:长度4：高度
+	// 
+	
+	
+	window.onload = function(){
+	    var drawing = document.getElementById("myCanvas2");
+	    //make sure <canvas> is completely supported
+	    if (drawing.getContext){
+	        var context = drawing.getContext("2d");
+	        //start the path
+	        
+	        context.beginPath();
+	        //draw outer circle
+	      	
+	      	context.fillStyle="yellow";
+	      	context.strokeStyle="green";
+	        context.arc(100, 100, 99, 0, 1 * Math.PI, true);
+	        context.stroke();
+	        context.fill();
+	        context.closePath();
+	        
+	        context.beginPath();
+	        //draw inner circle
+	        
+	      	context.fillStyle="grey";
+	      	context.strokeStyle="red";
+	        context.arc(100, 100, 94, 0, 2 * Math.PI, false);
+	        context.fill();
+	        context.stroke();
+	        context.closePath();
+	        
+
+	        // draw minute hand
+	        context.beginPath();
+	        context.strokeStyle="white";
+	        context.moveTo(100,100);
+	        context.lineTo(100, 10);
+	        context.stroke();
+	        context.closePath();
+	        //draw hour hand
+	        context.moveTo(100, 100);
+	        context.lineTo(35, 100);
+	        context.stroke();
+	    }    
+	    var c=document.getElementById('myCanvas3');
+	    var context=c.getContext("2d"); 
+	    for(var i=0;i<15;i++){
+	    	context.strokeStyle="blue";
+	    	context.beginPath();
+	    	context.arc(0,200,i*10,0,Math.PI*3/2,true);
+	    	// context.closePath();
+	    	context.stroke();
+
+	    } 
+
+
+	};
+//2次方 贝塞尔曲线
+	var c=document.getElementById('myCanvas4');
+	var context=c.getContext("2d"); 
+	context.strokeStyle="black";
+	context.beginPath();
+	context.moveTo(0,200);
+	context.quadraticCurveTo(75,50,200,200);
+	//quadratic二次方程式//Curve曲线
+	context.stroke();
+	context.globalCompositeOperation="source-over";
+
+	context.strokeStyle="grey";
+	context.beginPath();
+	context.moveTo(75,50);
+	context.lineTo(0,200);
+	context.moveTo(75,50);
+	context.lineTo(200,200);
+	context.stroke();
+//3次方 贝塞尔曲线
+	var c=document.getElementById('myCanvas5');
+	var context=c.getContext("2d"); 
+	context.strokeStyle="black";
+	context.beginPath();
+	context.moveTo(0,200);
+	context.bezierCurveTo(25,50,100,100,200,200);
+	context.stroke();
+	context.globalCompositeOperation="source-over";
+
+	context.strokeStyle="grey";
+	context.beginPath();
+	context.moveTo(25,50);
+	context.lineTo(0,200);
+	context.moveTo(100,100);
+	context.lineTo(200,200);
+	context.stroke();
+//渐变
+	var c=document.getElementById('myCanvas6');
+	var context=c.getContext("2d"); 
+	 	gradient = context.createLinearGradient(30, 30, 200, 200);
+	 	gradient.addColorStop(0, "white");
+	 	gradient.addColorStop(1, "black");
+	 	//gradient梯度linear	直线的，线形的; 长度的
+	 	//draw a red rectangle[数] 长方形，矩形
+	 	context.fillStyle = "#ff0000";
+	 	context.fillRect(10, 10, 110, 110);
+	 	
+	 	//draw a gradient rectangle
+	 	context.fillStyle = gradient;
+	 	context.fillRect(30, 30, 200, 200);
+//jianbian qiuzhuang
+	var c=document.getElementById('myCanvas7');
+ 	var context = c.getContext("2d"),
+ 	    gradient = context.createRadialGradient(100, 100, 10, 100, 100, 100);
+ 	    gradient = context.createRadialGradient(150,50, 0, 100, 100, 100);
+ 		//Radial径向
+ 	
+ 	gradient.addColorStop(0, "white");
+ 	gradient.addColorStop(1, "black");
+ 	
+ 	//draw a red rectangle
+ 	
+ 	
+ 	//draw a gradient rectangle
+ 	context.fillStyle = gradient;
+ 	context.fillRect(0, 0, 200, 200);
+//text
+	var c=document.getElementById('myCanvas8');
+ 	var context = c.getContext("2d");
+ 	context.font="35px arial";
+ 	context.fillStyle="black";
+ 	context.fillText("Simon",30,60,200);
+ 	context.translate(100, 100);
+//rotate
+	var c=document.getElementById('myCanvas9');
+	var context=c.getContext("2d");
+	
+	context.rotate(0.1);
+	context.scale(1.2,1.5)
+	context.fillRect(30, 30, 50, 50);
+
+//juzhen
+	
+	</script>
+</body>
+</html>	
