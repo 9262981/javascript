@@ -10,11 +10,11 @@
   var url='a=1&b=2&g=bbb||c=3&d=4&e=&f=aaa'
   // url='index.html?a=1&b=2||c=3&d=4&e='
   var a=url.split('||')
-  console.log(a)
+  // console.log(a)
   var b=a[0].split('&')
   var bb=a[1].split('&')
-  console.log(typeof(b))
-  console.log((b)) //["a=1", "b=2"] object
+  // console.log(typeof(b))
+  // console.log((b)) //["a=1", "b=2"] object
   var c=b[0].split('=')
   // console.log(c)//["a", "1"]
   // var d={}
@@ -27,7 +27,7 @@
      return eee
    }
 
-  console.log(111,abc(b))//[Array[2], Array[2]]
+  // console.log(111,abc(b))//[Array[2], Array[2]]
   var ddd=abc(b)
   var fff={}
   for(var i=0;i<ddd.length;i++){
