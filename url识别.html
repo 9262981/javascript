@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+  var url='a=1&b=2&g=bbb||c=3&d=4&e=&f=aaa'
+  // url='index.html?a=1&b=2||c=3&d=4&e='
+  var a=url.split('||')
+  console.log(a)
+  var b=a[0].split('&')
+  var bb=a[1].split('&')
+  console.log(typeof(b))
+  console.log((b)) //["a=1", "b=2"] object
+  var c=b[0].split('=')
+  // console.log(c)//["a", "1"]
+  // var d={}
+  // d[c[0]]=c[1]
+  function abc(aaa) {
+    var eee=[]
+     for(var i=0;i<aaa.length;i++){
+        eee.push(aaa[i].split('='))
+     }
+     return eee
+   }
+
+  console.log(111,abc(b))//[Array[2], Array[2]]
+  var ddd=abc(b)
+  var fff={}
+  for(var i=0;i<ddd.length;i++){
+      fff[ddd[i][0]]=ddd[i][1];
+  }
+
+  var dddd=abc(bb)
+  var ffff={}
+  for(var i=0;i<dddd.length;i++){
+      ffff[dddd[i][0]]=dddd[i][1];
+  }
+
+
+  var u = navigator.userAgent;
+  var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+  var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+  if(isiOS){
+    console.log(fff)
+  }else if(isAndroid){
+    console.log(ffff)
+  }
+
+</script>
+</html>
