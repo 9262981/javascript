@@ -8,7 +8,8 @@
 </body>
 <script type="text/javascript">
   var url='a=1&b=2&g=bbb||c=3&d=4&e=&f=aaa'
-  // url='index.html?a=1&b=2||c=3&d=4&e='
+  // var url=window.location.search.substring(1)
+  console.log(url)
   var a=url.split('||')
   // console.log(a)
   var b=a[0].split('&')
