@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>自由职客——高端自由职业者服务平台</title>
+  <!-- Polyfills -->
+  <!--[if lt IE 10]>
+  <script src="https://as.alipayobjects.com/g/component/??console-polyfill/0.2.2/index.js,es5-shim/4.5.7/es5-shim.min.js,es5-shim/4.5.7/es5-sham.min.js,es6-shim/0.35.1/es6-sham.min.js,es6-shim/0.35.1/es6-shim.min.js,html5shiv/3.7.2/html5shiv.min.js,media-match/2.0.2/media.match.min.js"></script>
+  <![endif]-->
+  <script src="http://apps.bdimg.com/libs/jquery/1.8.0/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+1232
+<div id="root"></div>
+
+<!--<script src="index.js?"+Math.random()></script>-->
+<script src="js/storage.js"></script>
+
+<script>
+  // $(window).bind('beforeunload', function() {
+  //       return 1;
+  //       alert(2)
+  // })
+  // window.addEventListener('beforeunload', function (e) {
+  //        return '您正在编辑的 issue 还没有提交，确定要离开？';
+  // });
+//   window.onunload = function(){
+//    return "你确定要离开吗"
+// }
+
+window.onbeforeunload = function (e) {
+  e = e || window.event;
+
+  // 兼容IE8和Firefox 4之前的版本
+  // if (e) {
+  //   // e.returnValue = '关闭提示';
+  //   var wsCache = new WebStorageCache();
+  //
+  //   var reqHeaders = {
+  //     'Content-Type': 'application/json',
+  //     'accToken':  wsCache.get('token')
+  //   }
+  //   $.ajax({
+  //     url:  'api/v2/enter/demand/demandsList/all/1',
+  //     type: 'GET',
+  //     asyny: false,
+  //     headers: reqHeaders,
+  //     success: function(data, textStatus, request) {
+  //
+  //         alert(1111)
+  //     },
+  //     error: function(data) {
+  //       console.log(data)
+  //     }
+  //   });
+  // }
+
+  // Chrome, Safari, Firefox 4+, Opera 12+ , IE 9+
+  // return '关闭提示';
+  var wsCache = new WebStorageCache();
+
+  var reqHeaders = {
+    'Content-Type': 'application/json',
+    'accToken':  wsCache.get('token')
+  }
+  $.ajax({
+    url:  'api/v2/enter/demand/enterpriseDemand/00581A4C538C490C9A543758FC0BC1E5',
+    type: 'GET',
+    asyny: false,
+    headers: reqHeaders,
+    success: function(data, textStatus, request) {
+
+        alert(1111)
+    },
+    error: function(data) {
+      console.log(data)
+    }
+  });
+};
+</script>
+
+</body>
+</html>
